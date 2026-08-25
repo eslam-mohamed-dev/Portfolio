@@ -190,6 +190,30 @@ document.addEventListener('DOMContentLoaded', () => {
         if (prevBtn) prevBtn.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); updateCarousel(currentSlide - 1); });
         if (nextBtn) nextBtn.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); updateCarousel(currentSlide + 1); });
         dots.forEach((dot, i) => dot.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); updateCarousel(i); }));
+
+        // Touch Swipe Gestures for Mobile
+        let touchStartX = 0;
+        let touchStartY = 0;
+
+        carousel.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            touchStartY = e.changedTouches[0].screenY;
+        }, { passive: true });
+
+        carousel.addEventListener('touchend', (e) => {
+            const touchEndX = e.changedTouches[0].screenX;
+            const touchEndY = e.changedTouches[0].screenY;
+            const deltaX = touchEndX - touchStartX;
+            const deltaY = touchEndY - touchStartY;
+
+            if (Math.abs(deltaX) > 35 && Math.abs(deltaX) > Math.abs(deltaY)) {
+                if (deltaX < 0) {
+                    updateCarousel(currentSlide + 1);
+                } else {
+                    updateCarousel(currentSlide - 1);
+                }
+            }
+        }, { passive: true });
     }
 
     setupCarousel('.mena-carousel', '.mena-track', '.mena-prev', '.mena-next', '.mena-dot');
@@ -278,5 +302,30 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.key === 'ArrowLeft') updateLightbox(currentLightboxIndex - 1);
             if (e.key === 'ArrowRight') updateLightbox(currentLightboxIndex + 1);
         });
+
+        // Touch Swipe Gestures for Lightbox Modal
+        let lbTouchStartX = 0;
+        let lbTouchStartY = 0;
+
+        lightbox.addEventListener('touchstart', (e) => {
+            lbTouchStartX = e.changedTouches[0].screenX;
+            lbTouchStartY = e.changedTouches[0].screenY;
+        }, { passive: true });
+
+        lightbox.addEventListener('touchend', (e) => {
+            if (lightbox.classList.contains('hidden')) return;
+            const lbTouchEndX = e.changedTouches[0].screenX;
+            const lbTouchEndY = e.changedTouches[0].screenY;
+            const deltaX = lbTouchEndX - lbTouchStartX;
+            const deltaY = lbTouchEndY - lbTouchStartY;
+
+            if (Math.abs(deltaX) > 35 && Math.abs(deltaX) > Math.abs(deltaY)) {
+                if (deltaX < 0) {
+                    updateLightbox(currentLightboxIndex + 1);
+                } else {
+                    updateLightbox(currentLightboxIndex - 1);
+                }
+            }
+        }, { passive: true });
     }
 });
