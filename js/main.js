@@ -237,6 +237,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (lightbox && lightboxImg) {
         document.querySelectorAll('.mena-track img, .aflami-track img, .arabcare-track img, #projects img, #about img').forEach(img => {
+            // Ignore logo icons or explicitly excluded images
+            if (img.src.includes('thechance') || img.classList.contains('no-lightbox')) return;
+
             img.classList.add('cursor-pointer');
             img.addEventListener('click', (e) => {
                 e.stopPropagation();
