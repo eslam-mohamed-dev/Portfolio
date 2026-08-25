@@ -1,0 +1,305 @@
+/* Custom Styles & Utilities for Eslam Mohamed Portfolio */
+
+@layer utilities {
+    /* Custom Glassmorphism Card */
+    .glass-card {
+        background: rgba(15, 23, 42, 0.75);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(51, 65, 85, 0.6);
+    }
+    
+    /* Skill Badge Styling */
+    .skill-tag {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.35rem 0.75rem;
+        border-radius: 0.75rem;
+        background-color: rgba(30, 41, 59, 0.8);
+        border: 1px solid rgba(51, 65, 85, 0.7);
+        color: #cbd5e1;
+        font-size: 0.75rem;
+        font-weight: 600;
+        transition: all 0.2s ease;
+    }
+    
+    .skill-tag:hover {
+        border-color: #6366f1;
+        color: #ffffff;
+        background-color: rgba(99, 102, 241, 0.15);
+        transform: translateY(-1px);
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4f46e5;
+}
+
+/* Smooth Focus Rings */
+a:focus-visible, button:focus-visible {
+    outline: 2px solid #06b6d4;
+    outline-offset: 2px;
+}
+
+/* Lightbox Image Smooth Transition Animation */
+.lightbox-transition {
+    transition: opacity 0.22s cubic-bezier(0.4, 0, 0.2, 1), transform 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lightbox-entering {
+    opacity: 0;
+    transform: scale(0.96);
+}
+
+.lightbox-active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Light Mode Comprehensive Theme Overrides */
+html:not(.dark) {
+    background-color: #f8fafc;
+    color: #0f172a;
+}
+
+html:not(.dark) body {
+    background-color: #f8fafc;
+    color: #0f172a;
+}
+
+/* Header Navbar */
+html:not(.dark) header {
+    background-color: rgba(255, 255, 255, 0.85) !important;
+    border-color: #e2e8f0 !important;
+    backdrop-filter: blur(12px);
+}
+
+html:not(.dark) header nav a {
+    color: #334155 !important;
+}
+
+html:not(.dark) header nav a:hover {
+    color: #4f46e5 !important;
+}
+
+/* Headings & Text */
+html:not(.dark) .text-white {
+    color: #0f172a !important;
+}
+
+html:not(.dark) .text-slate-200,
+html:not(.dark) .text-slate-300 {
+    color: #1e293b !important;
+}
+
+html:not(.dark) .text-slate-400,
+html:not(.dark) .text-slate-500 {
+    color: #64748b !important;
+}
+
+/* Text Gradient Overrides for Light Mode */
+html:not(.dark) .from-white {
+    --tw-gradient-from: #0f172a var(--tw-gradient-from-position) !important;
+}
+
+html:not(.dark) .via-slate-200 {
+    --tw-gradient-via: #1e293b var(--tw-gradient-via-position) !important;
+}
+
+html:not(.dark) .to-slate-400 {
+    --tw-gradient-to: #475569 var(--tw-gradient-to-position) !important;
+}
+
+/* Background Cards & Panels */
+html:not(.dark) .bg-slate-900,
+html:not(.dark) .bg-slate-900\/95,
+html:not(.dark) .bg-slate-900\/90,
+html:not(.dark) .bg-slate-900\/80,
+html:not(.dark) .bg-slate-900\/70,
+html:not(.dark) .bg-slate-900\/50,
+html:not(.dark) .bg-slate-900\/40,
+html:not(.dark) .bg-slate-950,
+html:not(.dark) .bg-slate-950\/85 {
+    background-color: #ffffff !important;
+    border-color: #e2e8f0 !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.02);
+}
+
+/* Gradient Cards in Light Mode (Contact Card, Experience Cards) */
+html:not(.dark) .from-slate-900,
+html:not(.dark) .to-slate-950 {
+    --tw-gradient-from: #ffffff var(--tw-gradient-from-position) !important;
+    --tw-gradient-to: #f8fafc var(--tw-gradient-to-position) !important;
+}
+
+/* Form Inputs & Textareas */
+html:not(.dark) input,
+html:not(.dark) textarea {
+    background-color: #f8fafc !important;
+    border-color: #cbd5e1 !important;
+    color: #0f172a !important;
+}
+
+html:not(.dark) input::placeholder,
+html:not(.dark) textarea::placeholder {
+    color: #94a3b8 !important;
+}
+
+/* Skill Tags & Pills */
+html:not(.dark) .skill-tag {
+    background-color: #f1f5f9 !important;
+    border-color: #e2e8f0 !important;
+    color: #334155 !important;
+}
+
+html:not(.dark) .skill-tag:hover {
+    background-color: #e0e7ff !important;
+    border-color: #6366f1 !important;
+    color: #4f46e5 !important;
+}
+
+/* Section Backgrounds */
+html:not(.dark) section {
+    border-color: #e2e8f0 !important;
+}
+
+html:not(.dark) section.bg-slate-900\/40 {
+    background-color: #f1f5f9 !important;
+}
+
+/* Device Mockup Frame in Light Mode */
+html:not(.dark) #hero .border-slate-800 {
+    border-color: #cbd5e1 !important;
+}
+
+html:not(.dark) #hero .bg-slate-950\/90 {
+    background-color: #ffffff !important;
+}
+
+/* Store Action Buttons & Icons */
+html:not(.dark) .bg-slate-950.border-slate-800 {
+    background-color: #f8fafc !important;
+    border-color: #e2e8f0 !important;
+    color: #1e293b !important;
+}
+
+html:not(.dark) .bg-slate-950.border-slate-800:hover {
+    background-color: #ffffff !important;
+    border-color: #6366f1 !important;
+}
+
+/* Additional Light Mode Overrides for Chips, Dates, Experience Roles, and Contact Cards */
+html:not(.dark) .bg-slate-800,
+html:not(.dark) .bg-slate-800\/80,
+html:not(.dark) .bg-slate-800\/60,
+html:not(.dark) .bg-slate-950\/80,
+html:not(.dark) .bg-slate-950\/90,
+html:not(.dark) .bg-slate-950\/60 {
+    background-color: #f1f5f9 !important;
+    border-color: #cbd5e1 !important;
+    color: #334155 !important;
+}
+
+html:not(.dark) .border-slate-700,
+html:not(.dark) .border-slate-800\/80,
+html:not(.dark) .border-slate-700\/80 {
+    border-color: #e2e8f0 !important;
+}
+
+/* Tech Chips in Project Cards */
+html:not(.dark) .font-mono {
+    color: #334155 !important;
+}
+
+/* Date Badges in Education & Experience */
+html:not(.dark) .bg-slate-800\/80.text-slate-400,
+html:not(.dark) .bg-slate-800\/80.text-slate-300,
+html:not(.dark) span.bg-slate-800\/80 {
+    background-color: #f1f5f9 !important;
+    color: #475569 !important;
+    border-color: #cbd5e1 !important;
+}
+
+/* Experience Roles & Company Names */
+html:not(.dark) #experience h3,
+html:not(.dark) #education h3,
+html:not(.dark) #projects h3 {
+    color: #0f172a !important;
+}
+
+/* Contact Email & WhatsApp Cards */
+html:not(.dark) #contact a {
+    background-color: #ffffff !important;
+    border-color: #e2e8f0 !important;
+    color: #0f172a !important;
+}
+
+html:not(.dark) #contact a:hover {
+    background-color: #f8fafc !important;
+    border-color: #6366f1 !important;
+}
+
+html:not(.dark) #contact a .text-white {
+    color: #0f172a !important;
+}
+
+html:not(.dark) #contact a .text-slate-400 {
+    color: #64748b !important;
+}
+
+/* Accent Colors in Light Mode */
+html:not(.dark) .text-indigo-400 {
+    color: #4f46e5 !important;
+}
+
+html:not(.dark) .text-emerald-400 {
+    color: #059669 !important;
+}
+
+/* Tech Chips in Project Cards */
+html:not(.dark) span.font-mono {
+    background-color: #f1f5f9 !important;
+    border: 1px solid #e2e8f0 !important;
+    color: #334155 !important;
+}
+
+/* Date Badges in Education & Experience */
+html:not(.dark) #experience span.border-slate-700,
+html:not(.dark) #education span.border-slate-700,
+html:not(.dark) span.bg-slate-800\/80 {
+    background-color: #f1f5f9 !important;
+    color: #334155 !important;
+    border-color: #cbd5e1 !important;
+}
+
+/* Scrollbar */
+html:not(.dark) ::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+html:not(.dark) ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+}
+
+html:not(.dark) ::-webkit-scrollbar-thumb:hover {
+    background: #6366f1;
+}
