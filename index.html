@@ -6,6 +6,20 @@
     <title>Eslam Mohamed | Software Engineer</title>
     <meta name="description" content="Portfolio of Eslam Mohamed - Software Engineer & Mobile Developer specializing in Flutter, Compose Multiplatform (CMP), and Native Android.">
     
+    <!-- Synchronous Inline Theme Init to Prevent Flash (FOUC) -->
+    <script>
+        (function() {
+            try {
+                var savedTheme = localStorage.getItem('theme');
+                if (savedTheme === 'light') {
+                    document.documentElement.classList.remove('dark');
+                } else {
+                    document.documentElement.classList.add('dark');
+                }
+            } catch (e) {}
+        })();
+    </script>
+
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
     
