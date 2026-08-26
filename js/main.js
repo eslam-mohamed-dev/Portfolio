@@ -344,4 +344,36 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // 10. Interactive Projects Technology Filter Engine (Flicker-Free)
+    const filterBtns = document.querySelectorAll('.project-filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    if (filterBtns.length > 0 && projectCards.length > 0) {
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.getAttribute('data-filter');
+
+                // Update active state on buttons
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-indigo-600', '!text-white', 'shadow-lg', 'shadow-indigo-500/25', 'border-indigo-500');
+                    b.classList.add('bg-slate-900', 'border-slate-800', 'text-slate-300');
+                });
+                btn.classList.add('bg-indigo-600', '!text-white', 'shadow-lg', 'shadow-indigo-500/25', 'border-indigo-500');
+                btn.classList.remove('bg-slate-900', 'border-slate-800', 'text-slate-300');
+
+                // Instant flicker-free filtering without layout jumps
+                projectCards.forEach(card => {
+                    const categories = card.getAttribute('data-category') || '';
+                    const isMatch = filter === 'all' || categories.split(' ').includes(filter);
+
+                    if (isMatch) {
+                        card.classList.remove('is-filtered-out');
+                    } else {
+                        card.classList.add('is-filtered-out');
+                    }
+                });
+            });
+        });
+    }
 });

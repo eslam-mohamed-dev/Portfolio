@@ -379,3 +379,22 @@ html:not(.dark) .arabcare-dot.bg-white\/40, html:not(.dark) .almonqez-dot.bg-whi
 html:not(.dark) .abah-dot.bg-white\/40 {
     background-color: rgba(0, 0, 0, 0.3) !important;
 }
+
+/* Project Filter Buttons in Light Mode */
+html:not(.dark) .project-filter-btn:not(.bg-indigo-600) {
+    background-color: #ffffff !important;
+    border-color: #cbd5e1 !important;
+    color: #334155 !important;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+html:not(.dark) .project-filter-btn:not(.bg-indigo-600):hover {
+    background-color: #f8fafc !important;
+    border-color: #6366f1 !important;
+    color: #4f46e5 !important;
+}
+
+/* Smooth Flicker-Free Project Card Filter Utility */
+.project-card.is-filtered-out {
+    display: none !important;
+}
