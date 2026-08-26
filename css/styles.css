@@ -278,7 +278,7 @@ html:not(.dark) .text-emerald-400 {
 /* Tech Chips in Project Cards */
 html:not(.dark) span.font-mono {
     background-color: #f1f5f9 !important;
-    border: 1px solid #e2e8f0 !important;
+    border-color: #cbd5e1 !important;
     color: #334155 !important;
 }
 
@@ -397,4 +397,19 @@ html:not(.dark) .project-filter-btn:not(.bg-indigo-600):hover {
 /* Smooth Flicker-Free Project Card Filter Utility */
 .project-card.is-filtered-out {
     display: none !important;
+}
+
+/* Tsunami Radial Wave Theme Transition Engine (Flicker-Free) */
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+    z-index: 1;
+}
+
+::view-transition-new(root) {
+    z-index: 9999;
 }

@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
         fadeObserver.observe(el);
     });
 
-    // 6. Theme Toggle (Dark / Light Mode)
+    // 6. Theme Toggle (Dark / Light Mode with Tsunami Wave Flood Reveal)
     const themeToggleBtn = document.getElementById('theme-toggle');
     const themeToggleMobileBtn = document.getElementById('theme-toggle-mobile');
     const htmlEl = document.documentElement;
@@ -145,22 +145,61 @@ document.addEventListener('DOMContentLoaded', () => {
         if (typeof lucide !== 'undefined') lucide.createIcons();
     }
 
+    function toggleThemeWithTsunami(e) {
+        const isCurrentlyDark = htmlEl.classList.contains('dark');
+        const nextThemeIsDark = !isCurrentlyDark;
+
+        // Fallback for browsers without View Transitions API or reduced motion
+        if (!document.startViewTransition || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            applyTheme(nextThemeIsDark);
+            return;
+        }
+
+        // Get click coordinates (x, y) or fallback to top-right corner
+        const x = e ? e.clientX : window.innerWidth - 40;
+        const y = e ? e.clientY : 40;
+
+        // Calculate max radius needed to reach the farthest screen corner
+        const endRadius = Math.hypot(
+            Math.max(x, window.innerWidth - x),
+            Math.max(y, window.innerHeight - y)
+        );
+
+        const transition = document.startViewTransition(() => {
+            applyTheme(nextThemeIsDark);
+        });
+
+        transition.ready.then(() => {
+            document.documentElement.animate(
+                {
+                    clipPath: [
+                        `circle(0px at ${x}px ${y}px)`,
+                        `circle(${endRadius}px at ${x}px ${y}px)`
+                    ]
+                },
+                {
+                    duration: 500,
+                    easing: 'ease-in-out',
+                    pseudoElement: '::view-transition-new(root)'
+                }
+            );
+        });
+    }
+
     // Initialize saved theme preference or default to Dark mode
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = savedTheme ? savedTheme === 'dark' : true;
     applyTheme(prefersDark);
 
     if (themeToggleBtn) {
-        themeToggleBtn.addEventListener('click', () => {
-            const isCurrentlyDark = htmlEl.classList.contains('dark');
-            applyTheme(!isCurrentlyDark);
+        themeToggleBtn.addEventListener('click', (e) => {
+            toggleThemeWithTsunami(e);
         });
     }
 
     if (themeToggleMobileBtn) {
-        themeToggleMobileBtn.addEventListener('click', () => {
-            const isCurrentlyDark = htmlEl.classList.contains('dark');
-            applyTheme(!isCurrentlyDark);
+        themeToggleMobileBtn.addEventListener('click', (e) => {
+            toggleThemeWithTsunami(e);
         });
     }
 
