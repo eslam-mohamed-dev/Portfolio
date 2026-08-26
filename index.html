@@ -835,14 +835,26 @@
                 <!-- Project 5: Ali Bin Ali Hospital App -->
                 <div class="group p-6 rounded-3xl bg-slate-900 border border-slate-800 hover:border-brand-500/50 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5 shadow-xl">
                     <div class="space-y-4">
-                        <div class="w-full h-44 rounded-2xl bg-slate-950 border border-slate-800/80 flex items-center justify-center relative overflow-hidden group-hover:border-brand-500/30 transition-colors">
-                            
-                            <div class="text-center space-y-2 relative z-10 px-4">
-                                <div class="w-10 h-10 rounded-xl bg-brand-500/20 border border-brand-500/40 mx-auto flex items-center justify-center text-brand-accent">
-                                    <i data-lucide="building-2" class="w-5 h-5"></i>
-                                </div>
-                                <div class="text-xs font-bold text-white">Ali Bin Ali Hospital</div>
-                                <div class="text-[10px] text-slate-400 font-mono">Nov 2023 – Jan 2024</div>
+                        <!-- Ali Bin Ali Hospital Image Carousel (2 Showcase Slides) -->
+                        <div class="abah-carousel w-full h-48 rounded-2xl bg-slate-950 border border-slate-800/80 overflow-hidden relative group/carousel">
+                            <!-- Slides Track -->
+                            <div class="abah-track flex w-full h-full transition-transform duration-500 ease-out">
+                                <img src="assets/img/abah-1.png" alt="Ali Bin Ali Hospital - Onboarding & Patient Portal Hub Showcase" class="w-full h-full object-cover object-top flex-shrink-0" />
+                                <img src="assets/img/abah-2.png" alt="Ali Bin Ali Hospital - Doctor Search, Booking & Medical File Hub Showcase" class="w-full h-full object-cover object-top flex-shrink-0" />
+                            </div>
+
+                            <!-- Navigation Arrows -->
+                            <button type="button" class="abah-prev absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-slate-950/80 border border-slate-800 text-white opacity-80 hover:opacity-100 transition-opacity hover:bg-indigo-600 flex items-center justify-center z-10" aria-label="Previous Slide">
+                                <i data-lucide="chevron-left" class="w-4 h-4"></i>
+                            </button>
+                            <button type="button" class="abah-next absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-slate-950/80 border border-slate-800 text-white opacity-80 hover:opacity-100 transition-opacity hover:bg-indigo-600 flex items-center justify-center z-10" aria-label="Next Slide">
+                                <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                            </button>
+
+                            <!-- Slide Indicators / Dots -->
+                            <div class="abah-dots absolute bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-10 bg-slate-950/70 px-2.5 py-1 rounded-full border border-slate-800/60">
+                                <button type="button" class="abah-dot w-2.5 h-2.5 rounded-full bg-indigo-400 transition-all" aria-label="Slide 1"></button>
+                                <button type="button" class="abah-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all" aria-label="Slide 2"></button>
                             </div>
                         </div>
 
