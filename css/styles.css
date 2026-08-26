@@ -303,3 +303,79 @@ html:not(.dark) ::-webkit-scrollbar-thumb {
 html:not(.dark) ::-webkit-scrollbar-thumb:hover {
     background: #6366f1;
 }
+
+/* Full-Screen Image Lightbox Modal & Carousel Light Mode Styling */
+html:not(.dark) #image-lightbox {
+    background-color: rgba(248, 250, 252, 0.96) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+html:not(.dark) #image-lightbox > div {
+    background-color: #ffffff !important;
+    border-color: #cbd5e1 !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15) !important;
+}
+
+html:not(.dark) #lightbox-close,
+html:not(.dark) #lightbox-prev,
+html:not(.dark) #lightbox-next {
+    background-color: #ffffff !important;
+    border-color: #cbd5e1 !important;
+    color: #1e293b !important;
+    box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.12) !important;
+}
+
+html:not(.dark) #lightbox-close:hover,
+html:not(.dark) #lightbox-prev:hover,
+html:not(.dark) #lightbox-next:hover {
+    background-color: #4f46e5 !important;
+    color: #ffffff !important;
+    border-color: #4f46e5 !important;
+}
+
+html:not(.dark) #lightbox-caption {
+    color: #0f172a !important;
+    font-weight: 600;
+}
+
+html:not(.dark) #lightbox-counter {
+    background-color: #e0e7ff !important;
+    color: #4338ca !important;
+    border-color: #c7d2fe !important;
+}
+
+/* Carousel Navigation Arrows & Indicators in Light Mode */
+html:not(.dark) .mena-prev, html:not(.dark) .mena-next,
+html:not(.dark) .aflami-prev, html:not(.dark) .aflami-next,
+html:not(.dark) .arabcare-prev, html:not(.dark) .arabcare-next,
+html:not(.dark) .almonqez-prev, html:not(.dark) .almonqez-next,
+html:not(.dark) .abah-prev, html:not(.dark) .abah-next {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    border-color: #cbd5e1 !important;
+    color: #1e293b !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+}
+
+html:not(.dark) .mena-prev:hover, html:not(.dark) .mena-next:hover,
+html:not(.dark) .aflami-prev:hover, html:not(.dark) .aflami-next:hover,
+html:not(.dark) .arabcare-prev:hover, html:not(.dark) .arabcare-next:hover,
+html:not(.dark) .almonqez-prev:hover, html:not(.dark) .almonqez-next:hover,
+html:not(.dark) .abah-prev:hover, html:not(.dark) .abah-next:hover {
+    background-color: #4f46e5 !important;
+    color: #ffffff !important;
+    border-color: #4f46e5 !important;
+}
+
+html:not(.dark) .mena-dots, html:not(.dark) .aflami-dots,
+html:not(.dark) .arabcare-dots, html:not(.dark) .almonqez-dots,
+html:not(.dark) .abah-dots {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    border-color: #cbd5e1 !important;
+}
+
+html:not(.dark) .mena-dot.bg-white\/40, html:not(.dark) .aflami-dot.bg-white\/40,
+html:not(.dark) .arabcare-dot.bg-white\/40, html:not(.dark) .almonqez-dot.bg-white\/40,
+html:not(.dark) .abah-dot.bg-white\/40 {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+}
