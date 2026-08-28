@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eslam Mohamed | Software Engineer</title>
-    <meta name="description" content="Portfolio of Eslam Mohamed - Software Engineer & Mobile Developer specializing in Flutter, Compose Multiplatform (CMP), and Native Android.">
-    
+    <meta name="description"
+        content="Portfolio of Eslam Mohamed - Software Engineer & Mobile Developer specializing in Flutter, Compose Multiplatform (CMP), and Native Android.">
+
     <!-- Synchronous Inline Theme Init to Prevent Flash (FOUC) -->
     <script>
-        (function() {
+        (function () {
             try {
                 var savedTheme = localStorage.getItem('theme');
                 if (savedTheme === 'light') {
@@ -16,18 +18,19 @@
                 } else {
                     document.documentElement.classList.add('dark');
                 }
-            } catch (e) {}
+            } catch (e) { }
         })();
     </script>
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
-    
+
     <!-- Google Fonts: Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -67,23 +70,28 @@
             }
         }
     </script>
-    
+
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white relative overflow-x-hidden">
+
+<body
+    class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white relative overflow-x-hidden">
 
     <!-- Navigation Bar -->
-    <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-slate-950/90 border-b border-slate-800 transition-all duration-300">
+    <header
+        class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-slate-950/90 border-b border-slate-800 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
-            
+
             <!-- Brand Logo with Profile Pic -->
             <a href="#hero" class="flex items-center gap-3 group shrink-0 min-w-0">
-                <img src="assets/img/profile.jpg" alt="Eslam Mohamed" class="w-10 h-10 rounded-full object-cover border border-slate-700 shadow-sm group-hover:scale-105 transition-transform flex-shrink-0" />
+                <img src="assets/img/profile.jpg" alt="Eslam Mohamed"
+                    class="w-10 h-10 rounded-full object-cover border border-slate-700 shadow-sm group-hover:scale-105 transition-transform flex-shrink-0" />
                 <div class="min-w-0">
                     <span class="text-base sm:text-lg font-bold text-white block truncate">Eslam Mohamed</span>
-                    <span class="block text-[11px] sm:text-xs font-medium text-slate-400 truncate">Software Engineer | Mobile App Developer</span>
+                    <span class="block text-[11px] sm:text-xs font-medium text-slate-400 truncate">Software Engineer |
+                        Mobile App Developer</span>
                 </div>
             </a>
 
@@ -99,42 +107,58 @@
 
             <!-- Actions Button & Theme Toggle (Visible on xl 1280px+) -->
             <div class="hidden xl:flex items-center gap-3 flex-shrink-0">
-                <button id="theme-toggle" aria-label="Toggle Light or Dark Theme" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-slate-700 transition-all flex items-center justify-center group" title="Toggle Light / Dark Theme">
+                <button id="theme-toggle" aria-label="Toggle Light or Dark Theme"
+                    class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-slate-700 transition-all flex items-center justify-center group"
+                    title="Toggle Light / Dark Theme">
                     <i data-lucide="sun" class="w-4 h-4 text-amber-400 theme-icon-sun"></i>
                     <i data-lucide="moon" class="w-4 h-4 text-slate-300 theme-icon-moon hidden"></i>
                 </button>
-                <a href="https://drive.google.com/file/d/1LmuxATIp5OdauCm9mb_AbcTVEUMyi2o0/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 text-slate-300 hover:text-white font-semibold text-sm transition-all flex items-center gap-2 whitespace-nowrap">
+                <a href="https://drive.google.com/file/d/1LmuxATIp5OdauCm9mb_AbcTVEUMyi2o0/view?usp=drive_link"
+                    target="_blank" rel="noopener noreferrer"
+                    class="px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 text-slate-300 hover:text-white font-semibold text-sm transition-all flex items-center gap-2 whitespace-nowrap">
                     <i data-lucide="file-down" class="w-4 h-4 text-indigo-400"></i> CV
                 </a>
-                <a href="#contact" class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 !text-white font-semibold text-sm transition-all flex items-center gap-2 whitespace-nowrap">
+                <a href="#contact"
+                    class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 !text-white font-semibold text-sm transition-all flex items-center gap-2 whitespace-nowrap">
                     <i data-lucide="send" class="w-4 h-4"></i> Get In Touch
                 </a>
             </div>
 
             <!-- Mobile & Tablet Drawer Toggle Button (Visible on screens < 1280px, including iPad Pro) -->
-            <button id="menu-btn" aria-label="Toggle Navigation Menu" class="xl:hidden p-2.5 text-slate-400 hover:text-white rounded-lg bg-slate-900 border border-slate-800 flex-shrink-0">
+            <button id="menu-btn" aria-label="Toggle Navigation Menu"
+                class="xl:hidden p-2.5 text-slate-400 hover:text-white rounded-lg bg-slate-900 border border-slate-800 flex-shrink-0">
                 <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
             </button>
         </div>
 
         <!-- Mobile & Tablet Navigation Drawer -->
         <div id="mobile-menu" class="hidden xl:hidden bg-slate-900/95 border-b border-slate-800 px-6 py-6 space-y-4">
-            <a href="#about" class="mobile-nav-link block text-slate-300 hover:text-brand-accent py-2 font-medium">About</a>
-            <a href="#experience" class="mobile-nav-link block text-slate-300 hover:text-brand-accent py-2 font-medium">Experience</a>
-            <a href="#skills" class="mobile-nav-link block text-slate-300 hover:text-brand-accent py-2 font-medium">Skills</a>
-            <a href="#projects" class="mobile-nav-link block text-slate-300 hover:text-brand-accent py-2 font-medium">Projects</a>
-            <a href="#education" class="mobile-nav-link block text-slate-300 hover:text-brand-accent py-2 font-medium">Education</a>
-            <a href="#contact" class="mobile-nav-link block text-slate-300 hover:text-brand-accent py-2 font-medium">Contact</a>
+            <a href="#about"
+                class="mobile-nav-link block text-slate-300 hover:text-brand-accent py-2 font-medium">About</a>
+            <a href="#experience"
+                class="mobile-nav-link block text-slate-300 hover:text-brand-accent py-2 font-medium">Experience</a>
+            <a href="#skills"
+                class="mobile-nav-link block text-slate-300 hover:text-brand-accent py-2 font-medium">Skills</a>
+            <a href="#projects"
+                class="mobile-nav-link block text-slate-300 hover:text-brand-accent py-2 font-medium">Projects</a>
+            <a href="#education"
+                class="mobile-nav-link block text-slate-300 hover:text-brand-accent py-2 font-medium">Education</a>
+            <a href="#contact"
+                class="mobile-nav-link block text-slate-300 hover:text-brand-accent py-2 font-medium">Contact</a>
             <div class="pt-4 border-t border-slate-800 flex flex-col gap-3">
-                <a href="https://drive.google.com/file/d/1LmuxATIp5OdauCm9mb_AbcTVEUMyi2o0/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="w-full text-center py-3 rounded-xl bg-slate-900 border border-slate-800 text-slate-200 hover:text-white font-semibold text-sm flex items-center justify-center gap-2">
+                <a href="https://drive.google.com/file/d/1LmuxATIp5OdauCm9mb_AbcTVEUMyi2o0/view?usp=drive_link"
+                    target="_blank" rel="noopener noreferrer"
+                    class="w-full text-center py-3 rounded-xl bg-slate-900 border border-slate-800 text-slate-200 hover:text-white font-semibold text-sm flex items-center justify-center gap-2">
                     <i data-lucide="file-down" class="w-4 h-4 text-indigo-400"></i> Download CV
                 </a>
-                <button id="theme-toggle-mobile" class="w-full py-3 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white font-semibold text-sm flex items-center justify-center gap-2">
+                <button id="theme-toggle-mobile"
+                    class="w-full py-3 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white font-semibold text-sm flex items-center justify-center gap-2">
                     <i data-lucide="sun" class="w-4 h-4 text-amber-400 theme-icon-sun"></i>
                     <i data-lucide="moon" class="w-4 h-4 text-brand-accent theme-icon-moon hidden"></i>
                     <span>Toggle Theme</span>
                 </button>
-                <a href="#contact" class="w-full text-center py-3 rounded-xl bg-indigo-600 !text-white font-semibold text-sm flex items-center justify-center gap-2">
+                <a href="#contact"
+                    class="w-full text-center py-3 rounded-xl bg-indigo-600 !text-white font-semibold text-sm flex items-center justify-center gap-2">
                     <i data-lucide="send" class="w-4 h-4"></i> Get In Touch
                 </a>
             </div>
@@ -145,11 +169,12 @@
     <section id="hero" class="min-h-screen pt-28 pb-16 flex items-center relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div class="grid lg:grid-cols-12 gap-12 items-center">
-                
+
                 <!-- Hero Left Column Text -->
                 <div class="lg:col-span-7 space-y-6">
                     <!-- Status Badge -->
-                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs text-indigo-400 font-semibold mb-6">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs text-indigo-400 font-semibold mb-6">
                         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                         <span>Available for Software & Mobile Engineering Roles</span>
                     </div>
@@ -157,12 +182,18 @@
                     <!-- Main Headline -->
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
                         Hi, I'm <span class="text-indigo-400">Eslam Mohamed</span>
-                        <span class="block text-2xl sm:text-3xl lg:text-4xl text-slate-300 font-bold mt-2">Software Engineer | Mobile App Developer</span>
+                        <span class="block text-2xl sm:text-3xl lg:text-4xl text-slate-300 font-bold mt-2">Software
+                            Engineer | Mobile App Developer</span>
                     </h1>
 
                     <!-- Summary Pitch -->
                     <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl">
-                        A Software Engineer & Mobile App Developer with <strong class="text-white">3+ years of experience</strong> creating high-performance applications using <strong class="text-slate-200">Flutter</strong>, <strong class="text-slate-200">CMP</strong>, and native Android (<strong class="text-slate-200">Kotlin</strong>). Skilled in building robust, cross-platform solutions with proven experience implementing <strong class="text-white">Clean Architecture</strong>.
+                        A Software Engineer & Mobile App Developer with <strong class="text-white">3+ years of
+                            experience</strong> creating high-performance applications using <strong
+                            class="text-slate-200">Flutter</strong>, <strong class="text-slate-200">CMP</strong>, and
+                        native Android (<strong class="text-slate-200">Kotlin</strong>). Skilled in building robust,
+                        cross-platform solutions with proven experience implementing <strong class="text-white">Clean
+                            Architecture</strong>.
                     </p>
 
                     <!-- Key Metrics Cards (4-box responsive grid) -->
@@ -187,17 +218,37 @@
 
                     <!-- Call To Action Buttons -->
                     <div class="flex flex-wrap items-center gap-4 pt-4">
-                        <a href="https://drive.google.com/file/d/1LmuxATIp5OdauCm9mb_AbcTVEUMyi2o0/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 !text-white font-semibold text-sm transition-all flex items-center gap-2 shadow-lg hover:scale-105">
+                        <a href="https://drive.google.com/file/d/1LmuxATIp5OdauCm9mb_AbcTVEUMyi2o0/view?usp=drive_link"
+                            target="_blank" rel="noopener noreferrer"
+                            class="px-6 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 !text-white font-semibold text-sm transition-all flex items-center gap-2 shadow-lg hover:scale-105">
                             <i data-lucide="file-down" class="w-4 h-4"></i> Download CV
                         </a>
-                        <a href="#projects" class="px-6 py-3.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-200 hover:text-white font-semibold text-sm transition-all flex items-center gap-2">
+                        <a href="#projects"
+                            class="px-6 py-3.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-200 hover:text-white font-semibold text-sm transition-all flex items-center gap-2">
                             <i data-lucide="smartphone" class="w-4 h-4 text-indigo-400"></i> View Featured Apps
                         </a>
-                        <a href="https://www.github.com/eslam-mohamed-dev" target="_blank" rel="noopener noreferrer" class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 hover:text-white transition-all flex items-center justify-center group" title="GitHub Profile">
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                        <a href="https://www.github.com/eslam-mohamed-dev" target="_blank" rel="noopener noreferrer"
+                            class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 hover:text-white transition-all flex items-center justify-center group"
+                            title="GitHub Profile">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                            </svg>
                         </a>
-                        <a href="https://www.linkedin.com/in/eslam-mohamed-dev" target="_blank" rel="noopener noreferrer" class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 hover:text-white transition-all flex items-center justify-center group" title="LinkedIn Profile">
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 93.06 93.06" xmlns="http://www.w3.org/2000/svg"><path d="M11.185,0.08C5.004,0.08,0.001,5.092,0,11.259c0,6.173,5.003,11.184,11.186,11.184c6.166,0,11.176-5.011,11.176-11.184 C22.362,5.091,17.351,0.08,11.185,0.08z"></path><rect x="1.538" y="30.926" width="19.287" height="62.054"></rect><path d="M69.925,29.383c-9.382,0-15.673,5.144-18.248,10.022h-0.258v-8.479H32.921H32.92v62.053h19.27V62.281 c0-8.093,1.541-15.932,11.575-15.932c9.89,0,10.022,9.256,10.022,16.451v30.178H93.06V58.942 C93.06,42.235,89.455,29.383,69.925,29.383z"></path></svg>
+                        <a href="https://www.linkedin.com/in/eslam-mohamed-dev" target="_blank"
+                            rel="noopener noreferrer"
+                            class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 hover:text-white transition-all flex items-center justify-center group"
+                            title="LinkedIn Profile">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 93.06 93.06"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.185,0.08C5.004,0.08,0.001,5.092,0,11.259c0,6.173,5.003,11.184,11.186,11.184c6.166,0,11.176-5.011,11.176-11.184 C22.362,5.091,17.351,0.08,11.185,0.08z">
+                                </path>
+                                <rect x="1.538" y="30.926" width="19.287" height="62.054"></rect>
+                                <path
+                                    d="M69.925,29.383c-9.382,0-15.673,5.144-18.248,10.022h-0.258v-8.479H32.921H32.92v62.053h19.27V62.281 c0-8.093,1.541-15.932,11.575-15.932c9.89,0,10.022,9.256,10.022,16.451v30.178H93.06V58.942 C93.06,42.235,89.455,29.383,69.925,29.383z">
+                                </path>
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -205,23 +256,27 @@
                 <!-- Hero Right Column Graphic: Phone Frame Display -->
                 <div class="lg:col-span-5 flex justify-center items-center">
                     <div class="relative w-full max-w-[300px] sm:max-w-[320px]">
-                        
+
                         <!-- Device Frame -->
-                        <div class="relative bg-slate-900 p-4 rounded-[48px] border-2 border-slate-800 shadow-xl overflow-hidden">
+                        <div
+                            class="relative bg-slate-900 p-4 rounded-[48px] border-2 border-slate-800 shadow-xl overflow-hidden">
                             <!-- Dynamic Island / Speaker Notch -->
-                            <div class="absolute top-6 left-1/2 -translate-x-1/2 w-28 h-5 bg-slate-950 rounded-full flex items-center justify-center gap-2 z-20">
+                            <div
+                                class="absolute top-6 left-1/2 -translate-x-1/2 w-28 h-5 bg-slate-950 rounded-full flex items-center justify-center gap-2 z-20">
                                 <div class="w-2.5 h-2.5 rounded-full bg-slate-900"></div>
                                 <div class="w-2.5 h-2.5 rounded-full bg-slate-800"></div>
                             </div>
 
                             <!-- Screen Container -->
-                            <div class="bg-slate-950 rounded-[36px] pt-10 pb-6 px-4 border border-slate-800/80 min-h-[520px] flex flex-col justify-between relative overflow-hidden">
-                                
+                            <div
+                                class="bg-slate-950 rounded-[36px] pt-10 pb-6 px-4 border border-slate-800/80 min-h-[520px] flex flex-col justify-between relative overflow-hidden">
+
                                 <div class="space-y-4">
                                     <!-- App Header -->
                                     <div class="flex items-center justify-between">
                                         <div class="flex items-center gap-2">
-                                            <div class="w-8 h-8 rounded-lg bg-brand-500/20 border border-brand-500/40 flex items-center justify-center">
+                                            <div
+                                                class="w-8 h-8 rounded-lg bg-brand-500/20 border border-brand-500/40 flex items-center justify-center">
                                                 <i data-lucide="layers" class="w-4 h-4 text-brand-accent"></i>
                                             </div>
                                             <div>
@@ -233,10 +288,15 @@
                                     </div>
 
                                     <!-- Tech Stack Mockup Card 1 -->
-                                    <div class="p-3.5 rounded-2xl bg-slate-900/90 border border-slate-800 text-left space-y-2 shadow-lg">
+                                    <div
+                                        class="p-3.5 rounded-2xl bg-slate-900/90 border border-slate-800 text-left space-y-2 shadow-lg">
                                         <div class="flex items-center justify-between">
-                                            <span class="text-[11px] font-bold text-brand-accent uppercase tracking-wider">Flutter Core</span>
-                                            <span class="text-[10px] px-2 py-0.5 rounded-full bg-brand-500/20 text-brand-300 font-semibold">60 FPS</span>
+                                            <span
+                                                class="text-[11px] font-bold text-brand-accent uppercase tracking-wider">Flutter
+                                                Core</span>
+                                            <span
+                                                class="text-[10px] px-2 py-0.5 rounded-full bg-brand-500/20 text-brand-300 font-semibold">60
+                                                FPS</span>
                                         </div>
                                         <div class="text-xs font-semibold text-white">Offline-First Engine</div>
                                         <div class="w-full bg-slate-800 rounded-full h-1.5 overflow-hidden">
@@ -245,26 +305,36 @@
                                     </div>
 
                                     <!-- Tech Stack Mockup Card 2 -->
-                                    <div class="p-3.5 rounded-2xl bg-slate-900/90 border border-slate-800 text-left space-y-2 shadow-lg">
+                                    <div
+                                        class="p-3.5 rounded-2xl bg-slate-900/90 border border-slate-800 text-left space-y-2 shadow-lg">
                                         <div class="flex items-center justify-between">
-                                            <span class="text-[11px] font-bold text-emerald-400 uppercase tracking-wider">Kotlin Native / CMP</span>
-                                            <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-semibold">Room & Hilt</span>
+                                            <span
+                                                class="text-[11px] font-bold text-emerald-400 uppercase tracking-wider">Kotlin
+                                                Native / CMP</span>
+                                            <span
+                                                class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-semibold">Room
+                                                & Hilt</span>
                                         </div>
                                         <div class="text-xs font-semibold text-white">Jetpack Compose UI</div>
                                         <div class="flex gap-1.5 pt-1">
-                                            <span class="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono">MVVM</span>
-                                            <span class="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono">Coroutines</span>
+                                            <span
+                                                class="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono">MVVM</span>
+                                            <span
+                                                class="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono">Coroutines</span>
                                         </div>
                                     </div>
 
                                     <!-- Payments SDK Card -->
-                                    <div class="p-3 rounded-2xl bg-slate-900/90 border border-slate-800 text-left flex items-center justify-between shadow-lg">
+                                    <div
+                                        class="p-3 rounded-2xl bg-slate-900/90 border border-slate-800 text-left flex items-center justify-between shadow-lg">
                                         <div class="flex items-center gap-2">
-                                            <div class="w-7 h-7 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+                                            <div
+                                                class="w-7 h-7 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-400">
                                                 <i data-lucide="credit-card" class="w-3.5 h-3.5"></i>
                                             </div>
                                             <div>
-                                                <div class="text-[11px] font-bold text-slate-200">Payments Integrated</div>
+                                                <div class="text-[11px] font-bold text-slate-200">Payments Integrated
+                                                </div>
                                                 <div class="text-[9px] text-slate-400">Fawry & MyFatoorah</div>
                                             </div>
                                         </div>
@@ -273,7 +343,8 @@
                                 </div>
 
                                 <!-- Screen Nav Bar -->
-                                <div class="pt-4 border-t border-slate-800/80 flex items-center justify-around text-slate-500">
+                                <div
+                                    class="pt-4 border-t border-slate-800/80 flex items-center justify-around text-slate-500">
                                     <i data-lucide="home" class="w-4 h-4 text-brand-accent"></i>
                                     <i data-lucide="cpu" class="w-4 h-4"></i>
                                     <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
@@ -283,10 +354,12 @@
                         </div>
 
                         <!-- Floating Badges -->
-                        <div class="absolute -top-3 -right-4 bg-slate-900/90 border border-slate-800 px-3 py-1.5 rounded-xl shadow-xl backdrop-blur-md flex items-center gap-2 text-xs font-semibold text-slate-200">
+                        <div
+                            class="absolute -top-3 -right-4 bg-slate-900/90 border border-slate-800 px-3 py-1.5 rounded-xl shadow-xl backdrop-blur-md flex items-center gap-2 text-xs font-semibold text-slate-200">
                             <span class="w-2 h-2 rounded-full bg-sky-400"></span> Flutter
                         </div>
-                        <div class="absolute -bottom-4 -left-4 bg-slate-900/90 border border-slate-800 px-3 py-1.5 rounded-xl shadow-xl backdrop-blur-md flex items-center gap-2 text-xs font-semibold text-slate-200">
+                        <div
+                            class="absolute -bottom-4 -left-4 bg-slate-900/90 border border-slate-800 px-3 py-1.5 rounded-xl shadow-xl backdrop-blur-md flex items-center gap-2 text-xs font-semibold text-slate-200">
                             <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Kotlin / CMP
                         </div>
 
@@ -301,53 +374,67 @@
     <section id="about" class="py-14 sm:py-16 bg-slate-900/40 border-y border-slate-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-12 gap-10 items-center max-w-5xl mx-auto">
-                
+
                 <!-- Profile Portrait Frame -->
                 <div class="lg:col-span-4 flex justify-center">
-                    <img src="assets/img/profile.jpg" alt="Eslam Mohamed Mahmoud" class="w-64 h-64 sm:w-72 sm:h-72 lg:w-full lg:h-80 rounded-3xl object-cover border-2 border-slate-800 shadow-xl" />
+                    <img src="assets/img/profile.jpg" alt="Eslam Mohamed Mahmoud"
+                        class="w-64 h-64 sm:w-72 sm:h-72 lg:w-full lg:h-80 rounded-3xl object-cover border-2 border-slate-800 shadow-xl" />
                 </div>
 
                 <!-- Text Overview -->
                 <div class="lg:col-span-8 space-y-4 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-xs font-semibold text-indigo-400">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-xs font-semibold text-indigo-400">
                         <i data-lucide="user-check" class="w-3.5 h-3.5"></i> Professional Overview
                     </div>
                     <h2 class="text-3xl sm:text-4xl font-extrabold text-white">About Me</h2>
                     <p class="text-slate-400 text-base sm:text-lg leading-relaxed">
-                        Engineering mobile experiences with a relentless focus on code quality, user experience, and architecture scalability. I specialize in designing offline-first mobile applications, refactoring legacy codebases into unified Flutter & CMP systems, and integrating secure payment channels.
+                        Engineering mobile experiences with a relentless focus on code quality, user experience, and
+                        architecture scalability. I specialize in designing offline-first mobile applications,
+                        refactoring legacy codebases into unified Flutter & CMP systems, and integrating secure payment
+                        channels.
                     </p>
                 </div>
             </div>
 
             <!-- Pillars Grid -->
             <div class="grid sm:grid-cols-3 gap-6 mt-12 max-w-5xl mx-auto">
-                <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-all hover:-translate-y-1">
-                    <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-4">
+                <div
+                    class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-all hover:-translate-y-1">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-4">
                         <i data-lucide="zap" class="w-6 h-6"></i>
                     </div>
                     <h3 class="text-lg font-bold text-white mb-2">Performance & Speed</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">
-                        Implementing offline-first architecture, Room/Hive local caching, and efficient pagination for smooth 60 FPS user experience.
+                        Implementing offline-first architecture, Room/Hive local caching, and efficient pagination for
+                        smooth 60 FPS user experience.
                     </p>
                 </div>
 
-                <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-all hover:-translate-y-1">
-                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-4">
+                <div
+                    class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-all hover:-translate-y-1">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-4">
                         <i data-lucide="shield-check" class="w-6 h-6"></i>
                     </div>
                     <h3 class="text-lg font-bold text-white mb-2">Clean Architecture</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">
-                        Adhering strictly to SOLID principles, Clean Architecture, BLoC/Cubit, and MVVM/MVI to ensure maintainability and high test coverage.
+                        Adhering strictly to SOLID principles, Clean Architecture, BLoC/Cubit, and MVVM/MVI to ensure
+                        maintainability and high test coverage.
                     </p>
                 </div>
 
-                <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-all hover:-translate-y-1">
-                    <div class="w-12 h-12 rounded-xl bg-indigo-400/10 border border-indigo-400/20 flex items-center justify-center text-indigo-400 mb-4">
+                <div
+                    class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-all hover:-translate-y-1">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-indigo-400/10 border border-indigo-400/20 flex items-center justify-center text-indigo-400 mb-4">
                         <i data-lucide="refresh-cw" class="w-6 h-6"></i>
                     </div>
                     <h3 class="text-lg font-bold text-white mb-2">Cross-Platform & Native</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">
-                        Expertise spanning Flutter cross-platform apps, Compose Multiplatform (CMP), and native Android (Kotlin) development.
+                        Expertise spanning Flutter cross-platform apps, Compose Multiplatform (CMP), and native Android
+                        (Kotlin) development.
                     </p>
                 </div>
             </div>
@@ -358,7 +445,8 @@
     <section id="experience" class="py-14 sm:py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col items-center text-center space-y-4 mb-16">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-xs font-semibold text-brand-accent">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-xs font-semibold text-brand-accent">
                     <i data-lucide="briefcase" class="w-3.5 h-3.5"></i> Career Journey
                 </div>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Work Experience</h2>
@@ -372,136 +460,211 @@
 
                 <!-- Timeline Item 1: APPWARE -->
                 <div class="relative group">
-                    <div class="absolute -left-[33px] sm:-left-[49px] top-2.5 w-4 h-4 rounded-full bg-indigo-500 shadow-md shadow-indigo-500/50 group-hover:scale-125 transition-transform z-10"></div>
-                    
-                    <div class="p-6 sm:p-8 rounded-3xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 transition-all shadow-xl space-y-4">
+                    <div
+                        class="absolute -left-[33px] sm:-left-[49px] top-2.5 w-4 h-4 rounded-full bg-indigo-500 shadow-md shadow-indigo-500/50 group-hover:scale-125 transition-transform z-10">
+                    </div>
+
+                    <div
+                        class="p-6 sm:p-8 rounded-3xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 transition-all shadow-xl space-y-4">
                         <div class="flex flex-wrap items-center justify-between gap-2">
                             <div>
                                 <h3 class="text-xl font-bold text-white flex items-center gap-3">
                                     APPWARE
-                                    <span class="text-xs px-3 py-1 rounded-full bg-brand-500/10 text-brand-accent font-semibold border border-brand-500/20">Flutter Developer</span>
+                                    <span
+                                        class="text-xs px-3 py-1 rounded-full bg-brand-500/10 text-brand-accent font-semibold border border-brand-500/20">Flutter
+                                        Developer</span>
                                 </h3>
-                                <p class="text-xs text-slate-400 font-medium mt-1">Nursery & School Tracking Platforms • White-Label Mobile Architecture</p>
+                                <p class="text-xs text-slate-400 font-medium mt-1">Nursery & School Tracking Platforms •
+                                    White-Label Mobile Architecture</p>
                             </div>
-                            <div class="text-xs font-semibold text-slate-400 bg-slate-800/80 px-3 py-1.5 rounded-xl border border-slate-700/50 flex items-center gap-1.5">
+                            <div
+                                class="text-xs font-semibold text-slate-400 bg-slate-800/80 px-3 py-1.5 rounded-xl border border-slate-700/50 flex items-center gap-1.5">
                                 <i data-lucide="calendar" class="w-3.5 h-3.5 text-brand-accent"></i> Mar 2026 – Present
                             </div>
                         </div>
 
                         <ul class="space-y-2.5 text-slate-300 text-sm sm:text-base">
                             <li class="flex items-start gap-3">
-                                <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-accent flex-shrink-0 mt-0.5"></i>
-                                <span>Spearheaded the legacy native migration to <strong class="text-white">Flutter</strong>, establishing a unified cross-platform codebase and scalable white-label architecture for nursery & school tracking products.</span>
+                                <i data-lucide="check-circle-2"
+                                    class="w-5 h-5 text-brand-accent flex-shrink-0 mt-0.5"></i>
+                                <span>Spearheaded the legacy native migration to <strong
+                                        class="text-white">Flutter</strong>, establishing a unified cross-platform
+                                    codebase and scalable white-label architecture for nursery & school tracking
+                                    products.</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-accent flex-shrink-0 mt-0.5"></i>
-                                <span>Engineered a modular UI component system with high-performance responsive layouts for real-time student tracking and notifications.</span>
+                                <i data-lucide="check-circle-2"
+                                    class="w-5 h-5 text-brand-accent flex-shrink-0 mt-0.5"></i>
+                                <span>Engineered a modular UI component system with high-performance responsive layouts
+                                    for real-time student tracking and notifications.</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
-                                <span><strong class="text-emerald-400">Boosted app performance by 70%</strong> by implementing an offline-first strategy and efficient data pagination.</span>
+                                <i data-lucide="check-circle-2"
+                                    class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                                <span><strong class="text-emerald-400">Boosted app performance by 70%</strong> by
+                                    implementing an offline-first strategy and efficient data pagination.</span>
                             </li>
                         </ul>
 
                         <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-800/80">
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Flutter</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Clean Architecture</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Offline-First</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Pagination</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">White-Label Architecture</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">EdTech Tracking</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Flutter</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Clean
+                                Architecture</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Offline-First</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Pagination</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">White-Label
+                                Architecture</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">EdTech
+                                Tracking</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Timeline Item 2: ART 4 MUSLIM -->
                 <div class="relative group">
-                    <div class="absolute -left-[33px] sm:-left-[49px] top-2.5 w-4 h-4 rounded-full bg-indigo-400 shadow-md shadow-indigo-400/50 group-hover:scale-125 transition-transform z-10"></div>
-                    
-                    <div class="p-6 sm:p-8 rounded-3xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 transition-all shadow-xl space-y-4">
+                    <div
+                        class="absolute -left-[33px] sm:-left-[49px] top-2.5 w-4 h-4 rounded-full bg-indigo-400 shadow-md shadow-indigo-400/50 group-hover:scale-125 transition-transform z-10">
+                    </div>
+
+                    <div
+                        class="p-6 sm:p-8 rounded-3xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 transition-all shadow-xl space-y-4">
                         <div class="flex flex-wrap items-center justify-between gap-2">
                             <div>
                                 <h3 class="text-xl font-bold text-white flex items-center gap-3">
                                     ART 4 MUSLIM
-                                    <span class="text-xs px-3 py-1 rounded-full bg-brand-accent/10 text-brand-accent font-semibold border border-brand-accent/20">Flutter Developer</span>
+                                    <span
+                                        class="text-xs px-3 py-1 rounded-full bg-brand-accent/10 text-brand-accent font-semibold border border-brand-accent/20">Flutter
+                                        Developer</span>
                                 </h3>
-                                <p class="text-xs text-slate-400 font-medium mt-1">Software House & Enterprise Digital Solutions Agency</p>
+                                <p class="text-xs text-slate-400 font-medium mt-1">Software House & Enterprise Digital
+                                    Solutions Agency</p>
                             </div>
-                            <div class="text-xs font-semibold text-slate-400 bg-slate-800/80 px-3 py-1.5 rounded-xl border border-slate-700/50 flex items-center gap-1.5">
+                            <div
+                                class="text-xs font-semibold text-slate-400 bg-slate-800/80 px-3 py-1.5 rounded-xl border border-slate-700/50 flex items-center gap-1.5">
                                 <i data-lucide="calendar" class="w-3.5 h-3.5 text-brand-accent"></i> Jun 2024 – Feb 2026
                             </div>
                         </div>
 
                         <ul class="space-y-2.5 text-slate-300 text-sm sm:text-base">
                             <li class="flex items-start gap-3">
-                                <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-accent flex-shrink-0 mt-0.5"></i>
-                                <span>Translated complex Figma designs into high-quality, maintainable Flutter code adhering to clean architecture principles across enterprise projects.</span>
+                                <i data-lucide="check-circle-2"
+                                    class="w-5 h-5 text-brand-accent flex-shrink-0 mt-0.5"></i>
+                                <span>Translated complex Figma designs into high-quality, maintainable Flutter code
+                                    adhering to clean architecture principles across enterprise projects.</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
-                                <span>Diagnosed and resolved critical application bottlenecks, <strong class="text-emerald-400">improving overall app stability by 35%</strong>.</span>
+                                <i data-lucide="check-circle-2"
+                                    class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                                <span>Diagnosed and resolved critical application bottlenecks, <strong
+                                        class="text-emerald-400">improving overall app stability by 35%</strong>.</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
-                                <span>Optimized network rendering and memory management, achieving <strong class="text-emerald-400">40% faster initial load times</strong> and smoother UI performance.</span>
+                                <i data-lucide="check-circle-2"
+                                    class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                                <span>Optimized network rendering and memory management, achieving <strong
+                                        class="text-emerald-400">40% faster initial load times</strong> and smoother UI
+                                    performance.</span>
                             </li>
                             <li class="flex items-start gap-3">
                                 <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-400 flex-shrink-0 mt-0.5"></i>
-                                <span>Integrated the <strong class="text-white">MyFatoorah payment gateway SDK</strong>, directly driving a <strong class="text-brand-400">70% increase in checkout sales conversion</strong>.</span>
+                                <span>Integrated the <strong class="text-white">MyFatoorah payment gateway SDK</strong>,
+                                    directly driving a <strong class="text-brand-400">70% increase in checkout sales
+                                        conversion</strong>.</span>
                             </li>
                         </ul>
 
                         <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-800/80">
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Flutter</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">MyFatoorah Payment SDK</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Clean Architecture</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Performance Tuning</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Figma-to-Code</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Stability (+35%)</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Flutter</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">MyFatoorah
+                                Payment SDK</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Clean
+                                Architecture</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Performance
+                                Tuning</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Figma-to-Code</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Stability
+                                (+35%)</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Timeline Item 3: ZAZOME -->
                 <div class="relative group">
-                    <div class="absolute -left-[33px] sm:-left-[49px] top-2.5 w-4 h-4 rounded-full bg-slate-500 shadow-md group-hover:scale-125 transition-transform z-10"></div>
-                    
-                    <div class="p-6 sm:p-8 rounded-3xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 transition-all shadow-xl space-y-4">
+                    <div
+                        class="absolute -left-[33px] sm:-left-[49px] top-2.5 w-4 h-4 rounded-full bg-slate-500 shadow-md group-hover:scale-125 transition-transform z-10">
+                    </div>
+
+                    <div
+                        class="p-6 sm:p-8 rounded-3xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 transition-all shadow-xl space-y-4">
                         <div class="flex flex-wrap items-center justify-between gap-2">
                             <div>
                                 <h3 class="text-xl font-bold text-white flex items-center gap-3">
                                     ZAZOME
-                                    <span class="text-xs px-3 py-1 rounded-full bg-slate-800 text-slate-300 font-semibold border border-slate-700">Flutter Developer</span>
+                                    <span
+                                        class="text-xs px-3 py-1 rounded-full bg-slate-800 text-slate-300 font-semibold border border-slate-700">Flutter
+                                        Developer</span>
                                 </h3>
-                                <p class="text-xs text-slate-400 font-medium mt-1">E-Commerce, Retail & HR Solutions Platform</p>
+                                <p class="text-xs text-slate-400 font-medium mt-1">E-Commerce, Retail & HR Solutions
+                                    Platform</p>
                             </div>
-                            <div class="text-xs font-semibold text-slate-400 bg-slate-800/80 px-3 py-1.5 rounded-xl border border-slate-700/50 flex items-center gap-1.5">
+                            <div
+                                class="text-xs font-semibold text-slate-400 bg-slate-800/80 px-3 py-1.5 rounded-xl border border-slate-700/50 flex items-center gap-1.5">
                                 <i data-lucide="calendar" class="w-3.5 h-3.5 text-brand-accent"></i> Dec 2022 – May 2024
                             </div>
                         </div>
 
                         <ul class="space-y-2.5 text-slate-300 text-sm sm:text-base">
                             <li class="flex items-start gap-3">
-                                <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-accent flex-shrink-0 mt-0.5"></i>
-                                <span>Executed the <strong class="text-white">Legacy Migration</strong> of two core mobile applications from scratch into Flutter, modernizing technical architecture and developer velocity.</span>
+                                <i data-lucide="check-circle-2"
+                                    class="w-5 h-5 text-brand-accent flex-shrink-0 mt-0.5"></i>
+                                <span>Executed the <strong class="text-white">Legacy Migration</strong> of two core
+                                    mobile applications from scratch into Flutter, modernizing technical architecture
+                                    and developer velocity.</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-accent flex-shrink-0 mt-0.5"></i>
-                                <span>Built scalable retail & e-commerce features that enhanced digital shopping experiences for <strong class="text-white">10,000+ active users</strong>.</span>
+                                <i data-lucide="check-circle-2"
+                                    class="w-5 h-5 text-brand-accent flex-shrink-0 mt-0.5"></i>
+                                <span>Built scalable retail & e-commerce features that enhanced digital shopping
+                                    experiences for <strong class="text-white">10,000+ active users</strong>.</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-accent flex-shrink-0 mt-0.5"></i>
-                                <span>Integrated <strong class="text-white">Fawry payment gateway</strong> with robust transaction fallback, securely processing thousands of monthly payments.</span>
+                                <i data-lucide="check-circle-2"
+                                    class="w-5 h-5 text-brand-accent flex-shrink-0 mt-0.5"></i>
+                                <span>Integrated <strong class="text-white">Fawry payment gateway</strong> with robust
+                                    transaction fallback, securely processing thousands of monthly payments.</span>
                             </li>
                         </ul>
 
                         <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-800/80">
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Flutter</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Fawry Payment Gateway</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">E-Commerce & Retail</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">HR Systems</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Legacy Migration</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">10,000+ Users</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Flutter</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Fawry
+                                Payment Gateway</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">E-Commerce
+                                & Retail</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">HR
+                                Systems</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Legacy
+                                Migration</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">10,000+
+                                Users</span>
                         </div>
                     </div>
                 </div>
@@ -514,22 +677,26 @@
     <section id="skills" class="py-14 sm:py-16 bg-slate-900/40 border-y border-slate-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center space-y-4 mb-16">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-xs font-semibold text-brand-accent">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-xs font-semibold text-brand-accent">
                     <i data-lucide="code-2" class="w-3.5 h-3.5"></i> Technical Expertise
                 </div>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Skills & Stack</h2>
                 <p class="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
-                    Core languages, frameworks, state management tools, and testing practices I utilize to build modern apps.
+                    Core languages, frameworks, state management tools, and testing practices I utilize to build modern
+                    apps.
                 </p>
             </div>
 
             <!-- Skills Categorized Grid (3 cols x 2 rows) -->
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-                
+
                 <!-- Category 1: Core Languages -->
-                <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4 hover:border-slate-700 transition-all">
+                <div
+                    class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4 hover:border-slate-700 transition-all">
                     <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-accent">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-accent">
                             <i data-lucide="terminal" class="w-5 h-5"></i>
                         </div>
                         <h3 class="font-bold text-white text-base">Core Languages</h3>
@@ -541,9 +708,11 @@
                 </div>
 
                 <!-- Category 2: Cross-Platform (Flutter & CMP) -->
-                <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4 hover:border-slate-700 transition-all">
+                <div
+                    class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4 hover:border-slate-700 transition-all">
                     <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400">
                             <i data-lucide="smartphone" class="w-5 h-5"></i>
                         </div>
                         <h3 class="font-bold text-white text-base">Cross-Platform (Flutter & CMP)</h3>
@@ -562,9 +731,11 @@
                 </div>
 
                 <!-- Category 3: Native Android Stack -->
-                <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4 hover:border-slate-700 transition-all">
+                <div
+                    class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4 hover:border-slate-700 transition-all">
                     <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
                             <i data-lucide="cpu" class="w-5 h-5"></i>
                         </div>
                         <h3 class="font-bold text-white text-base">Native Android Stack</h3>
@@ -581,9 +752,11 @@
                 </div>
 
                 <!-- Category 4: Architecture & Quality Assurance -->
-                <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4 hover:border-slate-700 transition-all">
+                <div
+                    class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4 hover:border-slate-700 transition-all">
                     <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
                             <i data-lucide="layers" class="w-5 h-5"></i>
                         </div>
                         <h3 class="font-bold text-white text-base">Architecture & QA</h3>
@@ -599,9 +772,11 @@
                 </div>
 
                 <!-- Category 5: Payments, Maps & Native SDKs -->
-                <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4 hover:border-slate-700 transition-all">
+                <div
+                    class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4 hover:border-slate-700 transition-all">
                     <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
                             <i data-lucide="credit-card" class="w-5 h-5"></i>
                         </div>
                         <h3 class="font-bold text-white text-base">Payments, Maps & SDKs</h3>
@@ -618,9 +793,11 @@
                 </div>
 
                 <!-- Category 6: Dev Tools & Workflow -->
-                <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4 hover:border-slate-700 transition-all">
+                <div
+                    class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4 hover:border-slate-700 transition-all">
                     <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400">
                             <i data-lucide="git-branch" class="w-5 h-5"></i>
                         </div>
                         <h3 class="font-bold text-white text-base">Tools & Workflow</h3>
@@ -643,386 +820,710 @@
     <section id="projects" class="py-14 sm:py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col items-center text-center space-y-4 mb-16">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-xs font-semibold text-brand-accent">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-xs font-semibold text-brand-accent">
                     <i data-lucide="folder-git-2" class="w-3.5 h-3.5"></i> Featured Work
                 </div>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Mobile Projects</h2>
                 <p class="text-slate-400 text-sm sm:text-base max-w-xl">
-                    Real-world applications built across Compose Multiplatform, Jetpack Compose, and Flutter for thousands of active users.
+                    Real-world applications built across Compose Multiplatform, Jetpack Compose, and Flutter for
+                    thousands of active users.
                 </p>
             </div>
 
             <!-- Interactive Technology Filter Bar -->
             <div class="flex flex-wrap items-center justify-center gap-2 mb-10" id="project-filters">
-                <button type="button" data-filter="all" class="project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 bg-indigo-600 !text-white shadow-lg shadow-indigo-500/25 border border-indigo-500">
+                <button type="button" data-filter="all"
+                    class="project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 bg-indigo-600 !text-white shadow-lg shadow-indigo-500/25 border border-indigo-500">
                     All Projects
                 </button>
-                <button type="button" data-filter="flutter" class="project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-slate-700">
+                <button type="button" data-filter="flutter"
+                    class="project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-slate-700">
                     Flutter
                 </button>
-                <button type="button" data-filter="cmp" class="project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-slate-700">
+                <button type="button" data-filter="cmp"
+                    class="project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-slate-700">
                     Kotlin Multiplatform (KMP)
                 </button>
-                <button type="button" data-filter="native" class="project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-slate-700">
+                <button type="button" data-filter="native"
+                    class="project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-slate-700">
                     Native Android
                 </button>
             </div>
 
             <!-- Projects Grid -->
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto" id="projects-grid">
-                
+
                 <!-- Project 1: Al-Monqiz Al-Shamel -->
-                <div data-category="flutter" class="project-card group p-6 rounded-3xl bg-slate-900 border border-slate-800 hover:border-brand-500/50 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5 shadow-xl">
+                <div data-category="flutter"
+                    class="project-card group p-6 rounded-3xl bg-slate-900 border border-slate-800 hover:border-brand-500/50 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5 shadow-xl">
                     <div class="space-y-4">
                         <!-- Al-Monqidh Project Image Carousel (5 Showcase Slides) -->
-                        <div class="almonqez-carousel w-full h-48 rounded-2xl bg-slate-950 border border-slate-800/80 overflow-hidden relative group/carousel">
+                        <div
+                            class="almonqez-carousel w-full h-48 rounded-2xl bg-slate-950 border border-slate-800/80 overflow-hidden relative group/carousel">
                             <!-- Slides Track -->
                             <div class="almonqez-track flex w-full h-full transition-transform duration-500 ease-out">
-                                <img src="assets/img/almonqez-1.png" alt="Al-Monqiz Al-Shamel - Multi-Role Onboarding Showcase" class="w-full h-full object-cover object-top flex-shrink-0" />
-                                <img src="assets/img/almonqez-2.png" alt="Al-Monqiz Al-Shamel - App Gateways & Core Feature Hubs Showcase" class="w-full h-full object-cover object-top flex-shrink-0" />
-                                <img src="assets/img/almonqez-3.png" alt="Al-Monqiz Al-Shamel - On-Demand Service Request & Technician Bidding Showcase" class="w-full h-full object-cover object-top flex-shrink-0" />
-                                <img src="assets/img/almonqez-4.png" alt="Al-Monqiz Al-Shamel - Multi-Vendor E-Commerce Store Showcase" class="w-full h-full object-cover object-top flex-shrink-0" />
-                                <img src="assets/img/almonqez-5.png" alt="Al-Monqiz Al-Shamel - Multi-Store Carts & Checkout Completion Showcase" class="w-full h-full object-cover object-top flex-shrink-0" />
+                                <img src="assets/img/almonqez-1.png"
+                                    alt="Al-Monqiz Al-Shamel - Multi-Role Onboarding Showcase"
+                                    class="w-full h-full object-cover object-top flex-shrink-0" />
+                                <img src="assets/img/almonqez-2.png"
+                                    alt="Al-Monqiz Al-Shamel - App Gateways & Core Feature Hubs Showcase"
+                                    class="w-full h-full object-cover object-top flex-shrink-0" />
+                                <img src="assets/img/almonqez-3.png"
+                                    alt="Al-Monqiz Al-Shamel - On-Demand Service Request & Technician Bidding Showcase"
+                                    class="w-full h-full object-cover object-top flex-shrink-0" />
+                                <img src="assets/img/almonqez-4.png"
+                                    alt="Al-Monqiz Al-Shamel - Multi-Vendor E-Commerce Store Showcase"
+                                    class="w-full h-full object-cover object-top flex-shrink-0" />
+                                <img src="assets/img/almonqez-5.png"
+                                    alt="Al-Monqiz Al-Shamel - Multi-Store Carts & Checkout Completion Showcase"
+                                    class="w-full h-full object-cover object-top flex-shrink-0" />
                             </div>
 
                             <!-- Navigation Arrows -->
-                            <button type="button" class="almonqez-prev absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-slate-950/80 border border-slate-800 text-white opacity-80 hover:opacity-100 transition-opacity hover:bg-indigo-600 flex items-center justify-center z-10" aria-label="Previous Slide">
+                            <button type="button"
+                                class="almonqez-prev absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-slate-950/80 border border-slate-800 text-white opacity-80 hover:opacity-100 transition-opacity hover:bg-indigo-600 flex items-center justify-center z-10"
+                                aria-label="Previous Slide">
                                 <i data-lucide="chevron-left" class="w-4 h-4"></i>
                             </button>
-                            <button type="button" class="almonqez-next absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-slate-950/80 border border-slate-800 text-white opacity-80 hover:opacity-100 transition-opacity hover:bg-indigo-600 flex items-center justify-center z-10" aria-label="Next Slide">
+                            <button type="button"
+                                class="almonqez-next absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-slate-950/80 border border-slate-800 text-white opacity-80 hover:opacity-100 transition-opacity hover:bg-indigo-600 flex items-center justify-center z-10"
+                                aria-label="Next Slide">
                                 <i data-lucide="chevron-right" class="w-4 h-4"></i>
                             </button>
 
                             <!-- Slide Indicators / Dots -->
-                            <div class="almonqez-dots absolute bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-10 bg-slate-950/70 px-2.5 py-1 rounded-full border border-slate-800/60">
-                                <button type="button" class="almonqez-dot w-2.5 h-2.5 rounded-full bg-indigo-400 transition-all" aria-label="Slide 1"></button>
-                                <button type="button" class="almonqez-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all" aria-label="Slide 2"></button>
-                                <button type="button" class="almonqez-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all" aria-label="Slide 3"></button>
-                                <button type="button" class="almonqez-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all" aria-label="Slide 4"></button>
-                                <button type="button" class="almonqez-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all" aria-label="Slide 5"></button>
+                            <div
+                                class="almonqez-dots absolute bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-10 bg-slate-950/70 px-2.5 py-1 rounded-full border border-slate-800/60">
+                                <button type="button"
+                                    class="almonqez-dot w-2.5 h-2.5 rounded-full bg-indigo-400 transition-all"
+                                    aria-label="Slide 1"></button>
+                                <button type="button"
+                                    class="almonqez-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all"
+                                    aria-label="Slide 2"></button>
+                                <button type="button"
+                                    class="almonqez-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all"
+                                    aria-label="Slide 3"></button>
+                                <button type="button"
+                                    class="almonqez-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all"
+                                    aria-label="Slide 4"></button>
+                                <button type="button"
+                                    class="almonqez-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all"
+                                    aria-label="Slide 5"></button>
                             </div>
                         </div>
 
                         <div class="space-y-2">
                             <div class="flex items-center justify-between gap-2">
-                                <h3 class="text-xl font-bold text-white group-hover:text-brand-accent transition-colors">Al-Monqiz Al-Shamel</h3>
-                                <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-brand-500/10 text-brand-accent border border-brand-500/20 shrink-0">Flutter</span>
+                                <h3
+                                    class="text-xl font-bold text-white group-hover:text-brand-accent transition-colors">
+                                    Al-Monqiz Al-Shamel</h3>
+                                <span
+                                    class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-brand-500/10 text-brand-accent border border-brand-500/20 shrink-0">Flutter</span>
                             </div>
                             <p class="text-slate-400 text-sm leading-relaxed">
-                                Engineered the complete multi-role mobile application end-to-end (4 user types), combining on-demand service bidding, multi-vendor carts, photo completion proof, and payment gateways (Apple Pay, Tabby & Tamara BNPL).
+                                Engineered the complete multi-role mobile application end-to-end (4 user types),
+                                combining on-demand service bidding, multi-vendor carts, photo completion proof, and
+                                payment gateways (Apple Pay, Tabby & Tamara BNPL).
                             </p>
                         </div>
 
                         <div class="flex flex-wrap gap-1.5 pt-2">
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">4 User Roles</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">On-Demand Bidding</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Multi-Vendor Cart</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">MyFatoorah SDK</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Apple Pay</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Tabby BNPL</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Tamara BNPL</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">4
+                                User Roles</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">On-Demand
+                                Bidding</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Multi-Vendor
+                                Cart</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">FCM
+                                Notifications</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">MyFatoorah
+                                SDK</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Apple
+                                Pay</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Tabby
+                                BNPL</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Tamara
+                                BNPL</span>
                         </div>
                     </div>
 
                     <div class="pt-6 mt-6 border-t border-slate-800/80 flex items-center justify-between">
                         <span class="text-xs font-medium text-slate-400">ART 4 MUSLIM</span>
                         <div class="flex items-center gap-2">
-                            <a href="https://play.google.com/store/apps/details?id=com.art4muslim.savior" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 hover:bg-slate-900 text-slate-300 hover:text-white transition-all hover:scale-110 flex items-center justify-center shadow-md" title="Google Play Store">
-                                <svg class="w-4 h-4 fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Google Play</title><path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg>
+                            <a href="https://play.google.com/store/apps/details?id=com.art4muslim.savior"
+                                target="_blank" rel="noopener noreferrer"
+                                class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 hover:bg-slate-900 text-slate-300 hover:text-white transition-all hover:scale-110 flex items-center justify-center shadow-md"
+                                title="Google Play Store">
+                                <svg class="w-4 h-4 fill-current" role="img" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <title>Google Play</title>
+                                    <path
+                                        d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z" />
+                                </svg>
                             </a>
-                            <a href="https://apps.apple.com/qa/app/%D8%A7%D9%84%D9%85%D9%86%D9%82%D8%B0-%D8%A7%D9%84%D8%B4%D8%A7%D9%85%D9%84/id6749821522" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 hover:bg-slate-900 text-slate-300 hover:text-white transition-all hover:scale-110 flex items-center justify-center shadow-md" title="Apple App Store">
-                                <svg class="w-4 h-4 fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>App Store</title><path d="M8.8086 14.9194l6.1107-11.0368c.0837-.1513.1682-.302.2437-.4584.0685-.142.1267-.2854.1646-.4403.0803-.3259.0588-.6656-.066-.9767-.1238-.3095-.3417-.5678-.6201-.7355a1.4175 1.4175 0 0 0-.921-.1924c-.3207.043-.6135.1935-.8443.4288-.1094.1118-.1996.2361-.2832.369-.092.1463-.175.2979-.259.4492l-.3864.6979-.3865-.6979c-.0837-.1515-.1667-.303-.2587-.4492-.0837-.1329-.1739-.2572-.2835-.369-.2305-.2353-.5233-.3857-.844-.429a1.4181 1.4181 0 0 0-.921.1926c-.2784.1677-.4964.426-.6203.7355-.1246.311-.1461.6508-.066.9767.038.155.0962.2984.1648.4403.0753.1564.1598.307.2437.4584l1.248 2.2543-4.8625 8.7825H2.0295c-.1676 0-.3351-.0007-.5026.0092-.1522.009-.3004.0284-.448.0714-.3108.0906-.5822.2798-.7783.548-.195.2665-.3006.5929-.3006.9279 0 .3352.1057.6612.3006.9277.196.2683.4675.4575.7782.548.1477.043.296.0623.4481.0715.1675.01.335.009.5026.009h13.0974c.0171-.0357.059-.1294.1-.2697.415-1.4151-.6156-2.843-2.0347-2.843zM3.113 18.5418l-.7922 1.5008c-.0818.1553-.1644.31-.2384.4705-.067.1458-.124.293-.1611.452-.0785.3346-.0576.6834.0645 1.0029.1212.3175.3346.583.607.7549.2727.172.5891.2416.9013.1975.3139-.044.6005-.1986.8263-.4402.1072-.1148.1954-.2424.2772-.3787.0902-.1503.1714-.3059.2535-.4612L6 19.4636c-.0896-.149-.9473-1.4704-2.887-.9218m20.5861-3.0056a1.4707 1.4707 0 0 0-.779-.5407c-.1476-.0425-.2961-.0616-.4483-.0705-.1678-.0099-.3352-.0091-.503-.0091H18.648l-4.3891-7.817c-.6655.7005-.9632 1.485-1.0773 2.1976-.1655 1.0333.0367 2.0934.546 3.0004l5.2741 9.3933c.084.1494.167.299.2591.4435.0837.131.1739.2537.2836.364.231.2323.5238.3809.8449.4232.3192.0424.643-.0244.9217-.1899.2784-.1653.4968-.4204.621-.7257.1246-.3072.146-.6425.0658-.9641-.0381-.1529-.0962-.2945-.165-.4346-.0753-.1543-.1598-.303-.2438-.4524l-1.216-2.1662h1.596c.1677 0 .3351.0009.5029-.009.1522-.009.3007-.028.4483-.0705a1.4707 1.4707 0 0 0 .779-.5407A1.5386 1.5386 0 0 0 24 16.452a1.539 1.539 0 0 0-.3009-.9158Z"/></svg>
+                            <a href="https://apps.apple.com/qa/app/%D8%A7%D9%84%D9%85%D9%86%D9%82%D8%B0-%D8%A7%D9%84%D8%B4%D8%A7%D9%85%D9%84/id6749821522"
+                                target="_blank" rel="noopener noreferrer"
+                                class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 hover:bg-slate-900 text-slate-300 hover:text-white transition-all hover:scale-110 flex items-center justify-center shadow-md"
+                                title="Apple App Store">
+                                <svg class="w-4 h-4 fill-current" role="img" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <title>App Store</title>
+                                    <path
+                                        d="M8.8086 14.9194l6.1107-11.0368c.0837-.1513.1682-.302.2437-.4584.0685-.142.1267-.2854.1646-.4403.0803-.3259.0588-.6656-.066-.9767-.1238-.3095-.3417-.5678-.6201-.7355a1.4175 1.4175 0 0 0-.921-.1924c-.3207.043-.6135.1935-.8443.4288-.1094.1118-.1996.2361-.2832.369-.092.1463-.175.2979-.259.4492l-.3864.6979-.3865-.6979c-.0837-.1515-.1667-.303-.2587-.4492-.0837-.1329-.1739-.2572-.2835-.369-.2305-.2353-.5233-.3857-.844-.429a1.4181 1.4181 0 0 0-.921.1926c-.2784.1677-.4964.426-.6203.7355-.1246.311-.1461.6508-.066.9767.038.155.0962.2984.1648.4403.0753.1564.1598.307.2437.4584l1.248 2.2543-4.8625 8.7825H2.0295c-.1676 0-.3351-.0007-.5026.0092-.1522.009-.3004.0284-.448.0714-.3108.0906-.5822.2798-.7783.548-.195.2665-.3006.5929-.3006.9279 0 .3352.1057.6612.3006.9277.196.2683.4675.4575.7782.548.1477.043.296.0623.4481.0715.1675.01.335.009.5026.009h13.0974c.0171-.0357.059-.1294.1-.2697.415-1.4151-.6156-2.843-2.0347-2.843zM3.113 18.5418l-.7922 1.5008c-.0818.1553-.1644.31-.2384.4705-.067.1458-.124.293-.1611.452-.0785.3346-.0576.6834.0645 1.0029.1212.3175.3346.583.607.7549.2727.172.5891.2416.9013.1975.3139-.044.6005-.1986.8263-.4402.1072-.1148.1954-.2424.2772-.3787.0902-.1503.1714-.3059.2535-.4612L6 19.4636c-.0896-.149-.9473-1.4704-2.887-.9218m20.5861-3.0056a1.4707 1.4707 0 0 0-.779-.5407c-.1476-.0425-.2961-.0616-.4483-.0705-.1678-.0099-.3352-.0091-.503-.0091H18.648l-4.3891-7.817c-.6655.7005-.9632 1.485-1.0773 2.1976-.1655 1.0333.0367 2.0934.546 3.0004l5.2741 9.3933c.084.1494.167.299.2591.4435.0837.131.1739.2537.2836.364.231.2323.5238.3809.8449.4232.3192.0424.643-.0244.9217-.1899.2784-.1653.4968-.4204.621-.7257.1246-.3072.146-.6425.0658-.9641-.0381-.1529-.0962-.2945-.165-.4346-.0753-.1543-.1598-.303-.2438-.4524l-1.216-2.1662h1.596c.1677 0 .3351.0009.5029-.009.1522-.009.3007-.028.4483-.0705a1.4707 1.4707 0 0 0 .779-.5407A1.5386 1.5386 0 0 0 24 16.452a1.539 1.539 0 0 0-.3009-.9158Z" />
+                                </svg>
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 2: Ali Bin Ali Hospital App -->
-                <div data-category="flutter" class="project-card group p-6 rounded-3xl bg-slate-900 border border-slate-800 hover:border-brand-500/50 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5 shadow-xl">
+                <div data-category="flutter"
+                    class="project-card group p-6 rounded-3xl bg-slate-900 border border-slate-800 hover:border-brand-500/50 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5 shadow-xl">
                     <div class="space-y-4">
                         <!-- Ali Bin Ali Hospital Image Carousel (2 Showcase Slides) -->
-                        <div class="abah-carousel w-full h-48 rounded-2xl bg-slate-950 border border-slate-800/80 overflow-hidden relative group/carousel">
+                        <div
+                            class="abah-carousel w-full h-48 rounded-2xl bg-slate-950 border border-slate-800/80 overflow-hidden relative group/carousel">
                             <!-- Slides Track -->
                             <div class="abah-track flex w-full h-full transition-transform duration-500 ease-out">
-                                <img src="assets/img/abah-1.png" alt="Ali Bin Ali Hospital - Onboarding & Patient Portal Hub Showcase" class="w-full h-full object-cover object-top flex-shrink-0" />
-                                <img src="assets/img/abah-2.png" alt="Ali Bin Ali Hospital - Doctor Search, Booking & Medical File Hub Showcase" class="w-full h-full object-cover object-top flex-shrink-0" />
+                                <img src="assets/img/abah-1.png"
+                                    alt="Ali Bin Ali Hospital - Onboarding & Patient Portal Hub Showcase"
+                                    class="w-full h-full object-cover object-top flex-shrink-0" />
+                                <img src="assets/img/abah-2.png"
+                                    alt="Ali Bin Ali Hospital - Doctor Search, Booking & Medical File Hub Showcase"
+                                    class="w-full h-full object-cover object-top flex-shrink-0" />
                             </div>
 
                             <!-- Navigation Arrows -->
-                            <button type="button" class="abah-prev absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-slate-950/80 border border-slate-800 text-white opacity-80 hover:opacity-100 transition-opacity hover:bg-indigo-600 flex items-center justify-center z-10" aria-label="Previous Slide">
+                            <button type="button"
+                                class="abah-prev absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-slate-950/80 border border-slate-800 text-white opacity-80 hover:opacity-100 transition-opacity hover:bg-indigo-600 flex items-center justify-center z-10"
+                                aria-label="Previous Slide">
                                 <i data-lucide="chevron-left" class="w-4 h-4"></i>
                             </button>
-                            <button type="button" class="abah-next absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-slate-950/80 border border-slate-800 text-white opacity-80 hover:opacity-100 transition-opacity hover:bg-indigo-600 flex items-center justify-center z-10" aria-label="Next Slide">
+                            <button type="button"
+                                class="abah-next absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-slate-950/80 border border-slate-800 text-white opacity-80 hover:opacity-100 transition-opacity hover:bg-indigo-600 flex items-center justify-center z-10"
+                                aria-label="Next Slide">
                                 <i data-lucide="chevron-right" class="w-4 h-4"></i>
                             </button>
 
                             <!-- Slide Indicators / Dots -->
-                            <div class="abah-dots absolute bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-10 bg-slate-950/70 px-2.5 py-1 rounded-full border border-slate-800/60">
-                                <button type="button" class="abah-dot w-2.5 h-2.5 rounded-full bg-indigo-400 transition-all" aria-label="Slide 1"></button>
-                                <button type="button" class="abah-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all" aria-label="Slide 2"></button>
+                            <div
+                                class="abah-dots absolute bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-10 bg-slate-950/70 px-2.5 py-1 rounded-full border border-slate-800/60">
+                                <button type="button"
+                                    class="abah-dot w-2.5 h-2.5 rounded-full bg-indigo-400 transition-all"
+                                    aria-label="Slide 1"></button>
+                                <button type="button"
+                                    class="abah-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all"
+                                    aria-label="Slide 2"></button>
                             </div>
                         </div>
 
                         <div class="space-y-2">
                             <div class="flex items-center justify-between">
-                                <h3 class="text-xl font-bold text-white group-hover:text-brand-accent transition-colors">Ali Bin Ali Hospital</h3>
-                                <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-brand-500/10 text-brand-accent border border-brand-500/20">Flutter</span>
+                                <h3
+                                    class="text-xl font-bold text-white group-hover:text-brand-accent transition-colors">
+                                    Ali Bin Ali Hospital</h3>
+                                <span
+                                    class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-brand-500/10 text-brand-accent border border-brand-500/20">Flutter</span>
                             </div>
                             <p class="text-slate-400 text-sm leading-relaxed">
-                                Architected a comprehensive hospital patient management solution serving 25,000+ active users, streamlining real-time doctor consultations, specialist appointment booking, medical offer discovery, and secure patient health record access.
+                                Architected a comprehensive hospital patient management solution serving 25,000+ active
+                                users, streamlining real-time doctor consultations, specialist appointment booking,
+                                medical offer discovery, and secure patient health record access.
                             </p>
                         </div>
 
                         <div class="flex flex-wrap gap-1.5 pt-2">
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Hospital Management</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Doctor Consultations</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Appointment Booking</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">25,000+ Users</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Hospital
+                                Management</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Doctor
+                                Consultations</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Appointment
+                                Booking</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">25,000+
+                                Users</span>
                         </div>
                     </div>
 
                     <div class="pt-6 mt-6 border-t border-slate-800/80 flex items-center justify-between">
                         <span class="text-xs font-medium text-slate-400">Freelance</span>
                         <div class="flex items-center gap-2">
-                            <a href="https://play.google.com/store/apps/details?id=com.we_are_devs.abah.abah" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 hover:bg-slate-900 text-slate-300 hover:text-white transition-all hover:scale-110 flex items-center justify-center shadow-md" title="Google Play Store">
-                                <svg class="w-4 h-4 fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Google Play</title><path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg>
+                            <a href="https://play.google.com/store/apps/details?id=com.we_are_devs.abah.abah"
+                                target="_blank" rel="noopener noreferrer"
+                                class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 hover:bg-slate-900 text-slate-300 hover:text-white transition-all hover:scale-110 flex items-center justify-center shadow-md"
+                                title="Google Play Store">
+                                <svg class="w-4 h-4 fill-current" role="img" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <title>Google Play</title>
+                                    <path
+                                        d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z" />
+                                </svg>
                             </a>
-                            <a href="https://apps.apple.com/us/app/id6478157039?platform=iphone" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 hover:bg-slate-900 text-slate-300 hover:text-white transition-all hover:scale-110 flex items-center justify-center shadow-md" title="Apple App Store">
-                                <svg class="w-4 h-4 fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>App Store</title><path d="M8.8086 14.9194l6.1107-11.0368c.0837-.1513.1682-.302.2437-.4584.0685-.142.1267-.2854.1646-.4403.0803-.3259.0588-.6656-.066-.9767-.1238-.3095-.3417-.5678-.6201-.7355a1.4175 1.4175 0 0 0-.921-.1924c-.3207.043-.6135.1935-.8443.4288-.1094.1118-.1996.2361-.2832.369-.092.1463-.175.2979-.259.4492l-.3864.6979-.3865-.6979c-.0837-.1515-.1667-.303-.2587-.4492-.0837-.1329-.1739-.2572-.2835-.369-.2305-.2353-.5233-.3857-.844-.429a1.4181 1.4181 0 0 0-.921.1926c-.2784.1677-.4964.426-.6203.7355-.1246.311-.1461.6508-.066.9767.038.155.0962.2984.1648.4403.0753.1564.1598.307.2437.4584l1.248 2.2543-4.8625 8.7825H2.0295c-.1676 0-.3351-.0007-.5026.0092-.1522.009-.3004.0284-.448.0714-.3108.0906-.5822.2798-.7783.548-.195.2665-.3006.5929-.3006.9279 0 .3352.1057.6612.3006.9277.196.2683.4675.4575.7782.548.1477.043.296.0623.4481.0715.1675.01.335.009.5026.009h13.0974c.0171-.0357.059-.1294.1-.2697.415-1.4151-.6156-2.843-2.0347-2.843zM3.113 18.5418l-.7922 1.5008c-.0818.1553-.1644.31-.2384.4705-.067.1458-.124.293-.1611.452-.0785.3346-.0576.6834.0645 1.0029.1212.3175.3346.583.607.7549.2727.172.5891.2416.9013.1975.3139-.044.6005-.1986.8263-.4402.1072-.1148.1954-.2424.2772-.3787.0902-.1503.1714-.3059.2535-.4612L6 19.4636c-.0896-.149-.9473-1.4704-2.887-.9218m20.5861-3.0056a1.4707 1.4707 0 0 0-.779-.5407c-.1476-.0425-.2961-.0616-.4483-.0705-.1678-.0099-.3352-.0091-.503-.0091H18.648l-4.3891-7.817c-.6655.7005-.9632 1.485-1.0773 2.1976-.1655 1.0333.0367 2.0934.546 3.0004l5.2741 9.3933c.084.1494.167.299.2591.4435.0837.131.1739.2537.2836.364.231.2323.5238.3809.8449.4232.3192.0424.643-.0244.9217-.1899.2784-.1653.4968-.4204.621-.7257.1246-.3072.146-.6425.0658-.9641-.0381-.1529-.0962-.2945-.165-.4346-.0753-.1543-.1598-.303-.2438-.4524l-1.216-2.1662h1.596c.1677 0 .3351.0009.5029-.009.1522-.009.3007-.028.4483-.0705a1.4707 1.4707 0 0 0 .779-.5407A1.5386 1.5386 0 0 0 24 16.452a1.539 1.539 0 0 0-.3009-.9158Z"/></svg>
+                            <a href="https://apps.apple.com/us/app/id6478157039?platform=iphone" target="_blank"
+                                rel="noopener noreferrer"
+                                class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 hover:bg-slate-900 text-slate-300 hover:text-white transition-all hover:scale-110 flex items-center justify-center shadow-md"
+                                title="Apple App Store">
+                                <svg class="w-4 h-4 fill-current" role="img" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <title>App Store</title>
+                                    <path
+                                        d="M8.8086 14.9194l6.1107-11.0368c.0837-.1513.1682-.302.2437-.4584.0685-.142.1267-.2854.1646-.4403.0803-.3259.0588-.6656-.066-.9767-.1238-.3095-.3417-.5678-.6201-.7355a1.4175 1.4175 0 0 0-.921-.1924c-.3207.043-.6135.1935-.8443.4288-.1094.1118-.1996.2361-.2832.369-.092.1463-.175.2979-.259.4492l-.3864.6979-.3865-.6979c-.0837-.1515-.1667-.303-.2587-.4492-.0837-.1329-.1739-.2572-.2835-.369-.2305-.2353-.5233-.3857-.844-.429a1.4181 1.4181 0 0 0-.921.1926c-.2784.1677-.4964.426-.6203.7355-.1246.311-.1461.6508-.066.9767.038.155.0962.2984.1648.4403.0753.1564.1598.307.2437.4584l1.248 2.2543-4.8625 8.7825H2.0295c-.1676 0-.3351-.0007-.5026.0092-.1522.009-.3004.0284-.448.0714-.3108.0906-.5822.2798-.7783.548-.195.2665-.3006.5929-.3006.9279 0 .3352.1057.6612.3006.9277.196.2683.4675.4575.7782.548.1477.043.296.0623.4481.0715.1675.01.335.009.5026.009h13.0974c.0171-.0357.059-.1294.1-.2697.415-1.4151-.6156-2.843-2.0347-2.843zM3.113 18.5418l-.7922 1.5008c-.0818.1553-.1644.31-.2384.4705-.067.1458-.124.293-.1611.452-.0785.3346-.0576.6834.0645 1.0029.1212.3175.3346.583.607.7549.2727.172.5891.2416.9013.1975.3139-.044.6005-.1986.8263-.4402.1072-.1148.1954-.2424.2772-.3787.0902-.1503.1714-.3059.2535-.4612L6 19.4636c-.0896-.149-.9473-1.4704-2.887-.9218m20.5861-3.0056a1.4707 1.4707 0 0 0-.779-.5407c-.1476-.0425-.2961-.0616-.4483-.0705-.1678-.0099-.3352-.0091-.503-.0091H18.648l-4.3891-7.817c-.6655.7005-.9632 1.485-1.0773 2.1976-.1655 1.0333.0367 2.0934.546 3.0004l5.2741 9.3933c.084.1494.167.299.2591.4435.0837.131.1739.2537.2836.364.231.2323.5238.3809.8449.4232.3192.0424.643-.0244.9217-.1899.2784-.1653.4968-.4204.621-.7257.1246-.3072.146-.6425.0658-.9641-.0381-.1529-.0962-.2945-.165-.4346-.0753-.1543-.1598-.303-.2438-.4524l-1.216-2.1662h1.596c.1677 0 .3351.0009.5029-.009.1522-.009.3007-.028.4483-.0705a1.4707 1.4707 0 0 0 .779-.5407A1.5386 1.5386 0 0 0 24 16.452a1.539 1.539 0 0 0-.3009-.9158Z" />
+                                </svg>
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 3: MENA App -->
-                <div data-category="cmp" class="project-card group p-6 rounded-3xl bg-slate-900 border border-slate-800 hover:border-brand-500/50 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5 shadow-xl">
+                <!-- Project 3: Highness Fruits -->
+                <div data-category="flutter"
+                    class="project-card group p-6 rounded-3xl bg-slate-900 border border-slate-800 hover:border-brand-500/50 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5 shadow-xl">
                     <div class="space-y-4">
-                        <!-- MENA Project Image Carousel (6 Showcase Slides) -->
-                        <div class="mena-carousel w-full h-48 rounded-2xl bg-slate-950 border border-slate-800/80 overflow-hidden relative group/carousel">
+                        <!-- Highness Fruits Carousel (4 Showcase Slides) -->
+                        <div
+                            class="highness-carousel w-full h-48 rounded-2xl bg-slate-950 border border-slate-800/80 overflow-hidden relative group/carousel">
                             <!-- Slides Track -->
-                            <div class="mena-track flex w-full h-full transition-transform duration-500 ease-out">
-                                <img src="assets/img/mena-1.png" alt="MENA Messaging & Chat Showcase" class="w-full h-full object-cover object-top flex-shrink-0" />
-                                <img src="assets/img/mena-2.png" alt="MENA Wallet & Transactions Showcase" class="w-full h-full object-cover object-top flex-shrink-0" />
-                                <img src="assets/img/mena-4.png" alt="MENA Dukan & E-Commerce Market Showcase" class="w-full h-full object-cover object-top flex-shrink-0" />
-                                <img src="assets/img/mena-3.png" alt="MENA Trends & Video Reels Showcase" class="w-full h-full object-cover object-top flex-shrink-0" />
-                                <img src="assets/img/mena-5.png" alt="MENA Faith & Prayer Times Showcase" class="w-full h-full object-cover object-top flex-shrink-0" />
-                                <img src="assets/img/mena-6.png" alt="MENA Profile & Security Showcase" class="w-full h-full object-cover object-top flex-shrink-0" />
+                            <div class="highness-track flex w-full h-full transition-transform duration-500 ease-out">
+                                <img src="assets/img/highness-1.png" alt="Highness Fruits Storefront Showcase"
+                                    class="w-full h-full object-cover object-top flex-shrink-0" />
+                                <img src="assets/img/highness-2.png" alt="Highness Fruits Fresh Produce Catalog"
+                                    class="w-full h-full object-cover object-top flex-shrink-0" />
+                                <img src="assets/img/highness-3.png"
+                                    alt="Highness Fruits Checkout & MyFatoorah Payments"
+                                    class="w-full h-full object-cover object-top flex-shrink-0" />
+                                <img src="assets/img/highness-4.png" alt="Highness Fruits Delivery Logistics & Orders"
+                                    class="w-full h-full object-cover object-top flex-shrink-0" />
                             </div>
 
                             <!-- Navigation Arrows -->
-                            <button type="button" class="mena-prev absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-slate-950/80 border border-slate-800 text-white opacity-80 hover:opacity-100 transition-opacity hover:bg-indigo-600 flex items-center justify-center z-10" aria-label="Previous Slide">
+                            <button type="button"
+                                class="highness-prev absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-slate-950/80 border border-slate-800 text-white opacity-80 hover:opacity-100 transition-opacity hover:bg-indigo-600 flex items-center justify-center z-10"
+                                aria-label="Previous Slide">
                                 <i data-lucide="chevron-left" class="w-4 h-4"></i>
                             </button>
-                            <button type="button" class="mena-next absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-slate-950/80 border border-slate-800 text-white opacity-80 hover:opacity-100 transition-opacity hover:bg-indigo-600 flex items-center justify-center z-10" aria-label="Next Slide">
+                            <button type="button"
+                                class="highness-next absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-slate-950/80 border border-slate-800 text-white opacity-80 hover:opacity-100 transition-opacity hover:bg-indigo-600 flex items-center justify-center z-10"
+                                aria-label="Next Slide">
                                 <i data-lucide="chevron-right" class="w-4 h-4"></i>
                             </button>
 
                             <!-- Slide Indicators / Dots -->
-                            <div class="mena-dots absolute bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-10 bg-slate-950/70 px-2.5 py-1 rounded-full border border-slate-800/60">
-                                <button type="button" class="mena-dot w-2.5 h-2.5 rounded-full bg-indigo-400 transition-all" aria-label="Slide 1"></button>
-                                <button type="button" class="mena-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all" aria-label="Slide 2"></button>
-                                <button type="button" class="mena-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all" aria-label="Slide 3"></button>
-                                <button type="button" class="mena-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all" aria-label="Slide 4"></button>
-                                <button type="button" class="mena-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all" aria-label="Slide 5"></button>
-                                <button type="button" class="mena-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all" aria-label="Slide 6"></button>
+                            <div
+                                class="highness-dots absolute bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-10 bg-slate-950/70 px-2.5 py-1 rounded-full border border-slate-800/60">
+                                <button type="button"
+                                    class="highness-dot w-2.5 h-2.5 rounded-full bg-indigo-400 transition-all"
+                                    aria-label="Slide 1"></button>
+                                <button type="button"
+                                    class="highness-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all"
+                                    aria-label="Slide 2"></button>
+                                <button type="button"
+                                    class="highness-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all"
+                                    aria-label="Slide 3"></button>
+                                <button type="button"
+                                    class="highness-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all"
+                                    aria-label="Slide 4"></button>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between gap-2">
+                                <h3
+                                    class="text-xl font-bold text-white group-hover:text-brand-accent transition-colors">
+                                    Highness Fruits</h3>
+                                <span
+                                    class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-brand-500/10 text-brand-accent border border-brand-500/20 shrink-0">Flutter</span>
+                            </div>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Engineered a commercial fresh produce e-commerce and logistics mobile platform, architecting dual-role workflows for customer shopping and courier delivery management, integrated with MyFatoorah Payment SDK, in-app digital wallet, and FCM push notifications.
+                            </p>
+                        </div>
+
+                        <div class="flex flex-wrap gap-1.5 pt-2">
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Dual-Role
+                                (Customer + Driver)</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">MyFatoorah
+                                SDK</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">FCM
+                                Notifications</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">In-App
+                                Wallet</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">5,000+
+                                Users</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-6 mt-6 border-t border-slate-800/80 flex items-center justify-between">
+                        <span class="text-xs font-medium text-slate-400">ART 4 MUSLIM</span>
+                        <div class="flex items-center gap-2">
+                            <a href="https://play.google.com/store/apps/details?id=com.mhsneen.highnessfruits"
+                                target="_blank" rel="noopener noreferrer"
+                                class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 hover:bg-slate-900 text-slate-300 hover:text-white transition-all hover:scale-110 flex items-center justify-center shadow-md"
+                                title="Google Play Store">
+                                <svg class="w-4 h-4 fill-current" role="img" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <title>Google Play</title>
+                                    <path
+                                        d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z" />
+                                </svg>
+                            </a>
+                            <a href="https://apps.apple.com/qa/app/%D8%B3%D9%85%D9%88-%D8%A7%D9%84%D9%81%D8%A7%D9%83%D9%87%D8%A9/id1539379099"
+                                target="_blank" rel="noopener noreferrer"
+                                class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 hover:bg-slate-900 text-slate-300 hover:text-white transition-all hover:scale-110 flex items-center justify-center shadow-md"
+                                title="Apple App Store">
+                                <svg class="w-4 h-4 fill-current" role="img" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <title>App Store</title>
+                                    <path
+                                        d="M8.8086 14.9194l6.1107-11.0368c.0837-.1513.1682-.302.2437-.4584.0685-.142.1267-.2854.1646-.4403.0803-.3259.0588-.6656-.066-.9767-.1238-.3095-.3417-.5678-.6201-.7355a1.4175 1.4175 0 0 0-.921-.1924c-.3207.043-.6135.1935-.8443.4288-.1094.1118-.1996.2361-.2832.369-.092.1463-.175.2979-.259.4492l-.3864.6979-.3865-.6979c-.0837-.1515-.1667-.303-.2587-.4492-.0837-.1329-.1739-.2572-.2835-.369-.2305-.2353-.5233-.3857-.844-.429a1.4181 1.4181 0 0 0-.921.1926c-.2784.1677-.4964.426-.6203.7355-.1246.311-.1461.6508-.066.9767.038.155.0962.2984.1648.4403.0753.1564.1598.307.2437.4584l1.248 2.2543-4.8625 8.7825H2.0295c-.1676 0-.3351-.0007-.5026.0092-.1522.009-.3004.0284-.448.0714-.3108.0906-.5822.2798-.7783.548-.195.2665-.3006.5929-.3006.9279 0 .3352.1057.6612.3006.9277.196.2683.4675.4575.7782.548.1477.043.296.0623.4481.0715.1675.01.335.009.5026.009h13.0974c.0171-.0357.059-.1294.1-.2697.415-1.4151-.6156-2.843-2.0347-2.843zM3.113 18.5418l-.7922 1.5008c-.0818.1553-.1644.31-.2384.4705-.067.1458-.124.293-.1611.452-.0785.3346-.0576.6834.0645 1.0029.1212.3175.3346.583.607.7549.2727.172.5891.2416.9013.1975.3139-.044.6005-.1986.8263-.4402.1072-.1148.1954-.2424.2772-.3787.0902-.1503.1714-.3059.2535-.4612L6 19.4636c-.0896-.149-.9473-1.4704-2.887-.9218m20.5861-3.0056a1.4707 1.4707 0 0 0-.779-.5407c-.1476-.0425-.2961-.0616-.4483-.0705-.1678-.0099-.3352-.0091-.503-.0091H18.648l-4.3891-7.817c-.6655.7005-.9632 1.485-1.0773 2.1976-.1655 1.0333.0367 2.0934.546 3.0004l5.2741 9.3933c.084.1494.167.299.2591.4435.0837.131.1739.2537.2836.364.231.2323.5238.3809.8449.4232.3192.0424.643-.0244.9217-.1899.2784-.1653.4968-.4204.621-.7257.1246-.3072.146-.6425.0658-.9641-.0381-.1529-.0962-.2945-.165-.4346-.0753-.1543-.1598-.303-.2438-.4524l-1.216-2.1662h1.596c.1677 0 .3351.0009.5029-.009.1522-.009.3007-.028.4483-.0705a1.4707 1.4707 0 0 0 .779-.5407A1.5386 1.5386 0 0 0 24 16.452a1.539 1.539 0 0 0-.3009-.9158Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: MENA App -->
+                <div data-category="cmp"
+                    class="project-card group p-6 rounded-3xl bg-slate-900 border border-slate-800 hover:border-brand-500/50 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5 shadow-xl">
+                    <div class="space-y-4">
+                        <!-- MENA Project Image Carousel (6 Showcase Slides) -->
+                        <div
+                            class="mena-carousel w-full h-48 rounded-2xl bg-slate-950 border border-slate-800/80 overflow-hidden relative group/carousel">
+                            <!-- Slides Track -->
+                            <div class="mena-track flex w-full h-full transition-transform duration-500 ease-out">
+                                <img src="assets/img/mena-1.png" alt="MENA Messaging & Chat Showcase"
+                                    class="w-full h-full object-cover object-top flex-shrink-0" />
+                                <img src="assets/img/mena-2.png" alt="MENA Wallet & Transactions Showcase"
+                                    class="w-full h-full object-cover object-top flex-shrink-0" />
+                                <img src="assets/img/mena-4.png" alt="MENA Dukan & E-Commerce Market Showcase"
+                                    class="w-full h-full object-cover object-top flex-shrink-0" />
+                                <img src="assets/img/mena-3.png" alt="MENA Trends & Video Reels Showcase"
+                                    class="w-full h-full object-cover object-top flex-shrink-0" />
+                                <img src="assets/img/mena-5.png" alt="MENA Faith & Prayer Times Showcase"
+                                    class="w-full h-full object-cover object-top flex-shrink-0" />
+                                <img src="assets/img/mena-6.png" alt="MENA Profile & Security Showcase"
+                                    class="w-full h-full object-cover object-top flex-shrink-0" />
+                            </div>
+
+                            <!-- Navigation Arrows -->
+                            <button type="button"
+                                class="mena-prev absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-slate-950/80 border border-slate-800 text-white opacity-80 hover:opacity-100 transition-opacity hover:bg-indigo-600 flex items-center justify-center z-10"
+                                aria-label="Previous Slide">
+                                <i data-lucide="chevron-left" class="w-4 h-4"></i>
+                            </button>
+                            <button type="button"
+                                class="mena-next absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-slate-950/80 border border-slate-800 text-white opacity-80 hover:opacity-100 transition-opacity hover:bg-indigo-600 flex items-center justify-center z-10"
+                                aria-label="Next Slide">
+                                <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                            </button>
+
+                            <!-- Slide Indicators / Dots -->
+                            <div
+                                class="mena-dots absolute bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-10 bg-slate-950/70 px-2.5 py-1 rounded-full border border-slate-800/60">
+                                <button type="button"
+                                    class="mena-dot w-2.5 h-2.5 rounded-full bg-indigo-400 transition-all"
+                                    aria-label="Slide 1"></button>
+                                <button type="button"
+                                    class="mena-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all"
+                                    aria-label="Slide 2"></button>
+                                <button type="button"
+                                    class="mena-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all"
+                                    aria-label="Slide 3"></button>
+                                <button type="button"
+                                    class="mena-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all"
+                                    aria-label="Slide 4"></button>
+                                <button type="button"
+                                    class="mena-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all"
+                                    aria-label="Slide 5"></button>
+                                <button type="button"
+                                    class="mena-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all"
+                                    aria-label="Slide 6"></button>
                             </div>
                         </div>
 
                         <div class="space-y-2">
                             <div class="flex items-center justify-between">
-                                <h3 class="text-xl font-bold text-white group-hover:text-brand-accent transition-colors">MENA App</h3>
-                                <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-brand-500/10 text-brand-accent border border-brand-500/20">KMP</span>
+                                <h3
+                                    class="text-xl font-bold text-white group-hover:text-brand-accent transition-colors">
+                                    MENA App</h3>
+                                <span
+                                    class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-brand-500/10 text-brand-accent border border-brand-500/20">KMP</span>
                             </div>
                             <p class="text-slate-400 text-sm leading-relaxed">
-                                Served as Infrastructure (IC2) Engineer for a 6-team modular platform. Architected core base foundations, authentication, MapLibre maps, and multi-environment build flavors (Dev/Staging/Prod) while mentoring junior IC1 developers.
+                                Served as Infrastructure (IC2) Engineer for a 6-team modular platform. Architected core
+                                base foundations, authentication, MapLibre maps, and multi-environment build flavors
+                                (Dev/Staging/Prod) while mentoring junior IC1 developers.
                             </p>
                         </div>
 
                         <div class="flex flex-wrap gap-1.5 pt-2">
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Infra & Modular Arch</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Authentication</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Build Flavors</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">MapLibre</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Infra
+                                & Modular Arch</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Authentication</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Build
+                                Flavors</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">MapLibre</span>
                         </div>
                     </div>
 
                     <div class="pt-6 mt-6 border-t border-slate-800/80 flex items-center justify-between">
                         <span class="text-xs font-medium text-slate-400 flex items-center gap-1.5">
-                            <img src="assets/img/thechance.svg" alt="The Chance Logo" class="no-lightbox w-4 h-4 inline-block object-contain" />
+                            <img src="assets/img/thechance.svg" alt="The Chance Logo"
+                                class="no-lightbox w-4 h-4 inline-block object-contain" />
                             The Chance
                         </span>
                         <div class="flex items-center gap-2">
-                            <a href="https://github.com/TheChance101/MENA-mobile" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 hover:bg-slate-900 text-slate-300 hover:text-white transition-all hover:scale-110 flex items-center justify-center shadow-md" title="GitHub Repository">
-                                <svg class="w-4 h-4 fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                            <a href="https://github.com/TheChance101/MENA-mobile" target="_blank"
+                                rel="noopener noreferrer"
+                                class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 hover:bg-slate-900 text-slate-300 hover:text-white transition-all hover:scale-110 flex items-center justify-center shadow-md"
+                                title="GitHub Repository">
+                                <svg class="w-4 h-4 fill-current" role="img" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <title>GitHub</title>
+                                    <path
+                                        d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                                </svg>
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 4: Aflami App -->
-                <div data-category="native" class="project-card group p-6 rounded-3xl bg-slate-900 border border-slate-800 hover:border-brand-500/50 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5 shadow-xl">
+                <div data-category="native"
+                    class="project-card group p-6 rounded-3xl bg-slate-900 border border-slate-800 hover:border-brand-500/50 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5 shadow-xl">
                     <div class="space-y-4">
                         <!-- Aflami Project Image Carousel (6 Showcase Slides) -->
-                        <div class="aflami-carousel w-full h-48 rounded-2xl bg-slate-950 border border-slate-800/80 overflow-hidden relative group/carousel">
+                        <div
+                            class="aflami-carousel w-full h-48 rounded-2xl bg-slate-950 border border-slate-800/80 overflow-hidden relative group/carousel">
                             <!-- Slides Track -->
                             <div class="aflami-track flex w-full h-full transition-transform duration-500 ease-out">
-                                <img src="assets/img/aflami-1.png" alt="Aflami Home & Onboarding Showcase" class="w-full h-full object-cover object-top flex-shrink-0" />
-                                <img src="assets/img/aflami-2.png" alt="Aflami Movies & TV Shows Showcase" class="w-full h-full object-cover object-top flex-shrink-0" />
-                                <img src="assets/img/aflami-3.png" alt="Aflami Games & Mood Picker Showcase" class="w-full h-full object-cover object-top flex-shrink-0" />
-                                <img src="assets/img/aflami-4.png" alt="Aflami Categories & Search Engine Showcase" class="w-full h-full object-cover object-top flex-shrink-0" />
-                                <img src="assets/img/aflami-5.png" alt="Aflami Profile & Watchlists Showcase" class="w-full h-full object-cover object-top flex-shrink-0" />
-                                <img src="assets/img/aflami-6.png" alt="Aflami Settings & App Preferences Showcase" class="w-full h-full object-cover object-top flex-shrink-0" />
+                                <img src="assets/img/aflami-1.png" alt="Aflami Home & Onboarding Showcase"
+                                    class="w-full h-full object-cover object-top flex-shrink-0" />
+                                <img src="assets/img/aflami-2.png" alt="Aflami Movies & TV Shows Showcase"
+                                    class="w-full h-full object-cover object-top flex-shrink-0" />
+                                <img src="assets/img/aflami-3.png" alt="Aflami Games & Mood Picker Showcase"
+                                    class="w-full h-full object-cover object-top flex-shrink-0" />
+                                <img src="assets/img/aflami-4.png" alt="Aflami Categories & Search Engine Showcase"
+                                    class="w-full h-full object-cover object-top flex-shrink-0" />
+                                <img src="assets/img/aflami-5.png" alt="Aflami Profile & Watchlists Showcase"
+                                    class="w-full h-full object-cover object-top flex-shrink-0" />
+                                <img src="assets/img/aflami-6.png" alt="Aflami Settings & App Preferences Showcase"
+                                    class="w-full h-full object-cover object-top flex-shrink-0" />
                             </div>
 
                             <!-- Navigation Arrows -->
-                            <button type="button" class="aflami-prev absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-slate-950/80 border border-slate-800 text-white opacity-80 hover:opacity-100 transition-opacity hover:bg-indigo-600 flex items-center justify-center z-10" aria-label="Previous Slide">
+                            <button type="button"
+                                class="aflami-prev absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-slate-950/80 border border-slate-800 text-white opacity-80 hover:opacity-100 transition-opacity hover:bg-indigo-600 flex items-center justify-center z-10"
+                                aria-label="Previous Slide">
                                 <i data-lucide="chevron-left" class="w-4 h-4"></i>
                             </button>
-                            <button type="button" class="aflami-next absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-slate-950/80 border border-slate-800 text-white opacity-80 hover:opacity-100 transition-opacity hover:bg-indigo-600 flex items-center justify-center z-10" aria-label="Next Slide">
+                            <button type="button"
+                                class="aflami-next absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-slate-950/80 border border-slate-800 text-white opacity-80 hover:opacity-100 transition-opacity hover:bg-indigo-600 flex items-center justify-center z-10"
+                                aria-label="Next Slide">
                                 <i data-lucide="chevron-right" class="w-4 h-4"></i>
                             </button>
 
                             <!-- Slide Indicators / Dots -->
-                            <div class="aflami-dots absolute bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-10 bg-slate-950/70 px-2.5 py-1 rounded-full border border-slate-800/60">
-                                <button type="button" class="aflami-dot w-2.5 h-2.5 rounded-full bg-indigo-400 transition-all" aria-label="Slide 1"></button>
-                                <button type="button" class="aflami-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all" aria-label="Slide 2"></button>
-                                <button type="button" class="aflami-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all" aria-label="Slide 3"></button>
-                                <button type="button" class="aflami-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all" aria-label="Slide 4"></button>
-                                <button type="button" class="aflami-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all" aria-label="Slide 5"></button>
-                                <button type="button" class="aflami-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all" aria-label="Slide 6"></button>
+                            <div
+                                class="aflami-dots absolute bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-10 bg-slate-950/70 px-2.5 py-1 rounded-full border border-slate-800/60">
+                                <button type="button"
+                                    class="aflami-dot w-2.5 h-2.5 rounded-full bg-indigo-400 transition-all"
+                                    aria-label="Slide 1"></button>
+                                <button type="button"
+                                    class="aflami-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all"
+                                    aria-label="Slide 2"></button>
+                                <button type="button"
+                                    class="aflami-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all"
+                                    aria-label="Slide 3"></button>
+                                <button type="button"
+                                    class="aflami-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all"
+                                    aria-label="Slide 4"></button>
+                                <button type="button"
+                                    class="aflami-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all"
+                                    aria-label="Slide 5"></button>
+                                <button type="button"
+                                    class="aflami-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all"
+                                    aria-label="Slide 6"></button>
                             </div>
                         </div>
 
                         <div class="space-y-2">
                             <div class="flex items-center justify-between">
-                                <h3 class="text-xl font-bold text-white group-hover:text-brand-accent transition-colors">Aflami App</h3>
-                                <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-brand-500/10 text-brand-accent border border-brand-500/20">Jetpack Compose</span>
+                                <h3
+                                    class="text-xl font-bold text-white group-hover:text-brand-accent transition-colors">
+                                    Aflami App</h3>
+                                <span
+                                    class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-brand-500/10 text-brand-accent border border-brand-500/20">Jetpack
+                                    Compose</span>
                             </div>
                             <p class="text-slate-400 text-sm leading-relaxed">
-                                Architected a native Kotlin movie & series discovery platform using Jetpack Compose UI, MVVM, and an offline-first RoomDB caching strategy for instant data access, backed by unit testing for critical business logic.
+                                Architected a native Kotlin movie & series discovery platform using Jetpack Compose UI,
+                                MVVM, and an offline-first RoomDB caching strategy for instant data access, backed by
+                                unit testing for critical business logic.
                             </p>
                         </div>
 
                         <div class="flex flex-wrap gap-1.5 pt-2">
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Jetpack Compose</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">MVVM</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">RoomDB</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Jetpack
+                                Compose</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">MVVM</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">RoomDB</span>
                         </div>
                     </div>
 
                     <div class="pt-6 mt-6 border-t border-slate-800/80 flex items-center justify-between">
                         <span class="text-xs font-medium text-slate-400 flex items-center gap-1.5">
-                            <img src="assets/img/thechance.svg" alt="The Chance Logo" class="no-lightbox w-4 h-4 inline-block object-contain" />
+                            <img src="assets/img/thechance.svg" alt="The Chance Logo"
+                                class="no-lightbox w-4 h-4 inline-block object-contain" />
                             The Chance
                         </span>
                         <div class="flex items-center gap-2">
-                            <a href="https://github.com/Amsterdam-Team/Aflami" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 hover:bg-slate-900 text-slate-300 hover:text-white transition-all hover:scale-110 flex items-center justify-center shadow-md" title="GitHub Repository">
-                                <svg class="w-4 h-4 fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                            <a href="https://github.com/Amsterdam-Team/Aflami" target="_blank" rel="noopener noreferrer"
+                                class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 hover:bg-slate-900 text-slate-300 hover:text-white transition-all hover:scale-110 flex items-center justify-center shadow-md"
+                                title="GitHub Repository">
+                                <svg class="w-4 h-4 fill-current" role="img" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <title>GitHub</title>
+                                    <path
+                                        d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                                </svg>
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 5: Arab Care -->
-                <div data-category="flutter" class="project-card group p-6 rounded-3xl bg-slate-900 border border-slate-800 hover:border-brand-500/50 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5 shadow-xl">
+                <div data-category="flutter"
+                    class="project-card group p-6 rounded-3xl bg-slate-900 border border-slate-800 hover:border-brand-500/50 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5 shadow-xl">
                     <div class="space-y-4">
                         <!-- Arab Care Project Image Carousel (3 Showcase Slides) -->
-                        <div class="arabcare-carousel w-full h-48 rounded-2xl bg-slate-950 border border-slate-800/80 overflow-hidden relative group/carousel">
+                        <div
+                            class="arabcare-carousel w-full h-48 rounded-2xl bg-slate-950 border border-slate-800/80 overflow-hidden relative group/carousel">
                             <!-- Slides Track -->
                             <div class="arabcare-track flex w-full h-full transition-transform duration-500 ease-out">
-                                <img src="assets/img/arabcare-1.png" alt="Arab Care Doctors & Hospitals Search Showcase" class="w-full h-full object-cover object-top flex-shrink-0" />
-                                <img src="assets/img/arabcare-2.png" alt="Arab Care Location & Map Confirmation Showcase" class="w-full h-full object-cover object-top flex-shrink-0" />
-                                <img src="assets/img/arabcare-3.png" alt="Arab Care Hospital Details & Medical Offers Showcase" class="w-full h-full object-cover object-top flex-shrink-0" />
+                                <img src="assets/img/arabcare-1.png" alt="Arab Care Doctors & Hospitals Search Showcase"
+                                    class="w-full h-full object-cover object-top flex-shrink-0" />
+                                <img src="assets/img/arabcare-2.png"
+                                    alt="Arab Care Location & Map Confirmation Showcase"
+                                    class="w-full h-full object-cover object-top flex-shrink-0" />
+                                <img src="assets/img/arabcare-3.png"
+                                    alt="Arab Care Hospital Details & Medical Offers Showcase"
+                                    class="w-full h-full object-cover object-top flex-shrink-0" />
                             </div>
 
                             <!-- Navigation Arrows -->
-                            <button type="button" class="arabcare-prev absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-slate-950/80 border border-slate-800 text-white opacity-80 hover:opacity-100 transition-opacity hover:bg-indigo-600 flex items-center justify-center z-10" aria-label="Previous Slide">
+                            <button type="button"
+                                class="arabcare-prev absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-slate-950/80 border border-slate-800 text-white opacity-80 hover:opacity-100 transition-opacity hover:bg-indigo-600 flex items-center justify-center z-10"
+                                aria-label="Previous Slide">
                                 <i data-lucide="chevron-left" class="w-4 h-4"></i>
                             </button>
-                            <button type="button" class="arabcare-next absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-slate-950/80 border border-slate-800 text-white opacity-80 hover:opacity-100 transition-opacity hover:bg-indigo-600 flex items-center justify-center z-10" aria-label="Next Slide">
+                            <button type="button"
+                                class="arabcare-next absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-slate-950/80 border border-slate-800 text-white opacity-80 hover:opacity-100 transition-opacity hover:bg-indigo-600 flex items-center justify-center z-10"
+                                aria-label="Next Slide">
                                 <i data-lucide="chevron-right" class="w-4 h-4"></i>
                             </button>
 
                             <!-- Slide Indicators / Dots -->
-                            <div class="arabcare-dots absolute bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-10 bg-slate-950/70 px-2.5 py-1 rounded-full border border-slate-800/60">
-                                <button type="button" class="arabcare-dot w-2.5 h-2.5 rounded-full bg-indigo-400 transition-all" aria-label="Slide 1"></button>
-                                <button type="button" class="arabcare-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all" aria-label="Slide 2"></button>
-                                <button type="button" class="arabcare-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all" aria-label="Slide 3"></button>
+                            <div
+                                class="arabcare-dots absolute bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-10 bg-slate-950/70 px-2.5 py-1 rounded-full border border-slate-800/60">
+                                <button type="button"
+                                    class="arabcare-dot w-2.5 h-2.5 rounded-full bg-indigo-400 transition-all"
+                                    aria-label="Slide 1"></button>
+                                <button type="button"
+                                    class="arabcare-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all"
+                                    aria-label="Slide 2"></button>
+                                <button type="button"
+                                    class="arabcare-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all"
+                                    aria-label="Slide 3"></button>
                             </div>
                         </div>
 
                         <div class="space-y-2">
                             <div class="flex items-center justify-between">
-                                <h3 class="text-xl font-bold text-white group-hover:text-brand-accent transition-colors">Arab Care</h3>
-                                <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-brand-500/10 text-brand-accent border border-brand-500/20">Flutter</span>
+                                <h3
+                                    class="text-xl font-bold text-white group-hover:text-brand-accent transition-colors">
+                                    Arab Care</h3>
+                                <span
+                                    class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-brand-500/10 text-brand-accent border border-brand-500/20">Flutter</span>
                             </div>
                             <p class="text-slate-400 text-sm leading-relaxed">
-                                Engineered a comprehensive healthcare & patient management platform for 1,000+ active users, integrating real-time doctor & hospital search, interactive medical location mapping, medical offer discovery, and seamless appointment booking.
+                                Engineered a comprehensive healthcare & patient management platform for 1,000+ active
+                                users, integrating real-time doctor & hospital search, interactive medical location
+                                mapping, medical offer discovery, and seamless appointment booking.
                             </p>
                         </div>
 
                         <div class="flex flex-wrap gap-1.5 pt-2">
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Healthcare Platform</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Doctor Booking</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Interactive Maps</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Medical Records</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">1,000+ Users</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Healthcare
+                                Platform</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Doctor
+                                Booking</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Interactive
+                                Maps</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Medical
+                                Records</span>
+                            <span
+                                class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">1,000+
+                                Users</span>
                         </div>
                     </div>
 
                     <div class="pt-6 mt-6 border-t border-slate-800/80 flex items-center justify-between">
                         <span class="text-xs font-medium text-slate-400">Freelance</span>
                         <div class="flex items-center gap-2">
-                            <a href="https://play.google.com/store/apps/details?id=com.saberson.arabcare" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 hover:bg-slate-900 text-slate-300 hover:text-white transition-all hover:scale-110 flex items-center justify-center shadow-md" title="Google Play Store">
-                                <svg class="w-4 h-4 fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Google Play</title><path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg>
+                            <a href="https://play.google.com/store/apps/details?id=com.saberson.arabcare"
+                                target="_blank" rel="noopener noreferrer"
+                                class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 hover:bg-slate-900 text-slate-300 hover:text-white transition-all hover:scale-110 flex items-center justify-center shadow-md"
+                                title="Google Play Store">
+                                <svg class="w-4 h-4 fill-current" role="img" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <title>Google Play</title>
+                                    <path
+                                        d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z" />
+                                </svg>
                             </a>
-                            <a href="https://apps.apple.com/us/app/arab-care/id6744697761" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 hover:bg-slate-900 text-slate-300 hover:text-white transition-all hover:scale-110 flex items-center justify-center shadow-md" title="Apple App Store">
-                                <svg class="w-4 h-4 fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>App Store</title><path d="M8.8086 14.9194l6.1107-11.0368c.0837-.1513.1682-.302.2437-.4584.0685-.142.1267-.2854.1646-.4403.0803-.3259.0588-.6656-.066-.9767-.1238-.3095-.3417-.5678-.6201-.7355a1.4175 1.4175 0 0 0-.921-.1924c-.3207.043-.6135.1935-.8443.4288-.1094.1118-.1996.2361-.2832.369-.092.1463-.175.2979-.259.4492l-.3864.6979-.3865-.6979c-.0837-.1515-.1667-.303-.2587-.4492-.0837-.1329-.1739-.2572-.2835-.369-.2305-.2353-.5233-.3857-.844-.429a1.4181 1.4181 0 0 0-.921.1926c-.2784.1677-.4964.426-.6203.7355-.1246.311-.1461.6508-.066.9767.038.155.0962.2984.1648.4403.0753.1564.1598.307.2437.4584l1.248 2.2543-4.8625 8.7825H2.0295c-.1676 0-.3351-.0007-.5026.0092-.1522.009-.3004.0284-.448.0714-.3108.0906-.5822.2798-.7783.548-.195.2665-.3006.5929-.3006.9279 0 .3352.1057.6612.3006.9277.196.2683.4675.4575.7782.548.1477.043.296.0623.4481.0715.1675.01.335.009.5026.009h13.0974c.0171-.0357.059-.1294.1-.2697.415-1.4151-.6156-2.843-2.0347-2.843zM3.113 18.5418l-.7922 1.5008c-.0818.1553-.1644.31-.2384.4705-.067.1458-.124.293-.1611.452-.0785.3346-.0576.6834.0645 1.0029.1212.3175.3346.583.607.7549.2727.172.5891.2416.9013.1975.3139-.044.6005-.1986.8263-.4402.1072-.1148.1954-.2424.2772-.3787.0902-.1503.1714-.3059.2535-.4612L6 19.4636c-.0896-.149-.9473-1.4704-2.887-.9218m20.5861-3.0056a1.4707 1.4707 0 0 0-.779-.5407c-.1476-.0425-.2961-.0616-.4483-.0705-.1678-.0099-.3352-.0091-.503-.0091H18.648l-4.3891-7.817c-.6655.7005-.9632 1.485-1.0773 2.1976-.1655 1.0333.0367 2.0934.546 3.0004l5.2741 9.3933c.084.1494.167.299.2591.4435.0837.131.1739.2537.2836.364.231.2323.5238.3809.8449.4232.3192.0424.643-.0244.9217-.1899.2784-.1653.4968-.4204.621-.7257.1246-.3072.146-.6425.0658-.9641-.0381-.1529-.0962-.2945-.165-.4346-.0753-.1543-.1598-.303-.2438-.4524l-1.216-2.1662h1.596c.1677 0 .3351.0009.5029-.009.1522-.009.3007-.028.4483-.0705a1.4707 1.4707 0 0 0 .779-.5407A1.5386 1.5386 0 0 0 24 16.452a1.539 1.539 0 0 0-.3009-.9158Z"/></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 6: Nour Quran App -->
-                <div data-category="flutter" class="project-card group p-6 rounded-3xl bg-slate-900 border border-slate-800 hover:border-brand-500/50 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5 shadow-xl">
-                    <div class="space-y-4">
-                        <div class="w-full h-44 rounded-2xl bg-slate-950 border border-slate-800/80 flex items-center justify-center relative overflow-hidden group-hover:border-brand-500/30 transition-colors">
-                            
-                            <div class="text-center space-y-2 relative z-10 px-4">
-                                <div class="w-10 h-10 rounded-xl bg-brand-500/20 border border-brand-500/40 mx-auto flex items-center justify-center text-brand-accent">
-                                    <i data-lucide="book-open-check" class="w-5 h-5"></i>
-                                </div>
-                                <div class="text-xs font-bold text-white">Nour Quran App</div>
-                                <div class="text-[10px] text-slate-400 font-mono">Nov 2023 – Jan 2024</div>
-                            </div>
-                        </div>
-
-                        <div class="space-y-2">
-                            <div class="flex items-center justify-between">
-                                <h3 class="text-xl font-bold text-white group-hover:text-brand-accent transition-colors">Nour Quran App</h3>
-                                <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-brand-500/10 text-brand-accent border border-brand-500/20">Flutter</span>
-                            </div>
-                            <p class="text-slate-400 text-sm leading-relaxed">
-                                Quran mobile application featuring enhanced accessibility features such as integrated sign language functionality.
-                            </p>
-                        </div>
-
-                        <div class="flex flex-wrap gap-1.5 pt-2">
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Flutter</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Sign Language UI</span>
-                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-800/80 text-slate-300 font-mono">Accessibility</span>
-                        </div>
-                    </div>
-
-                    <div class="pt-6 mt-6 border-t border-slate-800/80 flex items-center justify-between">
-                        <span class="text-xs font-medium text-slate-400">Freelance</span>
-                        <div class="flex items-center gap-2">
-                            <a href="https://apps.apple.com/us/app/id6741247921?platform=iphone" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 hover:bg-slate-900 text-slate-300 hover:text-white transition-all hover:scale-110 flex items-center justify-center shadow-md" title="Apple App Store">
-                                <svg class="w-4 h-4 fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>App Store</title><path d="M8.8086 14.9194l6.1107-11.0368c.0837-.1513.1682-.302.2437-.4584.0685-.142.1267-.2854.1646-.4403.0803-.3259.0588-.6656-.066-.9767-.1238-.3095-.3417-.5678-.6201-.7355a1.4175 1.4175 0 0 0-.921-.1924c-.3207.043-.6135.1935-.8443.4288-.1094.1118-.1996.2361-.2832.369-.092.1463-.175.2979-.259.4492l-.3864.6979-.3865-.6979c-.0837-.1515-.1667-.303-.2587-.4492-.0837-.1329-.1739-.2572-.2835-.369-.2305-.2353-.5233-.3857-.844-.429a1.4181 1.4181 0 0 0-.921.1926c-.2784.1677-.4964.426-.6203.7355-.1246.311-.1461.6508-.066.9767.038.155.0962.2984.1648.4403.0753.1564.1598.307.2437.4584l1.248 2.2543-4.8625 8.7825H2.0295c-.1676 0-.3351-.0007-.5026.0092-.1522.009-.3004.0284-.448.0714-.3108.0906-.5822.2798-.7783.548-.195.2665-.3006.5929-.3006.9279 0 .3352.1057.6612.3006.9277.196.2683.4675.4575.7782.548.1477.043.296.0623.4481.0715.1675.01.335.009.5026.009h13.0974c.0171-.0357.059-.1294.1-.2697.415-1.4151-.6156-2.843-2.0347-2.843zM3.113 18.5418l-.7922 1.5008c-.0818.1553-.1644.31-.2384.4705-.067.1458-.124.293-.1611.452-.0785.3346-.0576.6834.0645 1.0029.1212.3175.3346.583.607.7549.2727.172.5891.2416.9013.1975.3139-.044.6005-.1986.8263-.4402.1072-.1148.1954-.2424.2772-.3787.0902-.1503.1714-.3059.2535-.4612L6 19.4636c-.0896-.149-.9473-1.4704-2.887-.9218m20.5861-3.0056a1.4707 1.4707 0 0 0-.779-.5407c-.1476-.0425-.2961-.0616-.4483-.0705-.1678-.0099-.3352-.0091-.503-.0091H18.648l-4.3891-7.817c-.6655.7005-.9632 1.485-1.0773 2.1976-.1655 1.0333.0367 2.0934.546 3.0004l5.2741 9.3933c.084.1494.167.299.2591.4435.0837.131.1739.2537.2836.364.231.2323.5238.3809.8449.4232.3192.0424.643-.0244.9217-.1899.2784-.1653.4968-.4204.621-.7257.1246-.3072.146-.6425.0658-.9641-.0381-.1529-.0962-.2945-.165-.4346-.0753-.1543-.1598-.303-.2438-.4524l-1.216-2.1662h1.596c.1677 0 .3351.0009.5029-.009.1522-.009.3007-.028.4483-.0705a1.4707 1.4707 0 0 0 .779-.5407A1.5386 1.5386 0 0 0 24 16.452a1.539 1.539 0 0 0-.3009-.9158Z"/></svg>
+                            <a href="https://apps.apple.com/us/app/arab-care/id6744697761" target="_blank"
+                                rel="noopener noreferrer"
+                                class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 hover:bg-slate-900 text-slate-300 hover:text-white transition-all hover:scale-110 flex items-center justify-center shadow-md"
+                                title="Apple App Store">
+                                <svg class="w-4 h-4 fill-current" role="img" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <title>App Store</title>
+                                    <path
+                                        d="M8.8086 14.9194l6.1107-11.0368c.0837-.1513.1682-.302.2437-.4584.0685-.142.1267-.2854.1646-.4403.0803-.3259.0588-.6656-.066-.9767-.1238-.3095-.3417-.5678-.6201-.7355a1.4175 1.4175 0 0 0-.921-.1924c-.3207.043-.6135.1935-.8443.4288-.1094.1118-.1996.2361-.2832.369-.092.1463-.175.2979-.259.4492l-.3864.6979-.3865-.6979c-.0837-.1515-.1667-.303-.2587-.4492-.0837-.1329-.1739-.2572-.2835-.369-.2305-.2353-.5233-.3857-.844-.429a1.4181 1.4181 0 0 0-.921.1926c-.2784.1677-.4964.426-.6203.7355-.1246.311-.1461.6508-.066.9767.038.155.0962.2984.1648.4403.0753.1564.1598.307.2437.4584l1.248 2.2543-4.8625 8.7825H2.0295c-.1676 0-.3351-.0007-.5026.0092-.1522.009-.3004.0284-.448.0714-.3108.0906-.5822.2798-.7783.548-.195.2665-.3006.5929-.3006.9279 0 .3352.1057.6612.3006.9277.196.2683.4675.4575.7782.548.1477.043.296.0623.4481.0715.1675.01.335.009.5026.009h13.0974c.0171-.0357.059-.1294.1-.2697.415-1.4151-.6156-2.843-2.0347-2.843zM3.113 18.5418l-.7922 1.5008c-.0818.1553-.1644.31-.2384.4705-.067.1458-.124.293-.1611.452-.0785.3346-.0576.6834.0645 1.0029.1212.3175.3346.583.607.7549.2727.172.5891.2416.9013.1975.3139-.044.6005-.1986.8263-.4402.1072-.1148.1954-.2424.2772-.3787.0902-.1503.1714-.3059.2535-.4612L6 19.4636c-.0896-.149-.9473-1.4704-2.887-.9218m20.5861-3.0056a1.4707 1.4707 0 0 0-.779-.5407c-.1476-.0425-.2961-.0616-.4483-.0705-.1678-.0099-.3352-.0091-.503-.0091H18.648l-4.3891-7.817c-.6655.7005-.9632 1.485-1.0773 2.1976-.1655 1.0333.0367 2.0934.546 3.0004l5.2741 9.3933c.084.1494.167.299.2591.4435.0837.131.1739.2537.2836.364.231.2323.5238.3809.8449.4232.3192.0424.643-.0244.9217-.1899.2784-.1653.4968-.4204.621-.7257.1246-.3072.146-.6425.0658-.9641-.0381-.1529-.0962-.2945-.165-.4346-.0753-.1543-.1598-.303-.2438-.4524l-1.216-2.1662h1.596c.1677 0 .3351.0009.5029-.009.1522-.009.3007-.028.4483-.0705a1.4707 1.4707 0 0 0 .779-.5407A1.5386 1.5386 0 0 0 24 16.452a1.539 1.539 0 0 0-.3009-.9158Z" />
+                                </svg>
                             </a>
                         </div>
                     </div>
                 </div>
+
+
             </div>
         </div>
     </section>
@@ -1031,7 +1532,8 @@
     <section id="education" class="py-14 sm:py-16 bg-slate-900/40 border-y border-slate-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center space-y-4 mb-16">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-xs font-semibold text-brand-accent">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-xs font-semibold text-brand-accent">
                     <i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Education & Diplomas
                 </div>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Academic Qualifications</h2>
@@ -1039,41 +1541,57 @@
 
             <div class="grid sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 <!-- Degree 1: The Chance -->
-                <div class="p-8 rounded-3xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-all space-y-4 shadow-lg">
+                <div
+                    class="p-8 rounded-3xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-all space-y-4 shadow-lg">
                     <div class="flex items-center justify-between">
-                        <div class="w-12 h-12 rounded-2xl bg-slate-950 border border-slate-800 flex items-center justify-center p-2.5 shadow-inner">
-                            <img src="assets/img/thechance.svg" alt="The Chance Logo" class="no-lightbox w-full h-full object-contain" />
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-slate-950 border border-slate-800 flex items-center justify-center p-2.5 shadow-inner">
+                            <img src="assets/img/thechance.svg" alt="The Chance Logo"
+                                class="no-lightbox w-full h-full object-contain" />
                         </div>
-                        <span class="text-xs font-semibold text-slate-400 bg-slate-800/80 px-3 py-1.5 rounded-xl border border-slate-700">Apr 2025 – Nov 2025</span>
+                        <span
+                            class="text-xs font-semibold text-slate-400 bg-slate-800/80 px-3 py-1.5 rounded-xl border border-slate-700">Apr
+                            2025 – Nov 2025</span>
                     </div>
                     <div>
                         <div class="flex items-center justify-between flex-wrap gap-2">
                             <div class="flex items-center gap-2">
-                                <img src="assets/img/thechance.svg" alt="The Chance Logo" class="no-lightbox w-6 h-6 object-contain" />
+                                <img src="assets/img/thechance.svg" alt="The Chance Logo"
+                                    class="no-lightbox w-6 h-6 object-contain" />
                                 <h3 class="text-xl font-bold text-white">The Chance</h3>
                             </div>
-                            <a href="https://the-chance.net/certificate-validator?license_number=1112025008824" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-brand-500/10 border border-brand-500/20 text-xs font-semibold text-brand-accent hover:bg-brand-500/20 transition-all hover:scale-105" title="Verify Official Certificate">
+                            <a href="https://the-chance.net/certificate-validator?license_number=1112025008824"
+                                target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-brand-500/10 border border-brand-500/20 text-xs font-semibold text-brand-accent hover:bg-brand-500/20 transition-all hover:scale-105"
+                                title="Verify Official Certificate">
                                 <i data-lucide="shield-check" class="w-3.5 h-3.5"></i> Verify Certificate
                             </a>
                         </div>
-                        <p class="text-brand-accent text-sm font-semibold mt-1">Advanced Mobile Application Development Program</p>
+                        <p class="text-brand-accent text-sm font-semibold mt-1">Advanced Mobile Application Development
+                            Program</p>
                     </div>
                     <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
-                        8-month specialized program focused on advanced mobile application development techniques, architecture, and Compose Multiplatform (CMP).
+                        8-month specialized program focused on advanced mobile application development techniques,
+                        architecture, and Compose Multiplatform (CMP).
                     </p>
-                    <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400 font-mono">
+                    <div
+                        class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400 font-mono">
                         <span>License No.</span>
                         <span class="text-slate-200 font-bold">1112025008824</span>
                     </div>
                 </div>
 
                 <!-- Degree 2: Cairo University -->
-                <div class="p-8 rounded-3xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-all space-y-4 shadow-lg">
+                <div
+                    class="p-8 rounded-3xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-all space-y-4 shadow-lg">
                     <div class="flex items-center justify-between">
-                        <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
                             <i data-lucide="award" class="w-6 h-6"></i>
                         </div>
-                        <span class="text-xs font-semibold text-slate-400 bg-slate-800/80 px-3 py-1.5 rounded-xl border border-slate-700">Sep 2017 – May 2021</span>
+                        <span
+                            class="text-xs font-semibold text-slate-400 bg-slate-800/80 px-3 py-1.5 rounded-xl border border-slate-700">Sep
+                            2017 – May 2021</span>
                     </div>
                     <div>
                         <h3 class="text-xl font-bold text-white">Cairo University</h3>
@@ -1081,7 +1599,9 @@
                     </div>
                     <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-sm">
                         <span class="text-slate-400">Cumulative GPA</span>
-                        <span class="font-extrabold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded-md">3.36 / 4.0</span>
+                        <span
+                            class="font-extrabold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded-md">3.36
+                            / 4.0</span>
                     </div>
                 </div>
             </div>
@@ -1089,41 +1609,53 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="pt-14 pb-28 sm:pt-16 sm:pb-36 relative overflow-hidden min-h-[50vh] flex items-center justify-center">
+    <section id="contact"
+        class="pt-14 pb-28 sm:pt-16 sm:pb-36 relative overflow-hidden min-h-[50vh] flex items-center justify-center">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl mx-auto p-8 sm:p-12 rounded-3xl bg-slate-900 border border-slate-800 shadow-xl relative">
-                
+            <div
+                class="max-w-4xl mx-auto p-8 sm:p-12 rounded-3xl bg-slate-900 border border-slate-800 shadow-xl relative">
+
                 <div class="text-center space-y-6 relative z-10">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-xs font-semibold text-indigo-400">
+                    <div
+                        class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-xs font-semibold text-indigo-400">
                         <i data-lucide="message-square" class="w-3.5 h-3.5"></i> Get In Touch
                     </div>
-                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">Let's Build Something Great</h2>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">Let's Build Something
+                        Great</h2>
                     <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
-                        Looking for an experienced Mobile Application Developer for your team or mobile product? Send an email or connect with me directly!
+                        Looking for an experienced Mobile Application Developer for your team or mobile product? Send an
+                        email or connect with me directly!
                     </p>
 
                     <!-- Contact Channels -->
                     <div class="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto pt-6 text-left">
-                        
+
                         <!-- Email Card -->
-                        <a href="mailto:eslam.mohamed.551999@gmail.com" class="p-4 rounded-2xl bg-slate-950/80 dark:bg-slate-950/80 border border-slate-800 dark:border-slate-800 hover:border-indigo-500/50 transition-all flex items-center gap-4 group">
-                            <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:scale-110 transition-transform">
+                        <a href="mailto:eslam.mohamed.551999@gmail.com"
+                            class="p-4 rounded-2xl bg-slate-950/80 dark:bg-slate-950/80 border border-slate-800 dark:border-slate-800 hover:border-indigo-500/50 transition-all flex items-center gap-4 group">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:scale-110 transition-transform">
                                 <i data-lucide="mail" class="w-5 h-5"></i>
                             </div>
                             <div class="overflow-hidden">
                                 <div class="text-xs text-slate-400 font-medium">Direct Email</div>
-                                <div class="text-sm font-bold text-white group-hover:text-indigo-400 transition-colors truncate">eslam.mohamed.551999@gmail.com</div>
+                                <div
+                                    class="text-sm font-bold text-white group-hover:text-indigo-400 transition-colors truncate">
+                                    eslam.mohamed.551999@gmail.com</div>
                             </div>
                         </a>
 
                         <!-- Phone Card -->
-                        <a href="tel:+201288413516" class="p-4 rounded-2xl bg-slate-950/80 dark:bg-slate-950/80 border border-slate-800 dark:border-slate-800 hover:border-indigo-500/50 transition-all flex items-center gap-4 group">
-                            <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:scale-110 transition-transform">
+                        <a href="tel:+201288413516"
+                            class="p-4 rounded-2xl bg-slate-950/80 dark:bg-slate-950/80 border border-slate-800 dark:border-slate-800 hover:border-indigo-500/50 transition-all flex items-center gap-4 group">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:scale-110 transition-transform">
                                 <i data-lucide="phone" class="w-5 h-5"></i>
                             </div>
                             <div>
                                 <div class="text-xs text-slate-400 font-medium">Call / WhatsApp</div>
-                                <div class="text-sm font-bold text-white group-hover:text-indigo-400 transition-colors">+20 128 841 3516</div>
+                                <div class="text-sm font-bold text-white group-hover:text-indigo-400 transition-colors">
+                                    +20 128 841 3516</div>
                             </div>
                         </a>
 
@@ -1131,12 +1663,27 @@
 
                     <!-- Social Profiles -->
                     <div class="flex flex-wrap items-center justify-center gap-4 pt-6">
-                        <a href="https://www.github.com/eslam-mohamed-dev" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 text-slate-300 hover:text-white font-semibold text-xs flex items-center gap-2 transition-all hover:scale-105">
-                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                        <a href="https://www.github.com/eslam-mohamed-dev" target="_blank" rel="noopener noreferrer"
+                            class="px-5 py-3 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 text-slate-300 hover:text-white font-semibold text-xs flex items-center gap-2 transition-all hover:scale-105">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                            </svg>
                             github.com/eslam-mohamed-dev
                         </a>
-                        <a href="https://www.linkedin.com/in/eslam-mohamed-dev" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 text-slate-300 hover:text-white font-semibold text-xs flex items-center gap-2 transition-all hover:scale-105">
-                            <svg class="w-4 h-4 fill-current" viewBox="0 0 93.06 93.06" xmlns="http://www.w3.org/2000/svg"><path d="M11.185,0.08C5.004,0.08,0.001,5.092,0,11.259c0,6.173,5.003,11.184,11.186,11.184c6.166,0,11.176-5.011,11.176-11.184 C22.362,5.091,17.351,0.08,11.185,0.08z"></path><rect x="1.538" y="30.926" width="19.287" height="62.054"></rect><path d="M69.925,29.383c-9.382,0-15.673,5.144-18.248,10.022h-0.258v-8.479H32.921H32.92v62.053h19.27V62.281 c0-8.093,1.541-15.932,11.575-15.932c9.89,0,10.022,9.256,10.022,16.451v30.178H93.06V58.942 C93.06,42.235,89.455,29.383,69.925,29.383z"></path></svg>
+                        <a href="https://www.linkedin.com/in/eslam-mohamed-dev" target="_blank"
+                            rel="noopener noreferrer"
+                            class="px-5 py-3 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 text-slate-300 hover:text-white font-semibold text-xs flex items-center gap-2 transition-all hover:scale-105">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 93.06 93.06"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.185,0.08C5.004,0.08,0.001,5.092,0,11.259c0,6.173,5.003,11.184,11.186,11.184c6.166,0,11.176-5.011,11.176-11.184 C22.362,5.091,17.351,0.08,11.185,0.08z">
+                                </path>
+                                <rect x="1.538" y="30.926" width="19.287" height="62.054"></rect>
+                                <path
+                                    d="M69.925,29.383c-9.382,0-15.673,5.144-18.248,10.022h-0.258v-8.479H32.921H32.92v62.053h19.27V62.281 c0-8.093,1.541-15.932,11.575-15.932c9.89,0,10.022,9.256,10.022,16.451v30.178H93.06V58.942 C93.06,42.235,89.455,29.383,69.925,29.383z">
+                                </path>
+                            </svg>
                             linkedin.com/in/eslam-mohamed-dev
                         </a>
                     </div>
@@ -1154,32 +1701,45 @@
     </footer>
 
     <!-- Floating Back to Top Button -->
-    <a id="back-to-top" href="#hero" aria-label="Back to top" class="fixed bottom-6 right-6 z-40 p-3 rounded-full bg-slate-900/90 border border-slate-800 text-indigo-400 hover:text-white hover:bg-indigo-600 shadow-2xl backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300 hover:scale-110 flex items-center justify-center" title="Back to top">
+    <a id="back-to-top" href="#hero" aria-label="Back to top"
+        class="fixed bottom-6 right-6 z-40 p-3 rounded-full bg-slate-900/90 border border-slate-800 text-indigo-400 hover:text-white hover:bg-indigo-600 shadow-2xl backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300 hover:scale-110 flex items-center justify-center"
+        title="Back to top">
         <i data-lucide="arrow-up" class="w-5 h-5"></i>
     </a>
 
     <!-- Full-Screen Image Lightbox Modal with Carousel Navigation -->
-    <div id="image-lightbox" class="fixed inset-0 z-50 bg-slate-950/95 backdrop-blur-md hidden items-center justify-center p-4 transition-all duration-300">
+    <div id="image-lightbox"
+        class="fixed inset-0 z-50 bg-slate-950/95 backdrop-blur-md hidden items-center justify-center p-4 transition-all duration-300">
         <!-- Close Button -->
-        <button id="lightbox-close" type="button" aria-label="Close Lightbox" class="absolute top-5 right-5 p-3 rounded-full bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:bg-indigo-600 transition-all flex items-center justify-center shadow-2xl z-20" title="Close (Esc)">
+        <button id="lightbox-close" type="button" aria-label="Close Lightbox"
+            class="absolute top-5 right-5 p-3 rounded-full bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:bg-indigo-600 transition-all flex items-center justify-center shadow-2xl z-20"
+            title="Close (Esc)">
             <i data-lucide="x" class="w-6 h-6"></i>
         </button>
 
         <!-- Previous Slide Button -->
-        <button id="lightbox-prev" type="button" aria-label="Previous Image" class="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-slate-900/80 border border-slate-800 text-slate-300 hover:text-white hover:bg-indigo-600 transition-all flex items-center justify-center shadow-2xl z-20" title="Previous Slide (←)">
+        <button id="lightbox-prev" type="button" aria-label="Previous Image"
+            class="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-slate-900/80 border border-slate-800 text-slate-300 hover:text-white hover:bg-indigo-600 transition-all flex items-center justify-center shadow-2xl z-20"
+            title="Previous Slide (←)">
             <i data-lucide="chevron-left" class="w-6 h-6"></i>
         </button>
 
         <!-- Next Slide Button -->
-        <button id="lightbox-next" type="button" aria-label="Next Image" class="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-slate-900/80 border border-slate-800 text-slate-300 hover:text-white hover:bg-indigo-600 transition-all flex items-center justify-center shadow-2xl z-20" title="Next Slide (→)">
+        <button id="lightbox-next" type="button" aria-label="Next Image"
+            class="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-slate-900/80 border border-slate-800 text-slate-300 hover:text-white hover:bg-indigo-600 transition-all flex items-center justify-center shadow-2xl z-20"
+            title="Next Slide (→)">
             <i data-lucide="chevron-right" class="w-6 h-6"></i>
         </button>
 
-        <div class="relative max-w-6xl w-full max-h-[90vh] flex flex-col items-center justify-center overflow-hidden rounded-2xl border border-slate-800/80 bg-slate-900/60 p-3 shadow-2xl">
-            <img id="lightbox-img" src="" alt="Full view preview" class="max-w-full max-h-[80vh] object-contain rounded-xl shadow-2xl transition-all duration-300" />
+        <div
+            class="relative max-w-6xl w-full max-h-[90vh] flex flex-col items-center justify-center overflow-hidden rounded-2xl border border-slate-800/80 bg-slate-900/60 p-3 shadow-2xl">
+            <img id="lightbox-img" src="" alt="Full view preview"
+                class="max-w-full max-h-[80vh] object-contain rounded-xl shadow-2xl transition-all duration-300" />
             <div class="flex items-center justify-between w-full px-4 pt-3 border-t border-slate-800/60 mt-2 gap-3">
                 <div id="lightbox-caption" class="text-xs text-slate-300 font-medium line-clamp-2 leading-snug"></div>
-                <div id="lightbox-counter" class="text-xs text-indigo-400 font-mono font-semibold px-2.5 py-0.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 flex-shrink-0 whitespace-nowrap"></div>
+                <div id="lightbox-counter"
+                    class="text-xs text-indigo-400 font-mono font-semibold px-2.5 py-0.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 flex-shrink-0 whitespace-nowrap">
+                </div>
             </div>
         </div>
     </div>
@@ -1187,4 +1747,5 @@
     <!-- Main JavaScript -->
     <script src="js/main.js"></script>
 </body>
+
 </html>

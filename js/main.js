@@ -260,6 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupCarousel('.arabcare-carousel', '.arabcare-track', '.arabcare-prev', '.arabcare-next', '.arabcare-dot');
     setupCarousel('.almonqez-carousel', '.almonqez-track', '.almonqez-prev', '.almonqez-next', '.almonqez-dot');
     setupCarousel('.abah-carousel', '.abah-track', '.abah-prev', '.abah-next', '.abah-dot');
+    setupCarousel('.highness-carousel', '.highness-track', '.highness-prev', '.highness-next', '.highness-dot');
 
     // 8. Full-Screen Image Lightbox Viewer with Carousel Support
     const lightbox = document.getElementById('image-lightbox');
@@ -301,7 +302,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (lightbox && lightboxImg) {
-        document.querySelectorAll('.mena-track img, .aflami-track img, .arabcare-track img, .almonqez-track img, .abah-track img, #projects img, #about img').forEach(img => {
+        document.querySelectorAll('.mena-track img, .aflami-track img, .arabcare-track img, .almonqez-track img, .abah-track img, .highness-track img, #projects img, #about img').forEach(img => {
             // Ignore logo icons or explicitly excluded images
             if (img.src.includes('thechance') || img.classList.contains('no-lightbox')) return;
 
@@ -309,7 +310,7 @@ document.addEventListener('DOMContentLoaded', () => {
             img.addEventListener('click', (e) => {
                 e.stopPropagation();
                 // Determine image set (if inside a carousel, grab all sibling carousel images)
-                const carouselTrack = img.closest('.mena-track, .aflami-track, .arabcare-track, .almonqez-track, .abah-track, .carousel-track');
+                const carouselTrack = img.closest('.mena-track, .aflami-track, .arabcare-track, .almonqez-track, .abah-track, .highness-track, .carousel-track');
                 if (carouselTrack) {
                     lightboxImages = Array.from(carouselTrack.querySelectorAll('img'));
                 } else {
