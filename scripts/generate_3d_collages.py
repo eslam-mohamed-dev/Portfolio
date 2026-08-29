@@ -3,7 +3,7 @@
 Universal 3D App Showcase Collage Generator
 -------------------------------------------
 Generates 1920x1080 high-definition 3D phone showcase collages matching the
-exact empirical pixel standards of the portfolio.
+exact empirical pixel standards and mathematical symmetry of the portfolio.
 
 Default Frame: iPhone 15 Pro Frame
 Optional Frame: Android Punch-Hole Frame (--frame-type android)
@@ -185,7 +185,12 @@ def generate_hero_collage(screenshots, output_path, brand_hex, logo_path, frame_
     heights = [670, 725, 796, 725, 670]
     yaws = [-12, -6, 0, 6, 12]
     y_offsets = [282, 236, 190, 236, 282]
-    xs = [167, 450, 760, 1150, 1450]
+    
+    # 100% Mathematically Symmetrical X positions:
+    if frame_type == "android":
+        xs = [219, 485, 772, 1093, 1385] # Exact equal 55px/50px symmetrical overlaps
+    else:
+        xs = [187, 465, 765, 1100, 1405] # Exact equal 55px/50px symmetrical overlaps
     
     phones = []
     for ss_path, h, y in zip(screenshots[:5], heights, yaws):
