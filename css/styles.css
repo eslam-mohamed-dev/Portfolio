@@ -29,6 +29,13 @@
         background-color: rgba(99, 102, 241, 0.15);
         transform: translateY(-1px);
     }
+
+    /* Prevent vertical page scrolling during horizontal carousel swiping */
+    .mena-carousel, .aflami-carousel, .arabcare-carousel, .almonqez-carousel, .abah-carousel, .highness-carousel, [class*="-carousel"] {
+        touch-action: pan-y;
+        user-select: none;
+        -webkit-user-select: none;
+    }
 }
 
 /* Custom Scrollbar */

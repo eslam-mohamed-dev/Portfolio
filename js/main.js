@@ -233,19 +233,37 @@ document.addEventListener('DOMContentLoaded', () => {
         // Touch Swipe Gestures for Mobile
         let touchStartX = 0;
         let touchStartY = 0;
+        let isHorizontalSwipe = false;
 
         carousel.addEventListener('touchstart', (e) => {
-            touchStartX = e.changedTouches[0].screenX;
-            touchStartY = e.changedTouches[0].screenY;
+            if (!e.touches.length) return;
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+            isHorizontalSwipe = false;
         }, { passive: true });
 
-        carousel.addEventListener('touchend', (e) => {
-            const touchEndX = e.changedTouches[0].screenX;
-            const touchEndY = e.changedTouches[0].screenY;
-            const deltaX = touchEndX - touchStartX;
-            const deltaY = touchEndY - touchStartY;
+        carousel.addEventListener('touchmove', (e) => {
+            if (!e.touches.length) return;
+            const touchCurrentX = e.touches[0].clientX;
+            const touchCurrentY = e.touches[0].clientY;
+            const deltaX = touchCurrentX - touchStartX;
+            const deltaY = touchCurrentY - touchStartY;
 
-            if (Math.abs(deltaX) > 35 && Math.abs(deltaX) > Math.abs(deltaY)) {
+            // Lock vertical scrolling if user is intentionally swiping horizontally (> 8px)
+            if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 8) {
+                isHorizontalSwipe = true;
+                if (e.cancelable) {
+                    e.preventDefault();
+                }
+            }
+        }, { passive: false });
+
+        carousel.addEventListener('touchend', (e) => {
+            if (!isHorizontalSwipe) return;
+            const touchEndX = e.changedTouches[0].clientX;
+            const deltaX = touchEndX - touchStartX;
+
+            if (Math.abs(deltaX) > 30) {
                 if (deltaX < 0) {
                     updateCarousel(currentSlide + 1);
                 } else {
