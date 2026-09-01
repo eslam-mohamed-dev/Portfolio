@@ -420,3 +420,114 @@ html:not(.dark) .project-filter-btn:not(.bg-indigo-600):hover {
 ::view-transition-new(root) {
     z-index: 9999;
 }
+
+/* Futuristic Animated IDE Code Typer Visual Effects */
+@keyframes charPopGlow {
+    0% {
+        opacity: 0.2;
+        transform: scale(1.45);
+        filter: drop-shadow(0 0 10px rgba(56, 189, 248, 1)) drop-shadow(0 0 15px rgba(99, 102, 241, 0.8));
+        color: #38bdf8;
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+        filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.7));
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        filter: drop-shadow(0 0 0px transparent);
+    }
+}
+
+.char-type-glow {
+    display: inline-block;
+    animation: charPopGlow 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    will-change: transform, filter, opacity;
+}
+
+/* CRT Screen Power Off and Power On Animations */
+@keyframes crtPowerOff {
+    0% {
+        transform: scale(1, 1);
+        filter: brightness(1) contrast(1);
+        opacity: 1;
+    }
+    40% {
+        transform: scale(1, 0.005);
+        filter: brightness(3.5) contrast(2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0, 0);
+        filter: brightness(0);
+        opacity: 0;
+    }
+}
+
+@keyframes crtPowerOn {
+    0% {
+        transform: scale(0, 0.005);
+        filter: brightness(4);
+        opacity: 0.2;
+    }
+    50% {
+        transform: scale(1, 0.005);
+        filter: brightness(2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1, 1);
+        filter: brightness(1);
+        opacity: 1;
+    }
+}
+
+.crt-off {
+    animation: crtPowerOff 0.45s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+.crt-on {
+    animation: crtPowerOn 0.45s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+/* iOS Wallpaper Light & Dark Theme Switcher */
+html:not(.dark) .ios-wallpaper-dark {
+    display: none !important;
+}
+html:not(.dark) .ios-wallpaper-light {
+    display: block !important;
+}
+
+/* Enforce All Emulator Text & Icons to be Pure White (#ffffff) on Both Light & Dark Themes */
+#phone-screen-os,
+#phone-screen-os *,
+#phone-screen-os .phone-ui-text,
+#phone-screen-os .phone-ui-subtext {
+    color: #ffffff !important;
+}
+
+#phone-screen-os svg {
+    fill: #ffffff !important;
+}
+
+/* App Titles Soft Lighter & Spreaded Drop Shadow for iOS Legibility */
+.app-icon-btn span {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45), 0 1px 4px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* Clean iOS Sheer Liquid Glass Dock */
+.ios26-glass-dock {
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25) !important;
+}
+
+html:not(.dark) .ios26-glass-dock {
+    background: rgba(255, 255, 255, 0.3) !important;
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+}

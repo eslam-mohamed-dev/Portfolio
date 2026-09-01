@@ -389,7 +389,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { passive: true });
     }
 
-    // 9. Floating Back to Top Button Controller
+    // Global Flag Tracking Navigation From Mobile App Grid Icons
+    let jumpedFromPhone = false;
+
+    // 9. Floating Back to Top Button Controller (Smart 2-Stage Navigation)
     const backToTopBtn = document.getElementById('back-to-top');
     if (backToTopBtn) {
         window.addEventListener('scroll', () => {
@@ -399,6 +402,26 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
                 backToTopBtn.classList.remove('opacity-100', 'pointer-events-auto');
+                // Reset flag when scrolled back up near top
+                jumpedFromPhone = false;
+            }
+        });
+
+        backToTopBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (jumpedFromPhone) {
+                // Stage 1: Scroll back to the Mobile Device in Hero section
+                const phoneEl = document.getElementById('phone-screen-container') || document.getElementById('phone-mode-toggle');
+                if (phoneEl) {
+                    phoneEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+                // Reset flag so subsequent click scrolls to top of page
+                jumpedFromPhone = false;
+            } else {
+                // Stage 2: Scroll all the way to top of page
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             }
         });
     }
@@ -433,5 +456,256 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
         });
+    }
+
+    // 11. Hero Right Column Interactive CRT Smartphone State Engine
+    const phoneScreenContainer = document.getElementById('phone-screen-container');
+    const phoneScreenCode = document.getElementById('phone-screen-code');
+    const phoneScreenOs = document.getElementById('phone-screen-os');
+    const phoneModeToggle = document.getElementById('phone-mode-toggle');
+    const phoneModeLabel = document.getElementById('phone-mode-label');
+    const codeTyperContainer = document.getElementById('hero-code-typer');
+
+    if (phoneScreenContainer && codeTyperContainer) {
+        let currentMode = 'code'; // 'code' or 'os'
+        let isTransitioning = false;
+        let activeLineDiv = null;
+        let osTimer = null;
+        let typewriterTimeout = null;
+
+        const codeStructure = [
+            { indent: 0, tokens: [
+                { text: 'object ', class: 'text-purple-400 font-bold' },
+                { text: 'EslamMohamed ', class: 'text-indigo-300 font-bold' },
+                { text: ': ', class: 'text-slate-400' },
+                { text: 'MobileDeveloper ', class: 'text-emerald-400 font-bold' },
+                { text: '{', class: 'text-slate-200' }
+            ]},
+            { indent: 1, tokens: [
+                { text: 'val ', class: 'text-purple-400' },
+                { text: 'primaryStack ', class: 'text-slate-200' },
+                { text: '= ', class: 'text-slate-400' },
+                { text: 'listOf', class: 'text-sky-400' },
+                { text: '(', class: 'text-slate-300' },
+                { text: '"Flutter"', class: 'text-emerald-300' },
+                { text: ', ', class: 'text-slate-400' },
+                { text: '"Kotlin CMP"', class: 'text-emerald-300' },
+                { text: ')', class: 'text-slate-300' }
+            ]},
+            { indent: 1, tokens: [
+                { text: 'val ', class: 'text-purple-400' },
+                { text: 'architecture ', class: 'text-slate-200' },
+                { text: '= ', class: 'text-slate-400' },
+                { text: 'CleanArchitecture ', class: 'text-indigo-300' },
+                { text: '+ ', class: 'text-purple-400' },
+                { text: 'MVVM', class: 'text-indigo-300' }
+            ]},
+            { indent: 1, tokens: [
+                { text: 'val ', class: 'text-purple-400' },
+                { text: 'performanceBoost ', class: 'text-slate-200' },
+                { text: '= ', class: 'text-slate-400' },
+                { text: '70.percent', class: 'text-emerald-400 font-bold' }
+            ]},
+            { indent: 0, tokens: [] },
+            { indent: 1, tokens: [
+                { text: 'fun ', class: 'text-purple-400' },
+                { text: 'buildProducts', class: 'text-sky-400' },
+                { text: '() ', class: 'text-slate-300' },
+                { text: '= ', class: 'text-slate-400' },
+                { text: 'Deliver', class: 'text-indigo-300' },
+                { text: '(', class: 'text-slate-300' }
+            ]},
+            { indent: 2, tokens: [
+                { text: 'activeUsers ', class: 'text-slate-300' },
+                { text: '= ', class: 'text-slate-400' },
+                { text: '25000', class: 'text-amber-400 font-bold' },
+                { text: ',', class: 'text-slate-400' }
+            ]},
+            { indent: 2, tokens: [
+                { text: 'stability ', class: 'text-slate-300' },
+                { text: '= ', class: 'text-slate-400' },
+                { text: '99.9.percent', class: 'text-emerald-400 font-bold' }
+            ]},
+            { indent: 1, tokens: [{ text: ')', class: 'text-slate-300' }] },
+            { indent: 0, tokens: [{ text: '}', class: 'text-slate-200' }] }
+        ];
+
+        // CRT Screen State Switcher
+        function triggerCrtSwitch(targetMode) {
+            if (isTransitioning) return;
+            isTransitioning = true;
+            if (osTimer) clearTimeout(osTimer);
+            if (typewriterTimeout) clearTimeout(typewriterTimeout);
+
+            // Phase 1: CRT Power Off Flash & Collapse
+            phoneScreenContainer.classList.remove('crt-on');
+            phoneScreenContainer.classList.add('crt-off');
+
+            setTimeout(() => {
+                // Phase 2: Switch Screen View
+                currentMode = targetMode;
+                if (targetMode === 'os') {
+                    if (phoneScreenCode) phoneScreenCode.classList.add('hidden');
+                    if (phoneScreenOs) phoneScreenOs.classList.remove('hidden');
+                    if (phoneModeLabel) phoneModeLabel.textContent = '📱 Mobile OS';
+                    // Remains open on Mobile OS permanently (no auto return to code)
+                } else {
+                    if (phoneScreenOs) phoneScreenOs.classList.add('hidden');
+                    if (phoneScreenCode) phoneScreenCode.classList.remove('hidden');
+                    if (phoneModeLabel) phoneModeLabel.textContent = '💻 Code Mode';
+                    startCharacterTypewriter();
+                }
+
+                // Phase 3: CRT Power On Flash & Expand
+                phoneScreenContainer.classList.remove('crt-off');
+                phoneScreenContainer.classList.add('crt-on');
+
+                setTimeout(() => {
+                    phoneScreenContainer.classList.remove('crt-on');
+                    isTransitioning = false;
+                }, 450);
+            }, 450);
+        }
+
+        // Typewriter Engine
+        function startCharacterTypewriter() {
+            codeTyperContainer.innerHTML = '';
+            let lineIdx = 0;
+            activeLineDiv = null;
+
+            function processLine() {
+                if (currentMode !== 'code') return;
+
+                if (lineIdx >= codeStructure.length) {
+                    if (activeLineDiv) activeLineDiv.classList.remove('bg-indigo-500/10');
+                    activeLineDiv = null;
+
+                    // Show final build success line
+                    const successDiv = document.createElement('div');
+                    successDiv.className = 'font-mono text-indigo-400 font-bold animate-pulse pt-1 flex items-center gap-1.5';
+                    successDiv.innerHTML = '<span class="text-emerald-400">✓</span> <span class="text-slate-400">Build Successful</span> <span class="w-1.5 h-3.5 bg-indigo-400 inline-block animate-ping"></span>';
+                    codeTyperContainer.appendChild(successDiv);
+
+                    // Pause 2 seconds then trigger CRT switch to Mobile OS screen
+                    typewriterTimeout = setTimeout(() => {
+                        triggerCrtSwitch('os');
+                    }, 2200);
+                    return;
+                }
+
+                if (activeLineDiv) activeLineDiv.classList.remove('bg-indigo-500/10');
+
+                const lineData = codeStructure[lineIdx];
+                const lineDiv = document.createElement('div');
+                activeLineDiv = lineDiv;
+                
+                const indentClass = lineData.indent === 2 ? 'pl-8' : (lineData.indent === 1 ? 'pl-4' : 'pl-0');
+                lineDiv.className = `font-mono text-slate-300 whitespace-pre-wrap rounded px-1 transition-colors duration-200 bg-indigo-500/10 ${indentClass}`;
+                codeTyperContainer.appendChild(lineDiv);
+
+                if (lineData.tokens.length === 0) {
+                    lineDiv.innerHTML = '&nbsp;';
+                    lineIdx++;
+                    typewriterTimeout = setTimeout(processLine, 40);
+                    return;
+                }
+
+                let tokenIdx = 0;
+                let charIdx = 0;
+                let currentTokenSpan = null;
+
+                function typeChar() {
+                    if (currentMode !== 'code') return;
+
+                    if (tokenIdx >= lineData.tokens.length) {
+                        lineIdx++;
+                        const isClosingLine = lineData.tokens.length === 1 && lineData.tokens[0].text.length === 1;
+                        const lineDelay = isClosingLine ? 160 : 50;
+                        typewriterTimeout = setTimeout(processLine, lineDelay);
+                        return;
+                    }
+
+                    const currentToken = lineData.tokens[tokenIdx];
+                    
+                    if (charIdx === 0) {
+                        currentTokenSpan = document.createElement('span');
+                        currentTokenSpan.className = currentToken.class || 'text-slate-300';
+                        lineDiv.appendChild(currentTokenSpan);
+                    }
+
+                    const ch = currentToken.text[charIdx];
+                    const charSpan = document.createElement('span');
+                    charSpan.className = 'char-type-glow';
+                    charSpan.textContent = ch;
+                    currentTokenSpan.appendChild(charSpan);
+
+                    charIdx++;
+
+                    if (charIdx >= currentToken.text.length) {
+                        tokenIdx++;
+                        charIdx = 0;
+                    }
+
+                    typewriterTimeout = setTimeout(typeChar, Math.floor(Math.random() * 4) + 2);
+                }
+
+                typeChar();
+            }
+
+            processLine();
+        }
+
+        // Manual Mode Switcher Pill Toggle
+        if (phoneModeToggle) {
+            phoneModeToggle.addEventListener('click', () => {
+                const nextMode = currentMode === 'code' ? 'os' : 'code';
+                triggerCrtSwitch(nextMode);
+            });
+        }
+
+        // Clickable App Grid Icon Navigation to Project Cards
+        const appJumpButtons = document.querySelectorAll('[data-app-jump]');
+        appJumpButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = btn.getAttribute('data-app-jump');
+                const targetCard = document.getElementById(targetId);
+
+                if (targetCard) {
+                    // Flag that navigation originated from mobile app icon
+                    jumpedFromPhone = true;
+
+                    // Smooth Scroll to target project card
+                    targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                    // Highlight Project Card with glowing ring aura
+                    targetCard.classList.add('ring-2', 'ring-indigo-500', 'shadow-2xl', 'shadow-indigo-500/50');
+                    setTimeout(() => {
+                        targetCard.classList.remove('ring-2', 'ring-indigo-500', 'shadow-2xl', 'shadow-indigo-500/50');
+                    }, 2500);
+                }
+            });
+        });
+
+        // Live Real System Clock Tracker for Phone Emulator (System 12h/24h + 2-digit padded 00:00)
+        function updatePhoneStatusClock() {
+            const clockEl = document.getElementById('phone-status-clock');
+            if (!clockEl) return;
+            const now = new Date();
+            
+            // Format using system locale (respects 12h / 24h system setting)
+            const options = { hour: '2-digit', minute: '2-digit' };
+            let timeStr = now.toLocaleTimeString([], options);
+            
+            // Remove AM/PM text if present in locale output to keep clean status bar time
+            timeStr = timeStr.replace(/\s?[AP]M/i, '').trim();
+            
+            clockEl.textContent = timeStr;
+        }
+        updatePhoneStatusClock();
+        setInterval(updatePhoneStatusClock, 1000);
+
+        // Start Initial Code Mode
+        startCharacterTypewriter();
     }
 });

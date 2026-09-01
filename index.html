@@ -253,114 +253,167 @@
                     </div>
                 </div>
 
-                <!-- Hero Right Column Graphic: Phone Frame Display -->
+                <!-- Hero Right Column Graphic: Interactive CRT Smartphone State Engine -->
                 <div class="lg:col-span-5 flex justify-center items-center">
-                    <div class="relative w-full max-w-[300px] sm:max-w-[320px]">
+                    <div class="relative w-full max-w-[300px] sm:max-w-[325px]">
 
-                        <!-- Device Frame -->
-                        <div
-                            class="relative bg-slate-900 p-4 rounded-[48px] border-2 border-slate-800 shadow-xl overflow-hidden">
-                            <!-- Dynamic Island / Speaker Notch -->
-                            <div
-                                class="absolute top-6 left-1/2 -translate-x-1/2 w-28 h-5 bg-slate-950 rounded-full flex items-center justify-center gap-2 z-20">
-                                <div class="w-2.5 h-2.5 rounded-full bg-slate-900"></div>
-                                <div class="w-2.5 h-2.5 rounded-full bg-slate-800"></div>
-                            </div>
+                        <!-- Top Interactive Mode Switcher Pill (Theme-responsive & raised with gap) -->
+                        <button type="button" id="phone-mode-toggle"
+                            class="absolute -top-9 left-1/2 -translate-x-1/2 bg-white/95 dark:bg-slate-900/95 border border-slate-200 dark:border-indigo-500/40 hover:border-indigo-500 dark:hover:border-indigo-400 px-3.5 py-1 rounded-full shadow-xl backdrop-blur-md flex items-center gap-2 text-[11px] font-bold text-slate-800 dark:text-slate-100 z-30 transition-all cursor-pointer group">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500 dark:bg-emerald-400 animate-pulse"></span>
+                            <span id="phone-mode-label" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-300">💻 Code Mode</span>
+                            <i data-lucide="refresh-cw" class="w-3 h-3 text-slate-500 dark:text-slate-400 group-hover:rotate-180 transition-transform duration-500"></i>
+                        </button>
 
-                            <!-- Screen Container -->
-                            <div
-                                class="bg-slate-950 rounded-[36px] pt-10 pb-6 px-4 border border-slate-800/80 min-h-[520px] flex flex-col justify-between relative overflow-hidden">
+                        <!-- Real iPhone 15 PNG Device Frame Wrapper (Locked 502:1024 aspect ratio for 100% invariant responsiveness across all screens) -->
+                        <div class="relative w-[285px] sm:w-[300px] aspect-[502/1024] mx-auto select-none">
+                            
+                            <!-- Real iPhone 15 Transparent PNG Frame Overlay -->
+                            <img src="assets/img/iphone15_frame.png" alt="iPhone 15 Frame"
+                                class="absolute inset-0 w-full h-full object-contain pointer-events-none z-30 drop-shadow-2xl no-lightbox" />
 
-                                <div class="space-y-4">
-                                    <!-- App Header -->
-                                    <div class="flex items-center justify-between">
-                                        <div class="flex items-center gap-2">
-                                            <div
-                                                class="w-8 h-8 rounded-lg bg-brand-500/20 border border-brand-500/40 flex items-center justify-center">
-                                                <i data-lucide="layers" class="w-4 h-4 text-brand-accent"></i>
-                                            </div>
-                                            <div>
-                                                <div class="text-xs font-bold text-slate-200">Software Hub</div>
-                                                <div class="text-[10px] text-slate-400">Clean Architecture</div>
-                                            </div>
+                            <!-- Screen Content Container Positioned Perfectly Behind iPhone 15 Frame -->
+                            <div id="phone-screen-container"
+                                class="absolute top-[1.4%] left-[4.8%] right-[4.8%] bottom-[1.4%] bg-slate-950 rounded-[30px] overflow-hidden z-10 flex flex-col justify-between transition-transform">
+
+                                <!-- SCREEN 1: Code Mode (Extra 4px vertical padding) -->
+                                <div id="phone-screen-code" class="w-full h-full flex flex-col justify-between px-3.5 pt-[48px] pb-[24px] text-left font-mono rounded-[30px] overflow-hidden">
+                                    
+                                    <!-- Code Editor Top Header -->
+                                    <div class="flex items-center justify-between pb-2 border-b border-slate-800/80 mb-1">
+                                        <div class="flex items-center gap-1.5">
+                                            <div class="w-2.5 h-2.5 rounded-full bg-rose-500/80"></div>
+                                            <div class="w-2.5 h-2.5 rounded-full bg-amber-500/80"></div>
+                                            <div class="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></div>
                                         </div>
-                                        <div class="w-2 h-2 rounded-full bg-emerald-400"></div>
-                                    </div>
-
-                                    <!-- Tech Stack Mockup Card 1 -->
-                                    <div
-                                        class="p-3.5 rounded-2xl bg-slate-900/90 border border-slate-800 text-left space-y-2 shadow-lg">
-                                        <div class="flex items-center justify-between">
-                                            <span
-                                                class="text-[11px] font-bold text-brand-accent uppercase tracking-wider">Flutter
-                                                Core</span>
-                                            <span
-                                                class="text-[10px] px-2 py-0.5 rounded-full bg-brand-500/20 text-brand-300 font-semibold">60
-                                                FPS</span>
-                                        </div>
-                                        <div class="text-xs font-semibold text-white">Offline-First Engine</div>
-                                        <div class="w-full bg-slate-800 rounded-full h-1.5 overflow-hidden">
-                                            <div class="bg-indigo-500 h-full w-[90%] rounded-full"></div>
+                                        <div class="text-[10px] font-semibold text-indigo-300 bg-slate-900 px-2.5 py-0.5 rounded-md border border-slate-800">
+                                            EslamDeveloper.kt
                                         </div>
                                     </div>
 
-                                    <!-- Tech Stack Mockup Card 2 -->
-                                    <div
-                                        class="p-3.5 rounded-2xl bg-slate-900/90 border border-slate-800 text-left space-y-2 shadow-lg">
-                                        <div class="flex items-center justify-between">
-                                            <span
-                                                class="text-[11px] font-bold text-emerald-400 uppercase tracking-wider">Kotlin
-                                                Native / CMP</span>
-                                            <span
-                                                class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-semibold">Room
-                                                & Hilt</span>
-                                        </div>
-                                        <div class="text-xs font-semibold text-white">Jetpack Compose UI</div>
-                                        <div class="flex gap-1.5 pt-1">
-                                            <span
-                                                class="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono">MVVM</span>
-                                            <span
-                                                class="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono">Coroutines</span>
-                                        </div>
+                                    <!-- Code Typer Container -->
+                                    <div id="hero-code-typer" class="space-y-1 text-[11px] font-mono whitespace-pre-wrap relative z-10 my-auto">
+                                        <!-- Animated Code Lines Rendered by JS -->
                                     </div>
 
-                                    <!-- Payments SDK Card -->
-                                    <div
-                                        class="p-3 rounded-2xl bg-slate-900/90 border border-slate-800 text-left flex items-center justify-between shadow-lg">
-                                        <div class="flex items-center gap-2">
-                                            <div
-                                                class="w-7 h-7 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-400">
-                                                <i data-lucide="credit-card" class="w-3.5 h-3.5"></i>
+                                    <!-- Code Editor Bottom Status -->
+                                    <div class="pt-2 border-t border-slate-900 flex items-center justify-between text-[9px] text-slate-500 font-mono">
+                                        <div class="flex items-center gap-1">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+                                            <span class="text-slate-400">COMPILING</span>
+                                        </div>
+                                        <div class="text-indigo-400">Clean Architecture</div>
+                                    </div>
+                                </div>
+
+                                <!-- SCREEN 2: iOS Mobile OS Screen (Theme Responsive Wallpaper + Extra 2px vertical padding) -->
+                                <div id="phone-screen-os" class="w-full h-full px-3 pt-[12px] pb-[14px] text-left hidden relative overflow-hidden rounded-[30px]">
+                                    
+                                    <!-- Dynamic iOS Wallpapers -->
+                                    <img src="assets/img/ios26-dark-bg.jpg" alt="iOS 26 Dark Wallpaper" class="ios-wallpaper-dark absolute inset-0 w-full h-full object-cover z-0 pointer-events-none rounded-[30px]" />
+                                    <img src="assets/img/ios26-light-bg.jpg" alt="iOS 26 Light Wallpaper" class="ios-wallpaper-light absolute inset-0 w-full h-full object-cover z-0 pointer-events-none hidden rounded-[30px]" />
+
+                                    <!-- Content Layer -->
+                                    <div class="relative z-10 flex flex-col justify-between h-full">
+
+                                        <!-- Authentic iOS 26 Status Bar (4px top padding, 6px horizontal padding) -->
+                                        <div class="flex items-center justify-between px-[6px] pt-[4px] text-white select-none phone-ui-text mb-1 relative z-20">
+                                            
+                                            <!-- Left: 2-Digit Padded System Clock (00:00) -->
+                                            <div class="flex items-center justify-start">
+                                                <span id="phone-status-clock" class="text-[12px] font-semibold tracking-tight font-sans text-white phone-ui-text">09:41</span>
                                             </div>
-                                            <div>
-                                                <div class="text-[11px] font-bold text-slate-200">Payments Integrated
+
+                                            <!-- Right: Authentic iOS 26 Signal, Wi-Fi, and Battery Indicator (Tight gap-[3px]) -->
+                                            <div class="flex items-center justify-end gap-[3px] text-white phone-ui-text">
+                                                
+                                                <!-- Cellular Signal Icon PNG -->
+                                                <img src="assets/img/ios-signal.png" alt="Cellular Signal" class="w-4 h-3.5 object-contain no-lightbox" />
+
+                                                <!-- Wi-Fi Icon PNG -->
+                                                <img src="assets/img/ios-wifi.png" alt="Wi-Fi" class="w-4 h-3.5 object-contain no-lightbox" />
+
+                                                <!-- Official Apple iOS Battery Pill -->
+                                                <div class="flex items-center gap-[0.5px]">
+                                                    <div class="w-[20px] h-[10.5px] rounded-[3.5px] border-[1.2px] border-white p-[1.2px] relative flex items-center bg-black/10">
+                                                        <div class="w-[90%] h-full bg-emerald-400 rounded-[1.8px]"></div>
+                                                    </div>
+                                                    <div class="w-[1.8px] h-[4px] bg-white rounded-r-[1px]"></div>
                                                 </div>
-                                                <div class="text-[9px] text-slate-400">Fawry & MyFatoorah</div>
+
                                             </div>
                                         </div>
-                                        <span class="text-[10px] font-bold text-emerald-400">+70% Conv.</span>
+
+                                        <!-- Clickable Interactive App Grid with REAL App Logos (Squircle Shape Cutout) -->
+                                        <div class="my-auto space-y-3 pt-4">
+                                            <div class="grid grid-cols-3 gap-y-5 gap-x-3 px-1">
+                                            
+                                            <!-- App 1: Al-Monqiz -->
+                                            <button type="button" data-app-jump="project-almonqez"
+                                                class="app-icon-btn flex flex-col items-center gap-1.5 transition-transform hover:scale-105 active:scale-95 group cursor-pointer">
+                                                <div class="w-11 h-11 rounded-[22%] overflow-hidden shadow-lg group-hover:scale-105 transition-all flex items-center justify-center">
+                                                    <img src="assets/img/almonqez-app-icon.png" alt="Al-Monqiz" class="w-full h-full object-cover no-lightbox" />
+                                                </div>
+                                                <span class="text-[9px] font-bold text-white group-hover:text-indigo-300 truncate max-w-full drop-shadow-[0_2px_6px_rgba(0,0,0,0.45)]">Al-Monqiz</span>
+                                            </button>
+
+                                            <!-- App 2: Highness Fruits -->
+                                            <button type="button" data-app-jump="project-highness"
+                                                class="app-icon-btn flex flex-col items-center gap-1.5 transition-transform hover:scale-105 active:scale-95 group cursor-pointer">
+                                                <div class="w-11 h-11 rounded-[22%] overflow-hidden shadow-lg group-hover:scale-105 transition-all flex items-center justify-center">
+                                                    <img src="assets/img/highness-app-icon.png" alt="Highness Fruits" class="w-full h-full object-cover no-lightbox" />
+                                                </div>
+                                                <span class="text-[9px] font-bold text-white group-hover:text-emerald-300 truncate max-w-full drop-shadow-[0_2px_6px_rgba(0,0,0,0.45)]">Highness</span>
+                                            </button>
+
+                                            <!-- App 3: Ali Bin Ali Hospital -->
+                                            <button type="button" data-app-jump="project-abah"
+                                                class="app-icon-btn flex flex-col items-center gap-1.5 transition-transform hover:scale-105 active:scale-95 group cursor-pointer">
+                                                <div class="w-11 h-11 rounded-[22%] overflow-hidden shadow-lg group-hover:scale-105 transition-all flex items-center justify-center">
+                                                    <img src="assets/img/abah-app-icon.png" alt="Ali Bin Ali Hospital" class="w-full h-full object-cover no-lightbox" />
+                                                </div>
+                                                <span class="text-[9px] font-bold text-white group-hover:text-purple-300 truncate max-w-full drop-shadow-[0_2px_6px_rgba(0,0,0,0.45)]">ABAH</span>
+                                            </button>
+
+                                            <!-- App 4: MENA App -->
+                                            <button type="button" data-app-jump="project-mena"
+                                                class="app-icon-btn flex flex-col items-center gap-1.5 transition-transform hover:scale-105 active:scale-95 group cursor-pointer">
+                                                <div class="w-11 h-11 rounded-[22%] overflow-hidden shadow-lg group-hover:scale-105 transition-all flex items-center justify-center">
+                                                    <img src="assets/img/mena-app-icon.webp" alt="MENA App" class="w-full h-full object-cover no-lightbox" />
+                                                </div>
+                                                <span class="text-[9px] font-bold text-white group-hover:text-sky-300 truncate max-w-full drop-shadow-[0_2px_6px_rgba(0,0,0,0.45)]">MENA App</span>
+                                            </button>
+
+                                            <!-- App 5: Aflami (Light/Dark Responsive Icon) -->
+                                            <button type="button" data-app-jump="project-aflami"
+                                                class="app-icon-btn flex flex-col items-center gap-1.5 transition-transform hover:scale-105 active:scale-95 group cursor-pointer">
+                                                <div class="w-11 h-11 rounded-[22%] overflow-hidden shadow-lg group-hover:scale-105 transition-all flex items-center justify-center relative">
+                                                    <img src="assets/img/aflami-app-dark.webp" alt="Aflami App Dark" class="aflami-icon-dark w-full h-full object-cover no-lightbox" />
+                                                    <img src="assets/img/aflami-app-light.webp" alt="Aflami App Light" class="aflami-icon-light w-full h-full object-cover no-lightbox hidden" />
+                                                </div>
+                                                <span class="text-[9px] font-bold text-white group-hover:text-rose-300 truncate max-w-full drop-shadow-[0_2px_6px_rgba(0,0,0,0.45)]">Aflami</span>
+                                            </button>
+
+                                            <!-- App 6: Arab Care -->
+                                            <button type="button" data-app-jump="project-arabcare"
+                                                class="app-icon-btn flex flex-col items-center gap-1.5 transition-transform hover:scale-105 active:scale-95 group cursor-pointer">
+                                                <div class="w-11 h-11 rounded-[22%] overflow-hidden shadow-lg group-hover:scale-105 transition-all flex items-center justify-center">
+                                                    <img src="assets/img/arabcare-app-icon.webp" alt="Arab Care" class="w-full h-full object-cover no-lightbox" />
+                                                </div>
+                                                <span class="text-[9px] font-bold text-white group-hover:text-amber-300 truncate max-w-full drop-shadow-[0_2px_6px_rgba(0,0,0,0.45)]">Arab Care</span>
+                                            </button>
+
+                                        </div>
                                     </div>
+
+                                    <!-- iOS Home Bar Indicator -->
+                                    <div class="w-28 h-1 bg-white/70 rounded-full mx-auto phone-home-bar shadow-sm mb-1"></div>
+
+                                    </div>
+
                                 </div>
 
-                                <!-- Screen Nav Bar -->
-                                <div
-                                    class="pt-4 border-t border-slate-800/80 flex items-center justify-around text-slate-500">
-                                    <i data-lucide="home" class="w-4 h-4 text-brand-accent"></i>
-                                    <i data-lucide="cpu" class="w-4 h-4"></i>
-                                    <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
-                                    <i data-lucide="user" class="w-4 h-4"></i>
-                                </div>
                             </div>
-                        </div>
-
-                        <!-- Floating Badges -->
-                        <div
-                            class="absolute -top-3 -right-4 bg-slate-900/90 border border-slate-800 px-3 py-1.5 rounded-xl shadow-xl backdrop-blur-md flex items-center gap-2 text-xs font-semibold text-slate-200">
-                            <span class="w-2 h-2 rounded-full bg-sky-400"></span> Flutter
-                        </div>
-                        <div
-                            class="absolute -bottom-4 -left-4 bg-slate-900/90 border border-slate-800 px-3 py-1.5 rounded-xl shadow-xl backdrop-blur-md flex items-center gap-2 text-xs font-semibold text-slate-200">
-                            <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Kotlin / CMP
                         </div>
 
                     </div>
@@ -860,7 +913,7 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto" id="projects-grid">
 
                 <!-- Project 1: Al-Monqiz Al-Shamel -->
-                <div data-category="flutter"
+                <div id="project-almonqez" data-category="flutter"
                     class="project-card group p-6 rounded-3xl bg-slate-900 border border-slate-800 hover:border-brand-500/50 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5 shadow-xl">
                     <div class="space-y-4">
                         <!-- Al-Monqidh Project Image Carousel (5 Showcase Slides) -->
@@ -992,7 +1045,7 @@
                 </div>
 
                 <!-- Project 2: Ali Bin Ali Hospital App -->
-                <div data-category="flutter"
+                <div id="project-abah" data-category="flutter"
                     class="project-card group p-6 rounded-3xl bg-slate-900 border border-slate-800 hover:border-brand-500/50 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5 shadow-xl">
                     <div class="space-y-4">
                         <!-- Ali Bin Ali Hospital Image Carousel (2 Showcase Slides) -->
@@ -1093,8 +1146,8 @@
                 </div>
 
                 <!-- Project 3: Highness Fruits -->
-                <div data-category="flutter"
-                    class="project-card group p-6 rounded-3xl bg-slate-900 border border-slate-800 hover:border-brand-500/50 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5 shadow-xl">
+                <div id="project-highness" data-category="flutter"
+                    class="project-card group p-6 rounded-3xl bg-slate-900 border border-slate-800 hover:border-emerald-500/50 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5 shadow-xl">
                     <div class="space-y-4">
                         <!-- Highness Fruits Carousel (4 Showcase Slides) -->
                         <div
@@ -1212,7 +1265,7 @@
                 </div>
 
                 <!-- Project 4: MENA App -->
-                <div data-category="cmp"
+                <div id="project-mena" data-category="cmp"
                     class="project-card group p-6 rounded-3xl bg-slate-900 border border-slate-800 hover:border-brand-500/50 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5 shadow-xl">
                     <div class="space-y-4">
                         <!-- MENA Project Image Carousel (6 Showcase Slides) -->
@@ -1327,8 +1380,8 @@
                     </div>
                 </div>
 
-                <!-- Project 4: Aflami App -->
-                <div data-category="native"
+                <!-- Project 5: Aflami App -->
+                <div id="project-aflami" data-category="native"
                     class="project-card group p-6 rounded-3xl bg-slate-900 border border-slate-800 hover:border-brand-500/50 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5 shadow-xl">
                     <div class="space-y-4">
                         <!-- Aflami Project Image Carousel (6 Showcase Slides) -->
@@ -1443,8 +1496,8 @@
                     </div>
                 </div>
 
-                <!-- Project 5: Arab Care -->
-                <div data-category="flutter"
+                <!-- Project 6: Arab Care -->
+                <div id="project-arabcare" data-category="flutter"
                     class="project-card group p-6 rounded-3xl bg-slate-900 border border-slate-800 hover:border-brand-500/50 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5 shadow-xl">
                     <div class="space-y-4">
                         <!-- Arab Care Project Image Carousel (3 Showcase Slides) -->
