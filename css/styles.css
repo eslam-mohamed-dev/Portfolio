@@ -246,13 +246,30 @@ html:not(.dark) span.bg-slate-800\/80 {
     border-color: #cbd5e1 !important;
 }
 
-/* Card Hover States in Light Mode (Crisp Indigo Border Accent + Soft Glow) */
+/* Card Hover States in Light Mode (Preserves Indigo vs Emerald Accent Colors) */
+html:not(.dark) .hover\:border-indigo-500\/60:hover,
+html:not(.dark) .hover\:border-indigo-500:hover,
 html:not(.dark) #experience .group:hover > div,
 html:not(.dark) #experience div.rounded-3xl:hover,
-html:not(.dark) #education div.rounded-3xl:hover,
-html:not(.dark) .project-card:hover {
+html:not(.dark) #education div.rounded-3xl:hover {
     border-color: #6366f1 !important;
-    box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+    box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.25) !important;
+}
+
+html:not(.dark) .hover\:border-emerald-500\/60:hover,
+html:not(.dark) .hover\:border-emerald-500:hover {
+    border-color: #059669 !important;
+    box-shadow: 0 10px 30px -10px rgba(5, 150, 105, 0.25) !important;
+}
+
+html:not(.dark) .hover\:border-amber-500\/60:hover,
+html:not(.dark) .hover\:border-amber-500:hover {
+    border-color: #d97706 !important;
+    box-shadow: 0 10px 30px -10px rgba(217, 119, 6, 0.25) !important;
+}
+
+html:not(.dark) .text-amber-400 {
+    color: #d97706 !important;
 }
 
 /* Experience Roles & Company Names */
