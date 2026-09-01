@@ -246,6 +246,15 @@ html:not(.dark) span.bg-slate-800\/80 {
     border-color: #cbd5e1 !important;
 }
 
+/* Card Hover States in Light Mode (Crisp Indigo Border Accent + Soft Glow) */
+html:not(.dark) #experience .group:hover > div,
+html:not(.dark) #experience div.rounded-3xl:hover,
+html:not(.dark) #education div.rounded-3xl:hover,
+html:not(.dark) .project-card:hover {
+    border-color: #6366f1 !important;
+    box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
 /* Experience Roles & Company Names */
 html:not(.dark) #experience h3,
 html:not(.dark) #education h3,
@@ -296,6 +305,30 @@ html:not(.dark) span.bg-slate-800\/80 {
     background-color: #f1f5f9 !important;
     color: #334155 !important;
     border-color: #cbd5e1 !important;
+}
+
+/* Experience Timeline Vertical Line in Light Mode */
+html:not(.dark) #experience .border-slate-800 {
+    border-color: #cbd5e1 !important;
+}
+
+/* Active Present Role Node Ring in Light Mode */
+html:not(.dark) #experience .border-slate-950 {
+    border-color: #ffffff !important;
+}
+
+/* Timeline Dots Base State in Light Mode */
+html:not(.dark) #experience .bg-slate-950 {
+    background-color: #ffffff !important;
+    border-color: #6366f1 !important;
+    box-shadow: 0 2px 6px rgba(99, 102, 241, 0.25) !important;
+}
+
+/* Timeline Dots Hover State in Light Mode (Vibrant Purple Fill & Glow) */
+html:not(.dark) #experience .group:hover .bg-slate-950 {
+    background-color: #4f46e5 !important;
+    border-color: #4338ca !important;
+    box-shadow: 0 0 16px rgba(99, 102, 241, 0.7) !important;
 }
 
 /* Scrollbar */
