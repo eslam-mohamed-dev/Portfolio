@@ -675,8 +675,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Flag that navigation originated from mobile app icon
                     jumpedFromPhone = true;
 
-                    // Smooth Scroll to target project card
-                    targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    // Smooth Scroll to top of target project card
+                    targetCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
                     // Highlight Project Card with glowing ring aura
                     targetCard.classList.add('ring-2', 'ring-indigo-500', 'shadow-2xl', 'shadow-indigo-500/50');

@@ -517,6 +517,11 @@ html:not(.dark) .ios-wallpaper-light {
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45), 0 1px 4px rgba(0, 0, 0, 0.35) !important;
 }
 
+/* Precise Top Alignment for Project Card Scroll Jumps */
+.project-card {
+    scroll-margin-top: 6.5rem;
+}
+
 /* Clean iOS Sheer Liquid Glass Dock */
 .ios26-glass-dock {
     background: rgba(255, 255, 255, 0.15) !important;
