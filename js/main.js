@@ -518,7 +518,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { indent: 2, tokens: [
                 { text: 'activeUsers ', class: 'text-slate-300' },
                 { text: '= ', class: 'text-slate-400' },
-                { text: '25000', class: 'text-amber-400 font-bold' },
+                { text: '30000', class: 'text-amber-400 font-bold' },
                 { text: ',', class: 'text-slate-400' }
             ]},
             { indent: 2, tokens: [
