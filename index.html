@@ -429,10 +429,10 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-12 gap-10 items-center max-w-5xl mx-auto">
 
-                <!-- Profile Portrait Frame -->
+                <!-- Profile Portrait (Frame Removed & Non-Clickable) -->
                 <div class="lg:col-span-4 flex justify-center">
                     <img src="assets/img/profile.jpg" alt="Eslam Mohamed Mahmoud"
-                        class="w-64 h-64 sm:w-72 sm:h-72 lg:w-full lg:h-80 rounded-3xl object-cover border-2 border-slate-800 shadow-xl" />
+                        class="w-64 h-64 sm:w-72 sm:h-72 lg:w-full lg:h-80 rounded-3xl object-cover pointer-events-none select-none shadow-lg" />
                 </div>
 
                 <!-- Text Overview -->
@@ -453,8 +453,8 @@
 
             <!-- Pillars Grid -->
             <div class="grid sm:grid-cols-3 gap-6 mt-12 max-w-5xl mx-auto">
-                <div
-                    class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-amber-500/60 transition-all hover:-translate-y-1 shadow-md hover:shadow-lg hover:shadow-amber-500/20">
+                <div id="about-pillar-speed"
+                    class="p-6 rounded-2xl bg-slate-900 border border-slate-800 transition-all hover:-translate-y-1 shadow-md">
                     <div
                         class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 mb-4">
                         <i data-lucide="zap" class="w-6 h-6"></i>
@@ -466,8 +466,8 @@
                     </p>
                 </div>
 
-                <div
-                    class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-emerald-500/60 transition-all hover:-translate-y-1 shadow-md hover:shadow-lg hover:shadow-emerald-500/20">
+                <div id="about-pillar-arch"
+                    class="p-6 rounded-2xl bg-slate-900 border border-slate-800 transition-all hover:-translate-y-1 shadow-md">
                     <div
                         class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-4">
                         <i data-lucide="shield-check" class="w-6 h-6"></i>
@@ -479,8 +479,8 @@
                     </p>
                 </div>
 
-                <div
-                    class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-indigo-500/60 transition-all hover:-translate-y-1 shadow-md hover:shadow-lg hover:shadow-indigo-500/20">
+                <div id="about-pillar-cross"
+                    class="p-6 rounded-2xl bg-slate-900 border border-slate-800 transition-all hover:-translate-y-1 shadow-md">
                     <div
                         class="w-12 h-12 rounded-xl bg-indigo-400/10 border border-indigo-400/20 flex items-center justify-center text-indigo-400 mb-4">
                         <i data-lucide="refresh-cw" class="w-6 h-6"></i>
@@ -520,8 +520,8 @@
                         <span class="relative inline-flex rounded-full h-4 w-4 bg-indigo-500 border-2 border-slate-950 shadow-lg shadow-indigo-500/80"></span>
                     </div>
 
-                    <div
-                        class="p-6 sm:p-8 rounded-3xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 transition-all shadow-xl space-y-4">
+                    <div id="experience-appware"
+                        class="p-6 sm:p-8 rounded-3xl bg-slate-900/80 border border-slate-800 transition-all shadow-xl space-y-4">
                         <div class="flex flex-wrap items-center justify-between gap-3">
                             <div>
                                 <div class="flex flex-wrap items-center gap-2.5">
@@ -589,8 +589,8 @@
                         class="absolute -left-[33px] sm:-left-[49px] top-8 z-10 w-4 h-4 rounded-full bg-slate-950 border-2 border-indigo-400/80 shadow-md shadow-indigo-500/30 group-hover:scale-125 group-hover:border-indigo-400 group-hover:bg-indigo-500 group-hover:shadow-indigo-500/80 transition-all">
                     </div>
 
-                    <div
-                        class="p-6 sm:p-8 rounded-3xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 transition-all shadow-xl space-y-4">
+                    <div id="experience-art4muslim"
+                        class="p-6 sm:p-8 rounded-3xl bg-slate-900/80 border border-slate-800 transition-all shadow-xl space-y-4">
                         <div class="flex flex-wrap items-center justify-between gap-3">
                             <div>
                                 <div class="flex flex-wrap items-center gap-2.5">
@@ -664,8 +664,8 @@
                         class="absolute -left-[33px] sm:-left-[49px] top-8 z-10 w-4 h-4 rounded-full bg-slate-950 border-2 border-slate-600 shadow-md group-hover:scale-125 group-hover:border-indigo-400 group-hover:bg-indigo-500 group-hover:shadow-indigo-500/80 transition-all">
                     </div>
 
-                    <div
-                        class="p-6 sm:p-8 rounded-3xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 transition-all shadow-xl space-y-4">
+                    <div id="experience-zazome"
+                        class="p-6 sm:p-8 rounded-3xl bg-slate-900/80 border border-slate-800 transition-all shadow-xl space-y-4">
                         <div class="flex flex-wrap items-center justify-between gap-3">
                             <div>
                                 <div class="flex flex-wrap items-center gap-2.5">
@@ -751,11 +751,11 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
 
                 <!-- Category 1: Core Languages -->
-                <div
-                    class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4 hover:border-slate-700 transition-all">
+                <div id="skill-card-languages"
+                    class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4 transition-all">
                     <div class="flex items-center gap-3">
                         <div
-                            class="w-10 h-10 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-accent">
+                            class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400">
                             <i data-lucide="terminal" class="w-5 h-5"></i>
                         </div>
                         <h3 class="font-bold text-white text-base">Core Languages</h3>
@@ -767,8 +767,8 @@
                 </div>
 
                 <!-- Category 2: Cross-Platform (Flutter & CMP) -->
-                <div
-                    class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4 hover:border-slate-700 transition-all">
+                <div id="skill-card-cross"
+                    class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4 transition-all">
                     <div class="flex items-center gap-3">
                         <div
                             class="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400">
@@ -790,8 +790,8 @@
                 </div>
 
                 <!-- Category 3: Native Android Stack -->
-                <div
-                    class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4 hover:border-slate-700 transition-all">
+                <div id="skill-card-android"
+                    class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4 transition-all">
                     <div class="flex items-center gap-3">
                         <div
                             class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
@@ -811,8 +811,8 @@
                 </div>
 
                 <!-- Category 4: Architecture & Quality Assurance -->
-                <div
-                    class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4 hover:border-slate-700 transition-all">
+                <div id="skill-card-arch"
+                    class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4 transition-all">
                     <div class="flex items-center gap-3">
                         <div
                             class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
@@ -831,8 +831,8 @@
                 </div>
 
                 <!-- Category 5: Payments, Maps & Native SDKs -->
-                <div
-                    class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4 hover:border-slate-700 transition-all">
+                <div id="skill-card-payments"
+                    class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4 transition-all">
                     <div class="flex items-center gap-3">
                         <div
                             class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
@@ -852,8 +852,8 @@
                 </div>
 
                 <!-- Category 6: Dev Tools & Workflow -->
-                <div
-                    class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4 hover:border-slate-700 transition-all">
+                <div id="skill-card-tools"
+                    class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4 transition-all">
                     <div class="flex items-center gap-3">
                         <div
                             class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400">
@@ -1624,8 +1624,8 @@
 
             <div class="grid sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 <!-- Degree 1: The Chance -->
-                <div
-                    class="p-8 rounded-3xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-all space-y-4 shadow-lg">
+                <div id="education-thechance"
+                    class="p-8 rounded-3xl bg-slate-900 border border-slate-800 transition-all space-y-4 shadow-lg">
                     <div class="flex items-center justify-between">
                         <div
                             class="w-12 h-12 rounded-2xl bg-slate-950 border border-slate-800 flex items-center justify-center p-2.5 shadow-inner">
@@ -1665,8 +1665,8 @@
                 </div>
 
                 <!-- Degree 2: Cairo University -->
-                <div
-                    class="p-8 rounded-3xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-all space-y-4 shadow-lg">
+                <div id="education-cairouniv"
+                    class="p-8 rounded-3xl bg-slate-900 border border-slate-800 transition-all space-y-4 shadow-lg">
                     <div class="flex items-center justify-between">
                         <div
                             class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
@@ -1714,8 +1714,8 @@
                     <div class="grid sm:grid-cols-2 gap-4 max-w-3xl mx-auto pt-6 text-left">
 
                         <!-- Direct Email Card -->
-                        <a href="mailto:eslam.mohamed.551999@gmail.com"
-                            class="p-3.5 sm:p-4 rounded-2xl bg-slate-950/80 dark:bg-slate-950/80 border border-slate-800 dark:border-slate-800 hover:border-indigo-500/50 transition-all flex items-center gap-3.5 group min-w-0 shadow-md">
+                        <a id="contact-email" href="mailto:eslam.mohamed.551999@gmail.com"
+                            class="email-btn p-3.5 sm:p-4 rounded-2xl bg-slate-950/80 dark:bg-slate-950/80 border border-slate-800 dark:border-slate-800 hover:border-indigo-500/50 transition-all flex items-center gap-3.5 group min-w-0 shadow-md">
                             <div
                                 class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:scale-110 transition-transform shrink-0">
                                 <i data-lucide="mail" class="w-4 h-4 sm:w-5 sm:h-5"></i>
@@ -1730,8 +1730,8 @@
                         </a>
 
                         <!-- Call / WhatsApp Card -->
-                        <a href="tel:+201288413516"
-                            class="p-3.5 sm:p-4 rounded-2xl bg-slate-950/80 dark:bg-slate-950/80 border border-slate-800 dark:border-slate-800 hover:border-emerald-500/50 transition-all flex items-center gap-3.5 group min-w-0 shadow-md">
+                        <a id="contact-phone" href="tel:+201288413516"
+                            class="phone-btn p-3.5 sm:p-4 rounded-2xl bg-slate-950/80 dark:bg-slate-950/80 border border-slate-800 dark:border-slate-800 hover:border-emerald-500/50 transition-all flex items-center gap-3.5 group min-w-0 shadow-md">
                             <div
                                 class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover:scale-110 transition-transform shrink-0">
                                 <i data-lucide="phone" class="w-4 h-4 sm:w-5 sm:h-5"></i>
@@ -1749,20 +1749,20 @@
                     <!-- Group 2: Social Profile Buttons (Equal Width & Centered) -->
                     <div class="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto pt-4">
 
-                        <!-- GitHub Profile Button -->
-                        <a href="https://www.github.com/eslam-mohamed-dev" target="_blank" rel="noopener noreferrer"
-                            class="px-5 py-3 rounded-2xl bg-slate-950 border border-slate-800 hover:border-amber-500/50 text-slate-300 hover:text-white font-semibold text-xs flex items-center justify-center gap-2.5 transition-all hover:scale-105 shadow-md group">
-                            <svg class="w-4 h-4 fill-current text-slate-300 group-hover:text-amber-400 transition-colors shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <!-- GitHub Profile Button (White on Dark, Black on Light) -->
+                        <a id="contact-github" href="https://www.github.com/eslam-mohamed-dev" target="_blank" rel="noopener noreferrer"
+                            class="github-btn px-5 py-3 rounded-2xl bg-slate-950 border border-slate-800 text-slate-300 font-semibold text-xs flex items-center justify-center gap-2.5 transition-all hover:scale-105 shadow-md group">
+                            <svg class="w-4 h-4 fill-current text-slate-300 transition-colors shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
                             </svg>
                             <span class="truncate">github.com/eslam-mohamed-dev</span>
                         </a>
 
-                        <!-- LinkedIn Profile Button -->
-                        <a href="https://www.linkedin.com/in/eslam-mohamed-dev" target="_blank" rel="noopener noreferrer"
-                            class="px-5 py-3 rounded-2xl bg-slate-950 border border-slate-800 hover:border-sky-500/50 text-slate-300 hover:text-white font-semibold text-xs flex items-center justify-center gap-2.5 transition-all hover:scale-105 shadow-md group">
-                            <svg class="w-4 h-4 fill-current text-slate-300 group-hover:text-sky-400 transition-colors shrink-0" viewBox="0 0 93.06 93.06" xmlns="http://www.w3.org/2000/svg">
+                        <!-- LinkedIn Profile Button (Border-Only #0A66C2 Hover Accent) -->
+                        <a id="contact-linkedin" href="https://www.linkedin.com/in/eslam-mohamed-dev" target="_blank" rel="noopener noreferrer"
+                            class="linkedin-btn px-5 py-3 rounded-2xl bg-slate-950 border border-slate-800 text-slate-300 hover:text-white font-semibold text-xs flex items-center justify-center gap-2.5 transition-all hover:scale-105 shadow-md group">
+                            <svg class="w-4 h-4 fill-[#0A66C2] transition-colors shrink-0" viewBox="0 0 93.06 93.06" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M11.185,0.08C5.004,0.08,0.001,5.092,0,11.259c0,6.173,5.003,11.184,11.186,11.184c6.166,0,11.176-5.011,11.176-11.184 C22.362,5.091,17.351,0.08,11.185,0.08z">
                                 </path>

@@ -273,25 +273,132 @@ html:not(.dark) section.bg-slate-900\/40 {
     background-color: #f1f5f9 !important;
 }
 
-/* Device Mockup Frame in Light Mode */
-html:not(.dark) #hero .border-slate-800 {
-    border-color: #cbd5e1 !important;
+/* Universal Card Hover Accent Rules (100% Theme Parity) */
+html:not(.dark) .hover\:border-indigo-500\/60:hover {
+    border-color: #6366f1 !important;
+    box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.3) !important;
 }
 
-html:not(.dark) #hero .bg-slate-950\/90 {
-    background-color: #ffffff !important;
+html:not(.dark) .hover\:border-sky-500\/60:hover {
+    border-color: #0ea5e9 !important;
+    box-shadow: 0 10px 30px -10px rgba(14, 165, 233, 0.3) !important;
+}
+
+html:not(.dark) .hover\:border-emerald-500\/60:hover {
+    border-color: #10b981 !important;
+    box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.3) !important;
+}
+
+html:not(.dark) .hover\:border-purple-500\/60:hover {
+    border-color: #8b5cf6 !important;
+    box-shadow: 0 10px 30px -10px rgba(139, 92, 246, 0.3) !important;
+}
+
+html:not(.dark) .hover\:border-amber-500\/60:hover {
+    border-color: #f59e0b !important;
+    box-shadow: 0 10px 30px -10px rgba(245, 158, 11, 0.3) !important;
+}
+
+/* ==========================================================================
+   Per-App Icon Theme Hover Accent Rules (100% Identical Hex Codes in Light & Dark)
+   ========================================================================== */
+
+/* 1. Al-Monqiz Al-Shamel (#93CCEE) */
+#project-almonqez:hover,
+html:not(.dark) #project-almonqez:hover {
+    border-color: #93CCEE !important;
+    box-shadow: 0 12px 32px -10px rgba(147, 204, 238, 0.4) !important;
+}
+
+/* 2. Ali Bin Ali Hospital - ABAH (#B41019) */
+#project-abah:hover,
+html:not(.dark) #project-abah:hover {
+    border-color: #B41019 !important;
+    box-shadow: 0 12px 32px -10px rgba(180, 16, 25, 0.4) !important;
+}
+
+/* 3. Fruits - Highness App (#FDAA0D) */
+#project-highness:hover,
+html:not(.dark) #project-highness:hover {
+    border-color: #FDAA0D !important;
+    box-shadow: 0 12px 32px -10px rgba(253, 170, 13, 0.4) !important;
+}
+
+/* 4. MENA Platform (#27364C) */
+#project-mena:hover,
+html:not(.dark) #project-mena:hover {
+    border-color: #27364C !important;
+    box-shadow: 0 12px 32px -10px rgba(39, 54, 76, 0.4) !important;
+}
+
+/* 5. Aflami (#C9518B) */
+#project-aflami:hover,
+html:not(.dark) #project-aflami:hover {
+    border-color: #C9518B !important;
+    box-shadow: 0 12px 32px -10px rgba(201, 81, 139, 0.4) !important;
+}
+
+/* 6. Arab Care (#0E568E) */
+#project-arabcare:hover,
+html:not(.dark) #project-arabcare:hover {
+    border-color: #0E568E !important;
+    box-shadow: 0 12px 32px -10px rgba(14, 86, 142, 0.4) !important;
 }
 
 /* Store Action Buttons & Icons */
-html:not(.dark) .bg-slate-950.border-slate-800 {
+html:not(.dark) .bg-slate-950.border-slate-800:not(.github-btn):not(.linkedin-btn) {
     background-color: #f8fafc !important;
     border-color: #e2e8f0 !important;
     color: #1e293b !important;
 }
 
-html:not(.dark) .bg-slate-950.border-slate-800:hover {
+html:not(.dark) .bg-slate-950.border-slate-800:not(.github-btn):not(.linkedin-btn):hover {
     background-color: #ffffff !important;
     border-color: #6366f1 !important;
+}
+
+/* GitHub Button Hover Accent (White on Dark, Pure Black #000000 on Light) */
+.github-btn:hover {
+    border-color: #ffffff !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2) !important;
+}
+.github-btn:hover svg {
+    fill: #ffffff !important;
+}
+html:not(.dark) .github-btn {
+    background-color: #f8fafc !important;
+    border-color: #cbd5e1 !important;
+    color: #0f172a !important;
+}
+html:not(.dark) .github-btn svg {
+    fill: #0f172a !important;
+}
+html:not(.dark) .github-btn:hover {
+    background-color: #ffffff !important;
+    border-color: #000000 !important;
+    color: #000000 !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+}
+html:not(.dark) .github-btn:hover svg {
+    fill: #000000 !important;
+}
+
+/* LinkedIn Button Brand Accent (Border-Only #0A66C2 Hover Accent) */
+html:not(.dark) .linkedin-btn {
+    background-color: #f8fafc !important;
+    border-color: #cbd5e1 !important;
+    color: #0f172a !important;
+}
+.linkedin-btn:hover {
+    border-color: #0A66C2 !important;
+    box-shadow: 0 4px 20px rgba(10, 102, 194, 0.3) !important;
+}
+html:not(.dark) .linkedin-btn:hover {
+    background-color: #ffffff !important;
+    border-color: #0A66C2 !important;
+    color: #0f172a !important;
+    box-shadow: 0 4px 20px rgba(10, 102, 194, 0.25) !important;
 }
 
 /* Additional Light Mode Overrides for Chips, Dates, Experience Roles, and Contact Cards */
@@ -326,32 +433,6 @@ html:not(.dark) span.bg-slate-800\/80 {
     border-color: #cbd5e1 !important;
 }
 
-/* Card Hover States in Light Mode (Preserves Indigo vs Emerald Accent Colors) */
-html:not(.dark) .hover\:border-indigo-500\/60:hover,
-html:not(.dark) .hover\:border-indigo-500:hover,
-html:not(.dark) #experience .group:hover > div,
-html:not(.dark) #experience div.rounded-3xl:hover,
-html:not(.dark) #education div.rounded-3xl:hover {
-    border-color: #6366f1 !important;
-    box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.25) !important;
-}
-
-html:not(.dark) .hover\:border-emerald-500\/60:hover,
-html:not(.dark) .hover\:border-emerald-500:hover {
-    border-color: #059669 !important;
-    box-shadow: 0 10px 30px -10px rgba(5, 150, 105, 0.25) !important;
-}
-
-html:not(.dark) .hover\:border-amber-500\/60:hover,
-html:not(.dark) .hover\:border-amber-500:hover {
-    border-color: #d97706 !important;
-    box-shadow: 0 10px 30px -10px rgba(217, 119, 6, 0.25) !important;
-}
-
-html:not(.dark) .text-amber-400 {
-    color: #d97706 !important;
-}
-
 /* Experience Roles & Company Names */
 html:not(.dark) #experience h3,
 html:not(.dark) #education h3,
@@ -359,16 +440,11 @@ html:not(.dark) #projects h3 {
     color: #0f172a !important;
 }
 
-/* Contact Email & WhatsApp Cards */
+/* Contact Cards Light Mode Base & Text Color Rules */
 html:not(.dark) #contact a {
     background-color: #ffffff !important;
-    border-color: #e2e8f0 !important;
+    border-color: #cbd5e1 !important;
     color: #0f172a !important;
-}
-
-html:not(.dark) #contact a:hover {
-    background-color: #f8fafc !important;
-    border-color: #6366f1 !important;
 }
 
 html:not(.dark) #contact a .text-white {
@@ -665,4 +741,180 @@ html:not(.dark) .ios26-glass-dock {
     background: rgba(255, 255, 255, 0.3) !important;
     border: 1px solid rgba(255, 255, 255, 0.4) !important;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ==========================================================================
+   Get In Touch Social & Contact Cards (Exact Color Parity)
+   ========================================================================== */
+
+/* Dark Mode */
+#contact a.github-btn:hover {
+    border-color: #ffffff !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.25) !important;
+}
+#contact a.github-btn:hover svg {
+    fill: #ffffff !important;
+}
+
+#contact a.linkedin-btn:hover {
+    border-color: #0A66C2 !important;
+    box-shadow: 0 4px 20px rgba(10, 102, 194, 0.35) !important;
+}
+
+#contact a.phone-btn:hover {
+    border-color: #10b981 !important;
+    box-shadow: 0 4px 20px rgba(16, 185, 129, 0.35) !important;
+}
+
+#contact a.email-btn:hover {
+    border-color: #6366f1 !important;
+    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.35) !important;
+}
+
+/* Light Mode */
+html:not(.dark) #contact a.github-btn {
+    background-color: #ffffff !important;
+    border-color: #cbd5e1 !important;
+    color: #0f172a !important;
+}
+html:not(.dark) #contact a.github-btn svg {
+    fill: #0f172a !important;
+}
+html:not(.dark) #contact a.github-btn:hover {
+    background-color: #ffffff !important;
+    border-color: #000000 !important;
+    color: #000000 !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+}
+html:not(.dark) #contact a.github-btn:hover svg {
+    fill: #000000 !important;
+}
+
+html:not(.dark) #contact a.linkedin-btn {
+    background-color: #ffffff !important;
+    border-color: #cbd5e1 !important;
+    color: #0f172a !important;
+}
+html:not(.dark) #contact a.linkedin-btn:hover {
+    background-color: #ffffff !important;
+    border-color: #0A66C2 !important;
+    color: #0f172a !important;
+    box-shadow: 0 4px 20px rgba(10, 102, 194, 0.25) !important;
+}
+
+html:not(.dark) #contact a.phone-btn {
+    background-color: #ffffff !important;
+    border-color: #cbd5e1 !important;
+    color: #0f172a !important;
+}
+html:not(.dark) #contact a.phone-btn:hover {
+    background-color: #ffffff !important;
+    border-color: #10b981 !important;
+    color: #0f172a !important;
+    box-shadow: 0 4px 20px rgba(16, 185, 129, 0.35) !important;
+}
+
+html:not(.dark) #contact a.email-btn {
+    background-color: #ffffff !important;
+    border-color: #cbd5e1 !important;
+    color: #0f172a !important;
+}
+html:not(.dark) #contact a.email-btn:hover {
+    background-color: #ffffff !important;
+    border-color: #6366f1 !important;
+    color: #0f172a !important;
+    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.35) !important;
+}
+
+/* ==========================================================================
+   MASTER CARD HOVER ACCENT REGISTRY (100% Exact Parity in Light & Dark)
+   ========================================================================== */
+
+/* 1. About Me Pillar Cards */
+#about-pillar-speed:hover,
+html:not(.dark) #about-pillar-speed:hover {
+    border-color: #f59e0b !important;
+    box-shadow: 0 10px 30px -10px rgba(245, 158, 11, 0.35) !important;
+}
+
+#about-pillar-arch:hover,
+html:not(.dark) #about-pillar-arch:hover {
+    border-color: #10b981 !important;
+    box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.35) !important;
+}
+
+#about-pillar-cross:hover,
+html:not(.dark) #about-pillar-cross:hover {
+    border-color: #6366f1 !important;
+    box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.35) !important;
+}
+
+/* 2. Career Experience Role Cards */
+#experience-appware:hover,
+html:not(.dark) #experience-appware:hover {
+    border-color: #5BBBE9 !important;
+    box-shadow: 0 12px 32px -10px rgba(91, 187, 233, 0.4) !important;
+}
+
+#experience-art4muslim:hover,
+html:not(.dark) #experience-art4muslim:hover {
+    border-color: #FF9409 !important;
+    box-shadow: 0 12px 32px -10px rgba(255, 148, 9, 0.4) !important;
+}
+
+#experience-zazome:hover,
+html:not(.dark) #experience-zazome:hover {
+    border-color: #861C7A !important;
+    box-shadow: 0 12px 32px -10px rgba(134, 28, 122, 0.4) !important;
+}
+
+/* 3. Technical Skills Stack Cards */
+#skill-card-languages:hover,
+html:not(.dark) #skill-card-languages:hover {
+    border-color: #6366f1 !important;
+    box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.35) !important;
+}
+
+#skill-card-cross:hover,
+html:not(.dark) #skill-card-cross:hover {
+    border-color: #0ea5e9 !important;
+    box-shadow: 0 10px 30px -10px rgba(14, 165, 233, 0.35) !important;
+}
+
+#skill-card-android:hover,
+html:not(.dark) #skill-card-android:hover {
+    border-color: #10b981 !important;
+    box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.35) !important;
+}
+
+#skill-card-arch:hover,
+html:not(.dark) #skill-card-arch:hover {
+    border-color: #8b5cf6 !important;
+    box-shadow: 0 10px 30px -10px rgba(139, 92, 246, 0.35) !important;
+}
+
+#skill-card-payments:hover,
+html:not(.dark) #skill-card-payments:hover {
+    border-color: #f59e0b !important;
+    box-shadow: 0 10px 30px -10px rgba(245, 158, 11, 0.35) !important;
+}
+
+#skill-card-tools:hover,
+html:not(.dark) #skill-card-tools:hover {
+    border-color: #6366f1 !important;
+    box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.35) !important;
+}
+
+/* 4. Education Qualification Cards */
+#education-thechance:hover,
+html:not(.dark) #education-thechance:hover {
+    border-color: #6366f1 !important;
+    box-shadow: 0 12px 32px -10px rgba(99, 102, 241, 0.35) !important;
+}
+
+#education-cairouniv:hover,
+html:not(.dark) #education-cairouniv:hover {
+    border-color: #10b981 !important;
+    box-shadow: 0 12px 32px -10px rgba(16, 185, 129, 0.35) !important;
 }
