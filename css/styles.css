@@ -367,7 +367,6 @@ html:not(.dark) .bg-slate-950.border-slate-800:not(.github-btn):not(.linkedin-bt
     fill: #ffffff !important;
 }
 html:not(.dark) .github-btn {
-    background-color: #f8fafc !important;
     border-color: #cbd5e1 !important;
     color: #0f172a !important;
 }
@@ -375,7 +374,6 @@ html:not(.dark) .github-btn svg {
     fill: #0f172a !important;
 }
 html:not(.dark) .github-btn:hover {
-    background-color: #ffffff !important;
     border-color: #000000 !important;
     color: #000000 !important;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
@@ -386,7 +384,6 @@ html:not(.dark) .github-btn:hover svg {
 
 /* LinkedIn Button Brand Accent (Border-Only #0A66C2 Hover Accent) */
 html:not(.dark) .linkedin-btn {
-    background-color: #f8fafc !important;
     border-color: #cbd5e1 !important;
     color: #0f172a !important;
 }
@@ -395,7 +392,6 @@ html:not(.dark) .linkedin-btn {
     box-shadow: 0 4px 20px rgba(10, 102, 194, 0.3) !important;
 }
 html:not(.dark) .linkedin-btn:hover {
-    background-color: #ffffff !important;
     border-color: #0A66C2 !important;
     color: #0f172a !important;
     box-shadow: 0 4px 20px rgba(10, 102, 194, 0.25) !important;
@@ -774,7 +770,6 @@ html:not(.dark) .ios26-glass-dock {
 
 /* Light Mode */
 html:not(.dark) #contact a.github-btn {
-    background-color: #ffffff !important;
     border-color: #cbd5e1 !important;
     color: #0f172a !important;
 }
@@ -782,7 +777,6 @@ html:not(.dark) #contact a.github-btn svg {
     fill: #0f172a !important;
 }
 html:not(.dark) #contact a.github-btn:hover {
-    background-color: #ffffff !important;
     border-color: #000000 !important;
     color: #000000 !important;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
@@ -792,12 +786,10 @@ html:not(.dark) #contact a.github-btn:hover svg {
 }
 
 html:not(.dark) #contact a.linkedin-btn {
-    background-color: #ffffff !important;
     border-color: #cbd5e1 !important;
     color: #0f172a !important;
 }
 html:not(.dark) #contact a.linkedin-btn:hover {
-    background-color: #ffffff !important;
     border-color: #0A66C2 !important;
     color: #0f172a !important;
     box-shadow: 0 4px 20px rgba(10, 102, 194, 0.25) !important;
@@ -917,4 +909,82 @@ html:not(.dark) #education-thechance:hover {
 html:not(.dark) #education-cairouniv:hover {
     border-color: #10b981 !important;
     box-shadow: 0 12px 32px -10px rgba(16, 185, 129, 0.35) !important;
+}
+
+/* 5. Header Action Buttons */
+#theme-toggle:hover {
+    border-color: #f59e0b !important;
+    box-shadow: 0 4px 16px rgba(245, 158, 11, 0.3) !important;
+}
+html:not(.dark) #theme-toggle {
+    background-color: #ffffff !important;
+    border-color: #cbd5e1 !important;
+    color: #0f172a !important;
+}
+html:not(.dark) #theme-toggle:hover {
+    background-color: #ffffff !important;
+    border-color: #f59e0b !important;
+    box-shadow: 0 4px 16px rgba(245, 158, 11, 0.25) !important;
+}
+
+#header-cv-btn:hover {
+    border-color: #6366f1 !important;
+    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.3) !important;
+}
+html:not(.dark) #header-cv-btn {
+    background-color: #ffffff !important;
+    border-color: #cbd5e1 !important;
+    color: #0f172a !important;
+}
+html:not(.dark) #header-cv-btn:hover {
+    background-color: #ffffff !important;
+    border-color: #6366f1 !important;
+    color: #0f172a !important;
+    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.25) !important;
+}
+
+#header-contact-btn:hover {
+    border-color: #818cf8 !important;
+    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.45) !important;
+}
+html:not(.dark) #header-contact-btn {
+    background-color: #4f46e5 !important;
+    border-color: #4338ca !important;
+    color: #ffffff !important;
+}
+html:not(.dark) #header-contact-btn:hover {
+    background-color: #4338ca !important;
+    border-color: #3730a3 !important;
+    box-shadow: 0 4px 20px rgba(67, 56, 202, 0.35) !important;
+}
+
+#menu-btn:hover {
+    border-color: #6366f1 !important;
+}
+html:not(.dark) #menu-btn {
+    background-color: #ffffff !important;
+    border-color: #cbd5e1 !important;
+    color: #0f172a !important;
+}
+html:not(.dark) #menu-btn:hover {
+    border-color: #6366f1 !important;
+}
+
+/* 6. Hero CTA Buttons (Next to Download CV) */
+#hero-featured-apps-btn:hover {
+    border-color: #6366f1 !important;
+    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.35) !important;
+}
+
+html:not(.dark) #hero-featured-apps-btn {
+    background-color: #ffffff !important;
+    border-color: #cbd5e1 !important;
+    color: #0f172a !important;
+}
+
+html:not(.dark) #hero-featured-apps-btn:hover {
+    background-color: #ffffff !important;
+    border-color: #6366f1 !important;
+    color: #0f172a !important;
+    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.25) !important;
 }
